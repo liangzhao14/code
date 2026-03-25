@@ -8,16 +8,15 @@
 
 ```
 code/
-├── claudecode/       # 使用 Claude Code 构建的项目
+├── claude code/      # 使用 Claude Code 构建的项目
 ├── codex/            # 使用 Codex 构建的项目
 ├── opencode/         # 使用 OpenCode 构建的项目
-├── Agent/            # Agent 相关实验
-└── files/            # 数据文件与爬虫
+└── Agent/            # Agent 相关实验
 ```
 
 ---
 
-## claudecode
+## claude code
 
 > 使用 [Claude Code](https://claude.ai/code) 开发的项目
 
@@ -34,7 +33,7 @@ code/
 - JWT 登录鉴权
 
 ```
-claudecode/credit-card-manager/
+claude code/credit-card-manager/
 ├── backend/    # Spring Boot 后端
 ├── frontend/   # Vue 3 前端
 └── sql/        # 数据库初始化脚本
@@ -60,7 +59,7 @@ python main.py interactive         # 交互式配置新网站
 ```
 
 ```
-claudecode/universal-scraper/
+claude code/universal-scraper/
 ```
 
 ---
@@ -72,7 +71,7 @@ claudecode/universal-scraper/
 **技术栈**: HTML5 · CSS3 · Vanilla JavaScript
 
 ```
-claudecode/news-viewer/
+claude code/news-viewer/
 ```
 
 ---
@@ -80,7 +79,19 @@ claudecode/news-viewer/
 ### 文件下载器
 
 ```
-claudecode/file-downloader/
+claude code/file-downloader/
+```
+
+---
+
+### 核安全法规文件爬虫
+
+爬取国家核安全局（NNSA）法规标准文件库与世界核协会（WNA）文章，支持 PDF 批量下载。
+
+**技术栈**: Python 3 · Playwright · BeautifulSoup4 · requests
+
+```
+claude code/nnsa-scraper/
 ```
 
 ---
@@ -114,22 +125,6 @@ opencode/snake/snake.html
 
 ```
 opencode/test_login/
-```
-
----
-
-## files
-
-### 核安全法规文件爬虫
-
-爬取国家核安全局（NNSA）法规标准文件库与世界核协会（WNA）文章，支持 PDF 批量下载。
-
-```
-files/
-├── nnsa_scraper.py        # 国家核安全局爬虫
-├── wna_scraper.py         # 世界核协会爬虫
-├── nnsa_data/             # 爬取数据输出
-└── wna_data/              # 爬取数据输出
 ```
 
 ---
