@@ -3,8 +3,10 @@
 .vscode/
 *.iml
 
-# Claude
-.claude/
+# Claude (保留 scripts 和 settings)
+.claude/*
+!.claude/settings.json
+!.claude/scripts/
 
 # OS
 .DS_Store

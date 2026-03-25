@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /c/Users/iflytek/Desktop/code/.claude/scripts/auto-sync.sh",
+            "timeout": 60,
+            "statusMessage": "正在同步变更到 GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
