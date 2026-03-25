@@ -75,6 +75,9 @@ git commit -m "chore: auto-sync ${DATE} — ${SUMMARY}
 
 Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
 
-git push
-
-echo '{"systemMessage": "已自动同步：CHANGELOG 已记录，README 已更新，代码已推送到 GitHub"}'
+if git push 2>&1; then
+  echo '{"systemMessage": "已自动同步：CHANGELOG 已记录，README 已更新，代码已推送到 GitHub"}'
+else
+  echo '{"systemMessage": "⚠️ commit 已创建，但 git push 失败（可能是网络或凭证问题），请手动执行 git push"}'
+  exit 1
+fi
