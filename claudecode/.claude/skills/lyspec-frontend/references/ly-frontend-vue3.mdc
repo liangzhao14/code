@@ -1,0 +1,117 @@
+---
+alwaysApply: false
+description: 羚羊工业 Vue3 开发规范，涵盖 Composition API、响应式、命名、样式与性能
+globs:
+  - "**/*.vue"
+  - "**/composables/**/*.ts"
+  - "**/components/**/*.ts"
+  - "**/views/**/*.ts"
+---
+
+# Vue 3 开发规范
+
+> 综合集团统一规范 + 羚羊规范，统一为团队标准。标注【强制】必须遵守，【推荐】建议遵守。
+
+## 一、基础约定
+
+### 1.1 技术栈
+
+- 【强制】使用 **TypeScript**，优先 `type` 而非 `interface`（除非需扩展）
+- 【强制】使用 **`<script setup lang="ts">`**，禁止 Options API
+- 【强制】使用 **Composition API**，复杂业务用 Class 管理，复杂状态用 Composables 管理
+- 【强制】禁止使用 `any`，使用明确类型或 `unknown` + 类型守卫
+
+### 1.2 文件与目录
+
+- 【强制】组件文件：kebab-case 或 PascalCase（项目内统一），如 `user-card.vue` 或 `UserCard.vue`
+- 【强制】目录：kebab-case 或短横线 PascalCase，如 `views/video-player`、`components/AuthWizard`
+- 【推荐】目录结构：`api/`、`components/`、`composables/`、`router/`、`stores/`、`types/`、`utils/`、`views/`
+
+## 二、组件规范
+
+### 2.1 组件结构
+
+- 【强制】文件顺序：`template` → `script` → `style`
+- 【强制】选项顺序：name → components → props → emits → setup → 生命周期
+- 【强制】基础组件用 `Base` 前缀，单例用 `The`，业务用业务域名：`BaseButton`、`TheHeader`、`ProductCard`
+
+### 2.2 Props 与 Emits
+
+- 【强制】Props 必须定义类型、校验与默认值，禁止 `props: ['title']`
+- 【强制】使用 `defineProps<T>()` 泛型，Emits 使用 `defineEmits<T>()` 强类型
+- 【强制】JS 中 camelCase，模板中 kebab-case：`userId` ↔ `:user-id`
+- 【强制】不可直接修改 prop，用本地 `ref`/`reactive` 或 `computed` 替代
+- 【强制】对象/数组默认值用工厂函数：`default: () => ({})`
+
+```vue
+<script setup lang="ts">
+interface Props {
+  userId: string
+  readonly?: boolean
+}
+const props = defineProps<Props>()
+const emit = defineEmits<{ save: [value: string]; cancel: [] }>()
+</script>
+```
+
+### 2.3 事件
+
+- 【强制】事件名 kebab-case，且在 `emits` 中声明
+- 【强制】v-model：Vue 3 使用 `modelValue` + `update:modelValue`；多 v-model 用 `v-model:username` 等
+- 【推荐】事件枚举：Key 中文、Value 英文驼峰且以 `On` 开头，如 `状态变化 = 'OnStatusChange'`
+
+## 三、模板规范
+
+- 【强制】`v-for` 必须绑定**唯一 key**（用 ID，禁止用索引，除非静态列表）
+- 【强制】`v-if` 与 `v-for` 不可同元素，用 `<template>` 包裹或 computed 过滤
+- 【强制】避免模板内复杂表达式，提取到 `computed` 或 method
+- 【推荐】指令缩写统一：`:`、`@`、`#`
+- 【强制】禁止 `v-html`，必须用时先做内容净化
+
+## 四、响应式与生命周期
+
+### 4.1 响应式
+
+- 【强制】基础类型用 `ref`，形状固定的对象用 `reactive`；大对象/外部库数据用 `shallowRef`/`shallowReactive`
+- 【强制】不可直接解构 `reactive`，用 `toRefs` 或保持整体引用
+- 【强制】仅对需要响应式追踪的数据使用 `ref`/`reactive`；第三方库实例、Map/Set、含私有字段对象用 **`markRaw()`** 包裹
+- 【强制】派生状态用 `computed`；`watch` 仅用于异步或副作用，依赖明确用 `watch`，隐式用 `watchEffect`
+
+### 4.2 类实例与单例
+
+- 【强制】类实例用 **`let`** 声明（便于在 onUnmounted 中置为 undefined），用 `reactive()` 包裹需响应式的部分
+- 【强制】在 **`onUnmounted`** 中调用实例的 `destroy()` 并将实例设为 `undefined`，清理定时器、事件、订阅
+- 【强制】单例统一通过 `.globalInstance()` 或 `.getInstance()` 获取，禁止随意 `new`（如 AudioPlayer）
+
+### 4.3 Composables
+
+- 【推荐】可复用逻辑提取为 composable，命名以 **`use`** 开头，如 `useAuth`、`usePagination`
+- 【推荐】setup 内顺序：响应式状态 → composables → computed → methods → 生命周期 → return
+- 【强制】在 composable 的 `onUnmounted` 中清理副作用（监听、定时器等）
+
+## 五、样式与 UI
+
+- 【推荐】组件库：Ant Design Vue（以项目实际为准）
+- 【推荐】普通布局、间距、颜色、字体优先 **UnoCSS** 工具类；复杂动画或特殊样式再用 class
+- 【推荐】SCSS 使用 **`@use`** 引入，如 `@use '@/assets/style/variables.scss'`；禁止 `@import`
+- 【强制】组件样式使用 `<style scoped>` 或 CSS Modules，避免全局污染
+
+## 六、性能与工程化
+
+- 【推荐】路由与大型组件**懒加载**：`component: () => import('@/views/Home.vue')`
+- 【推荐】重量级组件用 **`defineAsyncComponent`**，配合 Suspense 提供 fallback
+- 【推荐】频繁切换显隐用 **`v-show`**，初始不渲染用 **`v-if`**；大列表考虑虚拟滚动
+- 【推荐】常见需求优先 **VueUse**（useScroll、useDebounceFn、useResizeObserver 等）
+- 【推荐】异步错误处理可选用 **await-to-js** 简化 try-catch；错误信息与用户提示统一在 API/上层处理
+- 【推荐】单文件不超过 500 行，超则拆分子组件或 composables
+
+## 七、状态管理（Pinia）
+
+- 【推荐】每个 store 只管理一个业务域，禁止跨 store 互相导入
+- 【强制】解构 store 的响应式状态使用 **`storeToRefs()`**
+- 【推荐】action 统一 async，用 `try/finally` 管理 loading；派生数据用 getters（computed），不存进 state
+
+## 八、路由
+
+- 【强制】路由组件使用懒加载
+- 【推荐】只使用命名路由跳转，禁止硬编码路径字符串；守卫在 `router.beforeEach` 统一处理

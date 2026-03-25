@@ -1,0 +1,204 @@
+---
+alwaysApply: true
+description: 羚羊工业前端开发规范（精华版），针对 Vue3、React、JavaScript、TypeScript；涵盖通用规范、HTML、CSS、JS/TS、Vue、React 核心规则。Flutter、Rust、Tauri 为同目录下专项规范，其目录/文件命名以专项规范为准，不受本规范约束。
+globs:
+  - '**/*.html'
+  - '**/*.css'
+  - '**/*.scss'
+  - '**/*.less'
+  - '**/*.js'
+  - '**/*.jsx'
+  - '**/*.ts'
+  - '**/*.tsx'
+  - '**/*.vue'
+---
+
+# 羚羊工业前端开发规范
+
+> 本规范**针对 Vue3、React、JavaScript、TypeScript** 项目，为羚羊工业团队核心规则精华版，标注【强制】的必须遵守，标注【推荐】的建议遵守。  
+> **Flutter、Rust、Tauri** 为单独规范，见同目录：[Vue3规范.mdc](羚羊工业Vue3规范.mdc)、[React规范.mdc](羚羊工业React规范.mdc)、[Tauri规范.mdc](羚羊工业Tauri规范.mdc)、[Rust规范.mdc](羚羊工业Rust规范.mdc)、[Flutter规范.mdc](羚羊工业Flutter规范.mdc)。上述专项规范中的**目录/文件命名以各专项规范为准**，不受本规范约束。
+
+## 一、通用规范
+
+### 1.1 命名规范
+
+| 场景      | 规则                                           | 示例                                                |
+| --------- | ---------------------------------------------- | --------------------------------------------------- |
+| 目录/文件 | 【强制】kebab-case                             | `views/` `utils/` `user-service.js` `user-model.ts` |
+| 组件文件  | 【强制】kebab-case 或 PascalCase（项目内统一） | `user-card.vue` 或 `UserCard.vue`                   |
+| 变量/函数 | 【强制】camelCase                              | `userName` `getUserInfo()`                          |
+| 常量      | 【强制】UPPER_SNAKE_CASE                       | `API_BASE_URL` `MAX_RETRY_COUNT`                    |
+| 类/组件名 | 【强制】PascalCase                             | `UserService` `ProductCard`                         |
+| 布尔值    | 【推荐】is/has/can/should 前缀                 | `isLoading` `hasError` `canEdit`                    |
+| 接口/类型 | 【强制】PascalCase                             | `interface User {}` `type Status = ...`             |
+
+**目录/文件为何推荐 kebab-case**：便于在不同前端框架（Vue、React 等）间统一各类文件的命名风格，避免同一目录下出现 PascalCase、camelCase、kebab-case 混用，降低认知负担，利于协作与工具链一致。
+
+### 1.2 项目目录结构
+
+【推荐】按功能模块划分，层级不超过 5 层，单目录文件不超过 20 个：
+
+```
+src/
+├── assets/        # 资源文件
+├── components/    # 通用组件
+├── views/         # 页面视图（按业务模块分组）
+├── router/        # 路由配置
+├── store/         # 状态管理
+├── api/           # API 接口
+├── utils/         # 工具函数
+├── hooks/         # 自定义 Hooks/Composables
+├── styles/        # 样式文件
+├── types/         # TypeScript 类型定义
+├── config/        # 配置文件
+├── constants/     # 常量定义
+└── main.js
+```
+
+## 二、HTML 规范
+
+- 【强制】使用 HTML5 DOCTYPE + UTF-8 编码 + `<html lang="zh-CN">`
+- 【强制】使用语义化标签（`<header>` `<nav>` `<main>` `<section>` `<footer>`），避免滥用 div/span
+- 【强制】标题层级 h1-h6 不跳级
+- 【强制】img 必须有 alt 属性，表单元素必须有 label 或 aria-label
+- 【强制】表单按钮明确 type 属性（submit/button）
+- 【推荐】属性顺序：class → id → data-_ → src/href → title/alt → role/aria-_
+- 【推荐】CSS 在 head，JS 在 body 底部或使用 defer/async
+- 【推荐】非首屏图片使用 `loading="lazy"`
+
+## 三、CSS/BEM 规范
+
+### 3.1 BEM 命名
+
+- 【强制】格式：`block__element--modifier`
+- 【强制】Block 语义化小写连字符：`.base-card` `.product-list`
+- 【强制】Element 双下划线，仅一级：`.base-card__title`（禁止 `.base-card__body__title`）
+- 【强制】Modifier 双连字符：`.base-button--primary` `.base-card--featured`
+
+### 3.2 选择器规范
+
+- 【强制】使用扁平化 BEM 类名，避免后代选择器（`.base-card .base-title` → `.base-card__title`）
+- 【强制】仅使用类选择器，禁止 ID 选择器和标签限定（`div.base-card` → `.base-card`）
+- 【强制】Block 不依赖外部样式，不设置外部 margin
+
+### 3.3 预处理器
+
+- 【推荐】SCSS/LESS 嵌套不超过 3 层，使用 `&` 拼接 BEM
+- 【推荐】使用变量管理主题色、间距等，Mixin 复用公共样式
+- 【推荐】动画优先使用 transform 和 opacity（GPU 加速）
+
+## 四、JavaScript 规范
+
+### 4.1 变量声明
+
+- 【强制】使用 const/let，禁止 var，优先 const
+- 【强制】使用 ES6 模块语法（import/export）
+
+### 4.2 函数设计
+
+- 【强制】单一职责，参数不超过 3 个（超过用对象）
+- 【推荐】回调和短函数优先使用箭头函数
+- 【推荐】使用解构赋值和扩展运算符简化代码
+
+### 4.3 异步与错误处理
+
+- 【强制】使用 async/await，避免回调地狱
+- 【强制】必须使用 try-catch 处理错误，禁止空 catch 块
+- 【推荐】并发请求使用 Promise.all/allSettled
+
+### 4.4 性能
+
+- 【推荐】高频事件使用防抖（搜索 300ms）/节流（滚动 200ms）
+- 【推荐】频繁查找使用 Map/Set（O(1)），避免嵌套循环
+- 【推荐】动态 import 按需加载
+
+## 五、TypeScript 规范
+
+### 5.1 类型安全
+
+- 【强制】函数参数和返回值必须声明类型
+- 【强制】禁止使用 any，使用 unknown + 类型守卫或泛型替代
+- 【强制】异步函数返回 `Promise<T>`，明确返回类型
+- 【强制】使用 `import type` 导入纯类型
+
+### 5.2 接口与类型
+
+- 【推荐】对象结构优先 interface（可扩展），联合/交叉类型用 type
+- 【推荐】善用内置工具类型：`Partial` `Required` `Pick` `Omit` `Record`
+- 【推荐】字符串枚举优于数字枚举，简单场景用联合类型
+
+### 5.3 泛型
+
+- 【推荐】可复用逻辑使用泛型，配合 extends 约束类型范围
+- 【推荐】避免过度复杂的类型推导（深度不超过 5 层）
+
+## 六、Vue 规范
+
+### 6.1 组件规范
+
+- 【强制】文件结构顺序：template → script → style
+- 【强制】基础组件用 `Base` 前缀或者统一业务缩写前缀
+- 【强制】Props 必须定义类型、验证和默认值，禁止 `props: ['title']`
+- 【强制】Props JS 中 camelCase，模板中 kebab-case
+- 【强制】不可直接修改 prop，使用本地 data 或 computed
+
+### 6.2 模板规范
+
+- 【强制】v-for 必须绑定唯一 key（使用 ID，非索引）
+- 【强制】v-if 与 v-for 不可同时使用（用 computed 过滤）
+- 【强制】避免模板中复杂表达式，提取到 computed 或 method
+- 【推荐】统一使用指令缩写：`:` `@` `#`
+
+### 6.3 响应式与生命周期
+
+- 【强制】data 必须是函数
+- 【强制】优先使用 computed（自动缓存），watch 仅用于异步/副作用
+- 【强制】beforeUnmount/beforeDestroy 中清理定时器、事件监听、第三方库实例
+
+### 6.4 Composition API (Vue 3)
+
+- 【推荐】setup 组织顺序：响应式状态 → composables → computed → methods → 生命周期
+- 【推荐】可复用逻辑提取为 composable，命名以 `use` 开头
+- 【推荐】基础类型用 ref，对象用 reactive；大对象用 shallowRef/shallowReactive
+
+### 6.5 性能优化
+
+- 【推荐】路由和大型组件使用懒加载：`() => import('@/views/page.vue')`
+- 【推荐】大列表使用虚拟滚动，频繁切换用 v-show
+- 【推荐】组件单文件不超过 500 行
+
+## 七、React 规范
+
+### 7.1 组件规范
+
+- 【强制】优先使用函数组件 + Hooks
+- 【强制】Props 必须定义 TypeScript 接口或 PropTypes
+- 【推荐】Props 在函数参数中解构，设置默认值
+- 【推荐】代码顺序：Hooks → Context → useEffect → 事件处理 → 计算值 → 渲染
+
+### 7.2 Hooks 规范
+
+- 【强制】只在组件顶层调用 Hooks，不可在条件/循环中调用
+- 【强制】useEffect 必须声明所有依赖项，返回清理函数
+- 【推荐】相关 state 合并，独立 state 分离
+- 【推荐】可复用逻辑提取为自定义 Hook，命名以 `use` 开头
+
+### 7.3 JSX 规范
+
+- 【强制】列表渲染必须使用唯一 key（使用 ID，非索引）
+- 【推荐】条件渲染：`&&` 短路、三元表达式、提前 return
+
+### 7.4 性能优化
+
+- 【推荐】纯组件使用 React.memo，复杂计算用 useMemo，回调用 useCallback
+- 【推荐】路由级别代码分割：`lazy(() => import('./page'))`
+- 【推荐】大列表使用虚拟滚动（react-window）
+- 【推荐】测量后优化，使用 React DevTools Profiler
+
+## 八、通用性能优化清单
+
+1. **资源加载**：代码分割、路由懒加载、第三方库按需导入、tree-shaking
+2. **构建优化**：生产环境压缩混淆、合理缓存策略、preload/preconnect 关键资源
+3. **运行时优化**：防抖节流、虚拟滚动、computed 缓存、避免深度监听
+4. **内存管理**：及时清理事件监听/定时器/订阅、避免闭包泄漏
+5. **工具配置**：ESLint + Prettier 统一格式、TypeScript strict 模式

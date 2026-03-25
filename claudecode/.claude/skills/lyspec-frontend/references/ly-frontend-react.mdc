@@ -1,0 +1,122 @@
+---
+alwaysApply: false
+description: 羚羊工业 React 开发规范，涵盖函数组件、Hooks、Props、性能与工程化
+globs:
+  - "**/*.jsx"
+  - "**/*.tsx"
+  - "**/components/**/*.js"
+  - "**/components/**/*.ts"
+  - "**/hooks/**/*.ts"
+  - "**/pages/**/*.tsx"
+---
+
+# React 开发规范
+
+> 综合集团统一规范 + 羚羊规范。标注【强制】必须遵守，【推荐】建议遵守。
+
+## 一、基础约定
+
+### 1.1 技术栈
+
+- 【强制】**只使用函数组件 + Hooks**，禁止 Class 组件（除非迁移或特殊需求）
+- 【强制】TypeScript 项目必须为 Props 定义接口；JavaScript 项目使用 PropTypes
+- 【强制】禁用 `any`，使用明确类型或 `unknown` + 类型收窄
+
+### 1.2 文件与目录
+
+- 【强制】组件文件：kebab-case 或 PascalCase（项目内统一），如 `user-card.tsx` 或 `UserCard.tsx`
+- 【强制】组件名必须 **PascalCase**：`function UserCard() {}`
+- 【强制】目录：kebab-case；组件按类型分层：`base/`、`layout/`、业务名（如 `user/`）
+- 【推荐】结构：`api/`、`components/`、`hooks/`、`pages/` 或 `views/`、`stores/`、`types/`、`utils/`
+
+## 二、组件规范
+
+### 2.1 组件结构
+
+- 【强制】基础组件用 `Base`，布局用 `Layout`，业务用业务域名：`BaseButton`、`LayoutHeader`、`UserCard`
+- 【强制】每个文件只导出一个组件，优先具名导出
+- 【推荐】代码顺序：Hooks → Context → useEffect → 自定义 Hooks → 事件处理 → 计算值 → 提前 return → 主渲染
+- 【推荐】Props 接口定义在组件上方：`interface UserCardProps { ... }`
+
+### 2.2 Props
+
+- 【强制】Props 必须定义类型（TypeScript 接口或 PropTypes），禁止无类型或 `any`
+- 【推荐】在函数参数中解构，并设默认值：`function UserCard({ user, onSelect, showDetails = false }: Props) {}`
+- 【强制】必填 props 在类型中不设为可选；PropTypes 使用 `isRequired`
+- 【推荐】事件处理函数命名：`handleXxx`（如 `handleSubmit`、`handleRowClick`）
+
+```tsx
+interface UserCardProps {
+  user: User
+  onSelect: (id: string) => void
+}
+
+export function UserCard({ user, onSelect }: UserCardProps) {
+  return (
+    <div onClick={() => onSelect(user.id)}>
+      <span>{user.name}</span>
+    </div>
+  )
+}
+```
+
+## 三、Hooks 规范
+
+### 3.1 规则
+
+- 【强制】**只在组件顶层调用 Hooks**，不可在条件、循环或嵌套函数中调用
+- 【强制】`useEffect` 必须声明完整依赖数组，避免遗漏导致 bug；可用函数式更新减少依赖：`setState(prev => prev + 1)`
+- 【强制】`useEffect` 中若有定时器、事件监听、订阅，**必须**在 return 的清理函数中移除
+- 【推荐】相关 state 合并（如表单 `useState({ name, email })`），独立状态分离（loading、error）
+
+### 3.2 自定义 Hooks
+
+- 【强制】可复用逻辑提取为自定义 Hook，命名以 **`use`** 开头：`useUserList`、`usePagination`
+- 【推荐】一个 Hook 只做一件事，按职责拆分
+- 【推荐】在 Hook 内用 `useEffect` 清理时，通过 return 或 `cancelled` 标志避免卸载后 setState
+
+```ts
+function useUserList(deptId: string) {
+  const [list, setList] = useState<User[]>([])
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    let cancelled = false
+    setLoading(true)
+    fetchUsers(deptId)
+      .then((data) => { if (!cancelled) setList(data) })
+      .finally(() => { if (!cancelled) setLoading(false) })
+    return () => { cancelled = true }
+  }, [deptId])
+
+  return { list, loading }
+}
+```
+
+## 四、JSX 规范
+
+- 【强制】列表渲染必须使用**唯一 key**，禁止用索引（除非静态列表），如 `key={item.id}`
+- 【推荐】条件渲染：`&&` 短路、三元、或提前 `return`；复杂块提取为变量或子组件
+- 【推荐】多属性换行、缩进一致；避免在 JSX 中内联创建新对象/数组/函数导致不必要的重渲染
+
+## 五、状态管理
+
+- 【推荐】本地 UI 状态 → `useState` / `useReducer`
+- 【推荐】跨组件共享 → Zustand 或 Redux Toolkit
+- 【推荐】服务端状态 → React Query（`useQuery`、`useMutation`）或 SWR
+- 【强制】派生数据不存入 state，应直接计算或使用 getters/memo
+
+## 六、性能优化
+
+- 【推荐】**先测量再优化**，使用 React DevTools Profiler
+- 【推荐】纯组件、props 变化少时使用 **React.memo**
+- 【推荐】复杂计算用 **useMemo**；传给 memo 子组件的回调用 **useCallback**
+- 【推荐】路由级代码分割：**`React.lazy(() => import('./Page'))`** + **Suspense**
+- 【推荐】大列表使用虚拟滚动（如 react-window）
+- 【推荐】单文件不超过 300 行，超出须拆分
+
+## 七、通用要求
+
+- 【强制】API 请求封装在 `api/`，组件不直接使用 `fetch`/`axios`；Base URL、超时、拦截器统一配置
+- 【强制】错误在 API 层或边界处理，用户提示用 toast/notification，禁止 `alert()`
+- 【推荐】Prettier + ESLint 强制执行；导入顺序：框架 → 第三方 → 内部模块

@@ -1,0 +1,95 @@
+---
+alwaysApply: false
+description: 羚羊工业 Rust 代码规范，涵盖导入、字面量、警告、借用、错误处理与格式
+globs:
+  - "**/*.rs"
+  - "**/Cargo.toml"
+---
+
+# Rust 代码规范
+
+> 综合集团统一规范 + 羚羊规范，适用于羚羊工业 Rust 与 Tauri 后端。标注【强制】必须遵守，【推荐】建议遵守。
+
+## 一、导入规范
+
+### 1.1 Trait 导入
+
+- 【强制】使用 trait 的方法前**必须导入该 trait**，否则编译报错（如 `no method named 'emit'`）
+
+```rust
+// ✅ 正确
+use tauri::Emitter;
+app_handle.emit("event-name", payload)?;
+
+// ❌ 错误：未导入 Emitter
+// app_handle.emit("event-name", payload)?;
+```
+
+常见 Trait：`Emitter`（tauri）、`Iterator`、`Read`/`Write`（std::io）等，按需导入。
+
+### 1.2 导入顺序与合并
+
+- 【推荐】顺序：1）标准库 2）第三方库 3）本地 crate（`crate::...`）
+- 【推荐】同一模块多符号用 `use std::fs::{self, File};` 合并，避免重复 `use std::fs;` 与 `use std::fs::File`
+
+## 二、字符与字符串字面量
+
+### 2.1 字符
+
+- 【强制】在 `matches!` 等宏中，避免**重复的字符模式**；中文引号等用 **Unicode 转义**：`'\u{2018}'`（左单引号）、`'\u{2019}'`（右单引号）、`'\u{201C}'`/`'\u{201D}'`（双引号）
+- 【强制】ASCII 单引号用转义：`'\''`，禁止 `'''`
+
+```rust
+// ✅ 正确
+matches!(c, '"' | '\'' | '\u{2018}' | '\u{2019}')
+
+// ❌ 错误：重复或语法错误
+matches!(c, '"' | '\'' | '"' | ''')
+```
+
+### 2.2 字符串
+
+- 【推荐】含大量引号的字符串优先 **原始字符串**：`r#"{"key": "value"}"#`，减少转义
+
+## 三、编译警告
+
+- 【强制】**必须修复**：`unreachable_pattern`（重复模式）、`unused_import`（删除未用导入）、`dead_code`（删除或按下面方式标注）
+- 【推荐】对**预留**的公共 API（枚举变体、方法）可加 `#[allow(dead_code)]`，并**必须附注释说明原因**
+- 【强制】优先通过改代码消除警告，仅在确认为预留功能时使用 `#[allow(...)]`
+
+```rust
+/// 预留的暂停功能，后续版本使用
+#[allow(dead_code)]
+pub fn pause(&mut self) { ... }
+```
+
+## 四、借用与所有权
+
+- 【强制】遵守借用规则，**禁止**同时持有 `&mut self` 与 `&self.xxx`；可先 clone/drain 再处理，或拆分方法
+- 【推荐】明确所有权：能传引用就传引用（`&[u8]`），需要所有权再传值；避免不必要的 `clone`
+- 【推荐】大集合共享考虑 `Arc`/`Rc`，仅克隆指针
+
+## 五、错误处理
+
+- 【强制】使用 **`Result<T, E>`** 和 **`?`** 传播错误；错误信息**使用中文**（符合项目语言要求）
+- 【推荐】用 `map_err` 包装上下文，便于排查
+
+```rust
+fn load_config() -> Result<Config, String> {
+    let content = std::fs::read_to_string("config.toml")
+        .map_err(|e| format!("读取配置文件失败: {}", e))?;
+    let config: Config = toml::from_str(&content)
+        .map_err(|e| format!("解析配置文件失败: {}", e))?;
+    Ok(config)
+}
+```
+
+## 六、代码格式与文档
+
+- 【强制】使用 **`cargo fmt`**（rustfmt）格式化；行宽尽量不超过 100 字符，使用 trailing comma
+- 【推荐】公共 API 必须**文档注释**（`///`），含参数、返回值、示例；关键逻辑补充 **单元测试**（`#[cfg(test)] mod tests`）
+
+## 七、与 Tauri 的配合
+
+- 在 Tauri 项目中调用 `emit` 等前务必 `use tauri::Emitter`
+- 日志分层、配置、Command 注册等见《Tauri规范》；Rust 侧风格与本规范一致

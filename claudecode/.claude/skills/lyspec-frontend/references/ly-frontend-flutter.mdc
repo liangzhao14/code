@@ -1,0 +1,97 @@
+---
+alwaysApply: false
+description: 羚羊工业 Flutter/Dart 开发规范（行业通用），涵盖项目结构、命名、Widget、状态与性能
+globs:
+  - "**/*.dart"
+  - "**/pubspec.yaml"
+---
+
+# Flutter 开发规范
+
+> 参考目录下暂无 Flutter 专项规范，本规范基于 Dart/Flutter 官方与行业通用实践整理，供羚羊工业 Flutter 项目使用。标注【强制】必须遵守，【推荐】建议遵守。
+
+## 一、项目结构
+
+- 【推荐】按**功能/业务模块**划分目录，避免按“类型”堆砌（如所有 page 放一起）
+- 【推荐】结构示例：
+
+```
+lib/
+├── main.dart
+├── app.dart
+├── core/           # 核心：路由、主题、常量、工具
+├── shared/         # 共享组件、样式、扩展
+├── features/       # 按功能模块
+│   ├── auth/
+│   │   ├── data/
+│   │   ├── domain/
+│   │   ├── presentation/
+│   │   └── auth.dart
+│   └── home/
+├── l10n/           # 国际化
+└── generated/
+```
+
+- 【强制】单文件不宜过长（建议不超过 300 行），逻辑复杂时拆成多个 widget 或抽取到 repository/use case
+
+## 二、命名规范
+
+- 【强制】遵循 **Dart 官方风格**：`lowerCamelCase`（变量、方法、参数）、`UpperCamelCase`（类、枚举、typedef）
+- 【强制】文件名：**snake_case**，与主类名一致或与模块对应，如 `user_profile_page.dart`、`user_repository.dart`
+- 【推荐】布尔变量：`isXxx`、`hasXxx`、`canXxx`；私有成员前加下划线 `_`
+- 【推荐】Widget 类名与用途一致：`XxxPage`、`XxxScreen`、`XxxView`，可复用组件不加 Page/Screen 后缀
+
+## 三、Widget 规范
+
+### 3.1 组件拆分
+
+- 【强制】单个 build 方法不宜过长，超过一屏逻辑应拆成**私有 Widget**（`_SectionTitle`）或独立文件
+- 【推荐】无状态优先：能用 `StatelessWidget` 就不用 `StatefulWidget`；状态可上提或用状态管理
+- 【强制】`const` 构造函数在可用的地方**尽量使用**，利于 Flutter 做 const 优化
+
+### 3.2 StatefulWidget
+
+- 【推荐】State 中仅保留与 UI 直接相关的状态；业务数据、列表等考虑 `ChangeNotifier`、`Bloc`、`Riverpod` 等
+- 【强制】在 `dispose()` 中取消订阅、关闭控制器（如 `ScrollController`、`TextEditingController`）、取消定时器，防止泄漏
+
+```dart
+@override
+void dispose() {
+  _controller.dispose();
+  _subscription?.cancel();
+  super.dispose();
+}
+```
+
+## 四、状态管理
+
+- 【推荐】项目内统一一种方案（Provider、Riverpod、Bloc、GetX 等），不混用多种风格
+- 【强制】业务逻辑、网络请求尽量放在 **Widget 层之外**（Repository、UseCase、Bloc/Cubit），UI 只做展示与分发事件
+- 【推荐】全局/跨页面状态与本地 UI 状态区分清楚，避免把应本地的状态放进全局 store
+
+## 五、异步与错误处理
+
+- 【强制】异步使用 **async/await**，避免嵌套 `.then()`
+- 【推荐】在 Repository 或 UseCase 层统一 catch 错误，转换为业务异常或 Result 类型；UI 层根据结果展示或提示
+- 【强制】使用 `FutureBuilder`/`StreamBuilder` 时处理 **loading**、**error** 状态，禁止只处理 data
+
+## 六、性能与构建
+
+- 【推荐】列表长列表使用 **ListView.builder**（或 SliverList），禁止对长列表使用 `ListView(children: [...])` 一次性构建
+- 【推荐】图片使用 `Image.network` 时合理设置 `cacheWidth`/`cacheHeight`，或使用 cached_network_image 等
+- 【强制】避免在 build 中创建新 **Future**、**Stream** 或大对象，应放在 initState、didChangeDependencies 或状态管理侧
+- 【推荐】不变的小组件加 **const**；必要时用 `RepaintBoundary` 隔离重绘区域
+
+## 七、路由与导航
+
+- 【推荐】路由集中配置（命名路由或 go_router 等），禁止在业务代码里硬编码大量路径字符串
+- 【推荐】传参通过路由参数或状态管理传递，避免深层 `ModalRoute.of(context)?.settings.arguments` 满天飞
+
+## 八、测试与 Lint
+
+- 【推荐】核心业务逻辑、Repository、状态逻辑编写**单元测试**；关键流程编写 **Widget 测试**
+- 【强制】开启 **analysis_options.yaml** 严格规则，修复 linter 与 hint；禁止提交仅注释掉的代码
+
+## 九、与羚羊前端规范对齐
+
+- 与 Vue/React 规范一致：**命名统一**、**结构清晰**、**单一职责**、**错误与加载态完整处理**、**资源在生命周期内正确释放**；TypeScript 的“禁止 any”在 Dart 中对应为避免动态类型滥用、优先明确类型。
