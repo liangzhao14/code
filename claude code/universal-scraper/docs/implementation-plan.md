@@ -8,7 +8,7 @@
 
 **Tech Stack:** Python 3, requests, beautifulsoup4, pyyaml, playwright, python-docx, markdownify
 
-**项目根目录:** `C:\Users\iflytek\Desktop\code\claudecode\universal-scraper`
+**项目根目录:** `C:\Users\iflytek\Desktop\code\claude code\universal-scraper`
 
 **设计文档:** `docs/design.md`
 

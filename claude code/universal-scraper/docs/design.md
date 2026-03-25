@@ -1,7 +1,7 @@
 # Universal Scraper 通用网站爬虫 - 设计文档
 
 > 日期：2026-03-24
-> 项目路径：`C:\Users\iflytek\Desktop\code\claudecode\universal-scraper`
+> 项目路径：`C:\Users\iflytek\Desktop\code\claude code\universal-scraper`
 
 ---
 
