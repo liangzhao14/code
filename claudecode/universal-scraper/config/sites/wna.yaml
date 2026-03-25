@@ -1,0 +1,44 @@
+name: "World Nuclear Association"
+base_url: "https://world-nuclear.org"
+output_dir: "wna_data"
+
+discovery:
+  - type: selector
+    start_url: "/information-library"
+    link_selector: "a[href*='/information-library/']"
+    filter_pattern: "/information-library/.+/.+/.+"
+
+  - type: sitemap
+    url: "/sitemap.xml"
+    filter_pattern: "/information-library/.+/.+/.+"
+
+fetch:
+  mode: auto
+  js_check: true
+
+clean_selectors:
+  - "header"
+  - "nav"
+  - "footer"
+  - ".site-header"
+  - ".site-footer"
+  - ".cookie-banner"
+  - ".cookie-consent"
+  - ".sidebar"
+  - ".share-buttons"
+  - ".social-share"
+  - ".popup"
+  - ".modal"
+
+content_selector: "article, .article-content, main"
+
+pagination:
+  enabled: false
+
+output:
+  formats:
+    - pdf
+    - markdown
+  category_from: "url_path"
+  category_base_path: "/information-library"
+  category_depth: 2

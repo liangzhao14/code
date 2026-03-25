@@ -1,0 +1,425 @@
+---
+source: https://world-nuclear.org/information-library/country-profiles/countries-o-s/south-korea
+downloaded: 2026-03-24 23:54:48
+---
+
+[HOME](https://world-nuclear.org/) / [Information Library](https://world-nuclear.org/information-library) / [country profiles](https://world-nuclear.org/information-library/country-profiles) / [countries-o-s](https://world-nuclear.org/information-library/country-profiles/countries-o-s) / South Korea
+
+country profiles
+
+# Nuclear Power in South Korea
+
+Updated Friday, 6 March 2026
+
+* **26 reactors provide about one-third of South Korea's electricity from 26 GWe of plant.**
+* **South Korea is among the world's most prominent nuclear energy countries, and exports its technology widely.**
+* **Nuclear energy has been a strategic priority for South Korea, but the president elected in 2017 introduced a policy to phase out nuclear energy over some 45 years.**
+* **President Yoon Suk-yeol, elected March 2022, scrapped the nuclear phase-out policy. His successor, President Lee Jae-myung, confirmed in January 2026 that the government would proceed with two new reactors from the country's 11th Basic Plan​.**
+
+26![](https://world-nuclear.org/images/icon-operable-reactor.png)
+
+Operable  
+Reactors
+
+25,609 MWe
+
+3![](https://world-nuclear.org/images/icon-construction-reactor.png)
+
+Reactors Under  
+Construction
+
+4,020 MWe
+
+2![](https://world-nuclear.org/images/icon-down-reactor.png)
+
+Reactors  
+Shutdown
+
+1,239 MWe
+
+#### Operable nuclear power capacity
+
+var RDB\_WIDGET\_CONFIG\_widget\_t6xou = { "id": "widget\_t6xou", "type": "chart\_status", "query": { "query": { "filtered": { "filter": { "bool": { "must": [ { "terms": { "reactor.country.exact": [ "South Korea" ] } } ] } }, "query": { "match\_all": {} } } } }, "base": "//reactordb.world-nuclear.org", "include": "/embed.html", "settings": { "chart": "bar", "start": "1970", "end": "2099", "status": "operable", "primary": "operational\_reference\_unit\_power", "fallback": "reference\_unit\_power\_capacity\_net", "label": "Reference Unit Power MWe", "height": "300", "left": "80", "distance": "0" }}
+
+## Electricity sector
+
+**Total generation (in 2024):**607 TWh
+
+**Generation mix:** coal 198 TWh (33%); nuclear 189 TWh (30%); natural gas 151 TWh (25%); solar 33.4 TWh (6%); biofuels & waste 11.8 TWh (2%); hydro 9.0 TWh (1%); oil 7.0 TWh (1%); wind 3.4 TWh.
+
+**Import/export balance:** no imports or exports
+
+**Total consumption:** 536 TWh
+
+**Per capita consumption:** c. 10,400 kWh in 2024
+
+*Source: International Energy Agency and The World Bank. Data for year 2024.*
+
+From 1961 until April 2001 South Korea's sole electric power utility was [Korea Electric Power Company](http://home.kepco.co.kr/kepco/EN/main.do "KEPCO website") (KEPCO). Set up as a government corporation, 49% of its shares are now held by public and foreign investors. The power generation part of KEPCO was then split into six entities and all the nuclear generation capacity, with a small amount of hydro, became part of the largest of these, [Korea Hydro & Nuclear Power](http://www.khnp.co.kr/eng/main.do "KHNP website") (KHNP). KEPCO remains a transmission and distribution monopoly, and retains the engineering capacity for new projects. [KEPCO E&C](https://www.kepco-enc.com/eng/index.do "KEPCO E&C website") is another KEPCO subsidiary, with engineering focus, [KEPCO NF](http://www.knfc.co.kr/eng "KEPCO NF") makes nuclear fuel and [KEPCO KPS](http://www.kps.co.kr/eng/about/about_05_01.do "KEPCO KPS") handles maintenance.
+
+## Energy policy
+
+South Korea is a major importer of energy. About 85% of the country's primary energy consumption is derived from fossil fuel, and insufficient domestic resources mean that 98% of the fossil fuel consumed is imported[a](#NotesReferences).
+
+In March 2022 Yoon Suk-yeol was elected president of South Korea. In his campaign he rejected the policy of phasing out nuclear energy introduced by his predecessor (see below) and pledged to boost investment in the country's domestic and export industry. His administration said it plans to win ten new nuclear power plant orders abroad by 2030, and in July it set a plan for nuclear to account for a minimum of 30% of the country's energy mix in 2030.
+
+In June 2025 Lee Jae-myung was elected president of South Korea after Yoon Suk-yeol was impeached and removed from office. During his campaign, Lee argued that nuclear power is “inherently dangerous” and said South Korea’s nuclear-heavy power mix should be re-examined, with renewables given greater priority. His administration has indicated that existing plants and reactors already under construction would continue. In January 2026, following public surveys showing strong support for nuclear energy, the Lee administration confirmed it would proceed with the construction of two new large reactors included in the 11th Basic Plan.
+
+The government’s 11th Electricity Plan (2024-2038) finalized in February 2025 states that the proportion of electricity generated by nuclear energy would increase to 31.8% by 2030 and 35.6% by 2038. Nuclear generating capacity was expected to increase from 24.7 GWe in 2023 to 35.2 GWe in 2038.
+
+Under President Moon Jae-in between 2017 and 2022, South Korea had a policy to phase out nuclear power over a period of 40 years. At the closing ceremony for Kori 1 in June 2017, President Moon Jae-in said he would “review the policy on nuclear power plants entirely,” and that the country would “abandon the development policy centred on nuclear power plants and exit the era of nuclear energy." He said plans for new power reactors would be cancelled and the operating periods of existing units would not be extended beyond their design lifetime. He added that he would reach a "social consensus" as soon as possible on whether construction of units 5&6 of the Shin Kori plant would proceed – their construction licence was issued by the [Nuclear Safety and Security Commission](http://www.nssc.go.kr/nssc/english/ "NSSC website") (NSSC) in June 2016 and site works were well advanced at the time. In mid-July the KHNP board decided to suspend construction of the two units for three months, pending public debate and government decision, despite vigorous local protests supporting construction. The government assembled a committee, which in October voted 59.5% in favour of continuing construction of the two units, and KHNP resumed work on them.
+
+The then president said his government would "actively nurture safe and clean energy industries", including renewables and LNG power generation, while closing down all coal-fired plants during his term of office.
+
+In July 2017 an open letter to President Moon Jae-in signed by 27 international scientists and conservationists – including climate scientist James Hansen – called for him to reconsider his policy. It said: "If South Korea withdraws from nuclear, the world risks losing a valuable supplier of cheap and abundant energy needed to lift humankind out of poverty and solve the climate crisis.” Publication of the letter came as a group of several hundred South Korean university professors and scholars also called on the president to drop his nuclear phase-out plans. Some 410 professors – including those from Seoul National University and the Korea Advanced Institute of Science and Technology – called for the government to "immediately halt the push to extinguish the nuclear energy industry that provides cheap electricity to the general public," and called for the phase-out plan to be carried out only after extensive deliberation, not only by government officials but also by industry experts.
+
+Wide support for nuclear power was maintained despite the previous phaseout policy. In a September 2021 poll of 1000 adults by EmBrain Public on behalf of the Korean Nuclear Society, 72.1% of respondents supported the use of nuclear power, while 24.3% opposed it. Some 69.9% supported maintaining the country's current nuclear plants or even expanding them.
+
+## Nuclear power industry
+
+**Operable reactors in South Korea**
+
+var RDB\_WIDGET\_CONFIG\_widget\_0wg1v = { "id": "widget\_0wg1v", "type": "table\_reactor", "query": { "query": { "filtered": { "filter": { "bool": { "must": [ { "terms": { "reactor.country.exact": [ "South Korea" ] } }, { "terms": { "reactor.status.exact": [ "Operable" ] } } ] } }, "query": { "match\_all": {} } } } }, "base": "https://reactordb.world-nuclear.org", "include": "/embed.html", "settings": { "order": { "field": "reactor.name", "dir": "asc", "sort\_type": "exact" }, "limit": "100", "countryPageTemplate": "/nuclear-reactor-database/summary/{country}", "reactorPageTemplate": "/nuclear-reactor-database/details/{reactor}", "reactor": [ { "field": "reactor.name", "display": "Reactor Name", "formatting": "reactor\_link" }, { "field": "reactor.model", "display": "Model" }, { "field": "reactor.process", "display": "Reactor Type" }, { "field": "reactor.reference\_unit\_power\_capacity\_net", "display": "Reference Unit Power (MWe)" }, { "field": "reactor.construction\_start", "display": "Construction Start", "formatting": "year\_month" }, { "field": "reactor.first\_grid\_connection", "display": "First Grid Connection", "formatting": "year\_month" } ] }}
+
+In May 2013 Yonggwang was renamed Hanbit and Ulchin was renamed Hanul. In November 2022 Shin Kori 3-6 were renamed Saeul 1-4.
+
+![](https://world-nuclear.org/images/articles/28870bcb-5b33-4991-9c11-32559869f48d.png)
+
+In recent years the capacity factor for South Korean power reactors has averaged up to 96.5% – some of the highest figures in the world.
+
+In 2005 permits for construction of Shin Kori 1&2 and Shin Wolsong 1&2 (all about 1000 MWe gross) were authorized. First concrete for Shin Kori 1&2 was in June 2006 and August 2007 respectively. For Shin Wolsong first concrete was in December 2007 for unit 1 and September 2008 for unit 2. Shin Kori 1 started up in July, was grid-connected in August 2010, and entered commercial operation at the end of February 2011. Unit 2 started up at the end of December 2011, was grid-connected in January 2012 and entered commercial operation in July. Shin Wolsong 1 started up in January 2012, was grid-connected later in the month and entered commercial operation at the end of July. However, it was then shut down to enable replacement of cabling. The operating licence for Shin Wolsong 2 was issued in November 2014; it started up early in 2015, was grid-connected in February, and entered commercial operation in July, following a delay of several months to replace cabling.
+
+**Under construction reactors in South Korea**
+
+var RDB\_WIDGET\_CONFIG\_widget\_9bycb = { "id": "widget\_9bycb", "type": "table\_reactor", "query": { "query": { "filtered": { "filter": { "bool": { "must": [ { "terms": { "reactor.status.exact": [ "Under Construction" ] } }, { "terms": { "reactor.country.exact": [ "South Korea" ] } } ] } }, "query": { "match\_all": {} } } } }, "base": "https://reactordb.world-nuclear.org", "include": "/embed.html", "settings": { "order": { "field": "reactor.name", "dir": "asc", "sort\_type": "exact" }, "limit": "10", "countryPageTemplate": "/nuclear-reactor-database/summary/{country}", "reactorPageTemplate": "/nuclear-reactor-database/details/{reactor}", "reactor": [ { "field": "reactor.name", "display": "Reactor Name", "formatting": "reactor\_link" }, { "field": "reactor.model", "display": "Model" }, { "field": "reactor.process", "display": "Reactor Type" }, { "field": "reactor.gross\_capacity", "display": "Gross Capacity" }, { "field": "reactor.construction\_start", "display": "Construction Start" } ] }}
+
+**Planned reactors in South Korea**
+
+| Reactor | Type | Gross capacity | Start construction | Commercial operation |
+| --- | --- | --- | --- | --- |
+| Shin Hanul 4 | APR-1400 | 1400 MWe | 2025 |  |
+| Total planned: 1 |  | **1400 MWe** |  |  |
+| Cheonji 1 | APR+ | 1500 MWe | 2022 (cancelled) |  |
+| Cheonji 2 | APR+ | 1500 MWe | 2023 (cancelled) |  |
+| Cheonji 3 or Daejin 1 | APR+ | 1500 MWe | 2025 (cancelled) |  |
+| Cheonji 4 or Daejin 2 | APR+ | 1500 MWe | 2026 (cancelled) |  |
+
+Design work at Shin Hanul 3&4 was suspended in May 2017. In February 2023 MOTIE announced that it was working to obtain the relevant approvals to enable KHNP to restart preliminary construction on Shin Hanul 3&4 in September 2023, with a view to starting full construction in 2024. Shin Hanul 3 began construction in May 2025.
+
+Construction of the first pair of third-generation APR1400 reactors – **Saeul 1&2\*** – was authorized in 2006, though the actual construction licence was not issued until April 2008. In anticipation of it, KHNP placed a $1.2 billion order with Doosan Heavy Industries for major components of both in August 2006. Westinghouse had a $300 million contract with Doosan for part of this order. In February 2007 a contract was let to a consortium led by Hyundai to build the two units, subsuming the Doosan order. Site works started in November 2007 and first concrete for unit 3 was poured at the end of October 2008, and that for unit 4 in mid-September 2009. Construction time of 51 months was envisaged for these first units, but completion was delayed for more than 12 months due to the need to replace cabling. This work was finished and checked for unit 3 in November 2014, with unit 4 about two months behind it. However, faulty valve parts then led to a further delay in commissioning unit 3, so it started up in December 2015, was grid-connected in January 2016, and commenced commercial operation in December 2016. KHNP completed construction of unit 4 in late 2017, and the unit was scheduled to start commercial operation in September 2018. However, approval from the country's Nuclear Safety and Security Commission (NSSC) was delayed until February 2019, when fuel loading commenced. Unit 4 achieved first criticality in April 2019, was grid connected on 22 April, and began commercial operation in September 2019.
+
+\* The two units were formerly known as Shin Kori 3&4
+
+In April 2009 the government authorized the construction of **Shin Hanul 1&2** at Ulchin in North Gyeongsang province, and contracts for major APR1400 components were signed in March 2010. First concrete for unit 1 was poured at the end of July 2012, and start-up then expected to be in April 2018. Unit 2 is a year behind it, with first concrete in June 2013. The two units will be the first to use locally-made coolant pumps and man-machine interface systems with distributed digital architecture and a computer-based advanced control room. At the end of 2018 the two units were 98% complete. Fuel loading in unit 1 was scheduled for June 2019 but was delayed pending safety checks by the NSSC and some modifications. Commercial operation of unit 1 was then expected in July 2021, and unit 2 in May 2022, but there were further delays. In June 2021 the prime minister said he would ask the chairman of the NSSC to approve the plant for operation. Fuel loading at unit 1 commenced in July 2021 and was completed in October 2021. First criticality was achieved in May 2022, and the unit was connected to the grid in June 2022. Commercial operation of unit 1 began in December 2022. Unit 2 achieved first criticality and was connected to the grid in December 2023. Commercial operation of unit 2 began in April 2024.
+
+In January 2014 the government authorized construction of two APR1400 units as **Saeul 3&4\***. Construction was originally scheduled to start in September 2014, but was then delayed. The regulator issued a construction licence in June 2016, and site works began immediately. Construction of unit 5 commenced in April 2017. However, following the change in government in June 2017, KHNP decided to suspend work for three months. In October, a government-organized committee voted 59.5% in favour of resuming construction of the two units. The committee stated that stability of power supply had been cited as a primary reason for the choice in survey responses. In September 2018, construction of unit 6 commenced.
+
+\* Formerly known as Shin Kori 5&6
+
+Prior to the delay, commercial operation was due in March 2021 and March 2022. They were expected to cost KRW 8.63 trillion ($7.6 billion, $2700/kWe), of which KRW 1.6 trillion had been spent to August 2017. KHNP awarded a KRW 1180 billion construction contract to a Samsung C&T, Doosan Heavy Industries & Construction and Hanwha Construction consortium in June 2015. In late December 2025 the NSSC issued an operating licence for Saeul 3, with fuel loading and approximately eight months of testing to follow. Commercial operation is expected around August 2026. Saeul 4 is expected to follow in late 2026.
+
+In November 2014 KHNP signed an agreement with Ulchin county to build **Shin Hanul 3&4**. Under the agreement, in exchange for hosting the new units, KHNP was to provide the county with KRW 280 billion ($250 million), mainly to be used for improving local infrastructure, with the remainder for building new schools and hospitals. A development licence was issued in February 2017. Commercial operation was expected in December 2022 and December 2023 but in May 2017, KHNP suspended design work on the units until the government confirmed its policy on the construction of new reactors. In March 2023 KHNP signed a KRW2.9 trillion ($2.3 billion) 10-year contract with Doosan Enerbility for the supply of nuclear reactors, steam generators and turbine generators for the two APR1400 units. In December 2023 Hyundai Engineering & Construction was selected as the prime contractor for the main nuclear island facilities. The NSSC issued a construction licence for the two units in September 2024. First concrete for unit 3 was poured in May 2025. Unit 3 is expected to be completed by 2032, with unit 4 following in 2033.
+
+In November 2014 the government signed an agreement with Yeongdeok county in North Gyeongsang province 100 km north of Wolsong to build the new **Cheon-ji** plant, initially with two 1500 MWe APR+ reactors, possibly from 2022. Two more units were proposed (either there or at Daejin). For hosting the new plant, the county would receive payments totalling KRW 1.5 trillion ($1.3 billion) from KHNP over 60 years. In 2015 KEPCO said that Cheon-ji 1&2 would come online in December 2026 and December 2027. However, in the light of government policy in December 2017, KHNP has cancelled these four units.
+
+Samcheok in Gangwon province 180 km east of Seoul had also been under consideration for a new plant. However, an October 2014 unofficial referendum at Samcheok, which volunteered a site in 2010, got a response of 85% against any new reactor there, despite a 97% vote in favour in 2009.
+
+### Extended outages
+
+Hanbit 4 was taken offline for a “planned preventive maintenance” outage in May 2017. During the outage 'voids' were discovered in its containment building requiring repair. The unit was returned to service in December 2022. The five-year outage was also used to replace steam generators. Hanbit 3 was offline for similar repairs from 2018-2020.
+
+### Licence renewals, uprates and upgrades
+
+KHNP and the Ministry of Education, Science and Technology (MEST) (now MOTIE) negotiated licence renewals to extend 30-year operating lifetimes of Kori 1 and Wolsong 1 by ten years. A six-month upgrade and inspection outage at Kori 1 in the second half of 2007 concluded a major refurbishment programme and enabled its relicensing for a further ten years. In 2015 the energy advisory panel recommended against further operating lifetime extension, and the unit was closed down in June 2017. KHNP submitted its application in May 2021 to the NSSC to dismantle the unit. It was approved in June 2025.
+
+At Wolsong 1, a Candu 6 PHWR, considerable refurbishment was undertaken in a longer outage from April 2009 to July 2011, including replacement of all 380 calandria tubes to enable a further 25 years operational lifetime. Some KRW 560 billion ($520 million) was spent. It had been operating at slightly derated capacity (622 MWe gross) since 2004, but the refurbishment restored it to the design level of 691 MWe gross. However, it was then shut down in November 2012 when its 30-year operating licence expired, and spent 28 months awaiting licence renewal by the NSSC. In October 2014 the [Korean Institute of Nuclear Safety](http://www.kins.re.kr/en/ "KINS website") (KINS) said that the unit could operate to 2022, and in February 2015 the NSSC renewed the licence to 2022. It restarted in June 2015 after KHNP had signed an agreement with local residents, including those in the nearby coastal city of Gyeongju, on the development of the region including the continued operation of Wolsong 1. The unit was taken offline in May 2018 for a scheduled outage, but in June 2018 KHNP announced it would be permanently shut down due to the "uncertain economic viability" of its continued operation. In December 2019 the NSSC confirmed its closure.
+
+Other Korean reactors are licensed for 40 years initially.
+
+The government is considering allowing reactors to operate beyond 40 years. KHNP suspended operation of Kori 2 in April 2023, Kori 3 in September 2024 and Kori 4 in August 2025 as each unit reached 40 years of operation. In November 2025 the NSSC approved the continued operation of Kori 2 until April 2033, making it the first South Korean reactor to receive an operating lifetime extension. KHNP plans to restart the unit in February 2026. KHNP is submitting safety assessment reports for continued operation of nine other units (Kori 3&4, Hanbit 1&2, Hanul 1&2, and Wolsong 2-4), whose operating licences expire before 2030.
+
+Rerating of the capacities of most units occurred at the end of 2005, totalling 693 MWe and reflecting the fact that many had been declaring load factors of over 100% for some time.
+
+**Cooling upgrades**
+
+The NSSC has said that rising seawater temperatures are approaching design limits at some nuclear plants in South Korea. According to KHNP's analysis, it is expected that Shin Wolsong 1&2 would reach the design seawater temperature in 2030, Hanbit 3&4 in 2031, and Hanbit 1, 2, 5&6 in 2034.
+
+KHNP plans to improve the cooling performance at its plants. At Shin Wolsong 1&2 the plate size of the existing heat exchanger has been increased. At Hanbit 1-6, KHNP plans to replace the existing tubular heat exchanger by the first half of 2029. For its other nuclear power plants, the company plans to pursue facility improvements in the mid- to long-term after conducting cooling performance evaluations.
+
+## History of the nuclear sector
+
+Nuclear activities were initiated when South Korea became a member of the International Atomic Energy Agency in 1957. In 1958 the Atomic Energy Law was passed and in 1959 the Office of Atomic Energy was established by the government. The first nuclear reactor to achieve criticality in South Korea was a small research unit in 1962.
+
+Ten years later, construction of the first nuclear power plant began – Kori 1, a Westinghouse unit built on a turnkey contract. It started up in 1977 and achieved commercial operation in 1978. After this there was a burst of activity, with eight reactors under construction in the early 1980s.
+
+South Korean energy policy has long been driven by considerations of energy security and the need to minimize dependence on imported fuels. Whilst energy policy continues to have nuclear power as a major element of electricity production in the near term, between 2017 and 2022 the government pursued a policy to phase out nuclear energy over about 40 years, which was subsequently reversed.
+
+After drawing on Westinghouse and Framatome technology for its first eight PWR units, and Combustion Engineering (which became part of Westinghouse) for two more, the Korean Standard Nuclear Power Plant (KSNP) became a recognized design, and evolved a little to KSNP+. In 2005 the KSNP/KSNP+ was rebranded as OPR-1000 (Optimized Power Reactor) apparently for Asian markets, particularly Indonesia and Vietnam. Ten operating units are now designated OPR-1000.
+
+Beyond this, the Generation III APR1400 draws on CE System 80+ innovations.
+
+## Fuel cycle
+
+South Korea has always had an open fuel cycle, without enrichment or reprocessing, due to the terms of its 1973 nuclear cooperation agreement with the USA. This agreement was renewed in June 2015 (see section below on [Korea-US Atomic Energy Agreement](#KoreaUS)).
+
+Uranium for fuel comes from Kazakhstan, Canada, Australia, Niger and elsewhere – 4730 tU being required in 2017, with 5300 tU anticipated by 2020. KEPCO, The state-owned [Korea Resources Corporation](https://www.kores.or.kr/ "KORES website") (KORES) has declared its intention to invest heavily in uranium and copper mines in Africa and South America. In 2009, KORES acquired Trendfield Holdings' 5% stake in Société des mines d’Azelik (SOMINA), a joint venture between the government of Niger (33%) and SinoU (37.2%), which owns the Azelik/Teguidda mine in Niger.
+
+A Korean consortium comprising KORES, Hanwha Corporation, Korea Electric Power Corporation, and SK Energy in 2007 acquired a 50% in CanAlaska Uranium's Cree East project located in the south-eastern portion of the Athabasca Basin in northern Saskatchewan, Canada. However, in May 2017, CanAlaska announced it had agreed to acquire the Korean consortium's 50% interest in the project through a buyback agreement.
+
+In 2010, KEPCO signed an agreement with France's Areva under which the South Korean company took a 10% stake in the Imouraren uranium mine in Niger. Work on the site was suspended in 2015 "pending more favourable market conditions". The operating company is 66.65% owned by Orano Expansion (86.5% Orano, 13.5% KEPCO/KHNP) and 33.35% by the government of Niger.
+
+In June 2009, KEPCO bought a 17% stake in Denison Mines and entered into an offtake agreement up to 20% of Denison's annual U3O8 production, KEPCO's stake in Denison was transferred to KEPCO's KHNP subsidiary in 2016 and, as of December 2017, stood at 10.42%. KHNP is also the majority member of the Korea Waterbury Uranium Limited Partnership (KWULP) consortium, which (as of December 2017) holds a 40% stake in Denison's Waterbury Lake Uranium Corporation and 35.78% of Denison's Waterbury Lake Uranium Limited Partnership.
+
+In August 2011, KEPCO entered into an agreement with Canada's Strathmore Minerals to take a 14% stake in Strathmore in order to fund exploration of Strathmore's Gas Hills uranium properties in Wyoming. Strathmore was acquired by Energy Fuels in 2013,
+
+Korea had no known and quantified uranium resources, though Perth-based Stonehenge Metals has acquired Chong Ma Mines, which holds the rights to the Daejon uranium deposit, identified by the [Korean Institute of Energy and Resources](http://www.kier.re.kr/eng/ "KIER website") (KIER) in a 1986 report. A JORC-compliant inferred resource of 25,000 tU at 0.027%U was announced in 2011. Uranium mining was planned from 2015, and test work on recovering vanadium by-product was proceeding. KORES, which discovered Daejon in 1979, holds the adjoining Gumsan deposit along strike to the south from Daejon. Stonehenge Metals has two other deposits further north in the same Ogchon geological formation: Miwon and Gwesan.
+
+In 2015 enrichment demand was 3.2 million SWU. TENEX, URENCO and Centrus have previously supplied this, but in mid-2007 KHNP signed a long-term (10+ years) €1 billion contract with AREVA NC for enrichment services at the Georges Besse II plant in France. Then in mid-2009 it took a 2.5% equity stake in the plant.
+
+The [Korea Atomic Energy Research Institute](http://www.kaeri.re.kr/english/ "KAERI website") (KAERI) has developed both PWR and Candu fuel technology. It and KEPCO NF have fabricated and supplied PWR fuel since 1990 and Candu PHWR fuel (unenriched) since 1987. KEPCO NF has capacity of 700 t/yr for PWR fuel and 400 t/yr for Candu PHWR fuel, and supplies all KHNP's needs. KEPCO NF plans to supply an advanced nuclear fuel with higher performance and improved safety compared with existing nuclear fuels, referred to as HIPER (High Performance with Efficiency and Reliability) fuel.
+
+In February 2009 Westinghouse announced that it and KEPCO NF would manufacture control element assemblies for Combustion Engineering-design power reactors in the USA and South Korea. A joint venture (Westinghouse 55%, KEPCO 45%), KW Nuclear Components, will make the elements at KEPCO NF's fuel fabrication facility in Daejeon. The Shin Kori 4 APR1400 is likely to include the first control elements manufactured by the venture.
+
+### Korea-US Atomic Energy Agreement
+
+South Korea is constrained in its nuclear power policy by the 1974 Korea-US Atomic Energy Agreement. This is a so-called '123 Agreement', named after section 123 of the 1954 US Atomic Energy Act, which constrains raw material supply and disallows uranium enrichment and reprocessing used fuel. Following the 123 agreement between the USA and the United Arab Emirates (UAE) in January 2009, the South Korean government described these US constraints as "excessive", and pushed for them to be eased before the agreement was renewed. The main concern was reprocessing. The 1973 agreement expired in March 2014, though with failure to reach agreement it was extended two years by unanimous vote in both houses of US Congress.
+
+After several years of intensive negotiation, a 20-year extension to the agreement with the USA was signed in June 2015. This is worded more in terms of a partnership than the 1974 one, and allows a little more freedom to manage nuclear fuel. However, it contains no provision to allow South Korea itself to enrich uranium or to recycle used nuclear fuel through reprocessing, apart from providing for US consent for some research on electrometallurgical reprocessing, and opening the possibility of future uranium enrichment “through consultations with the USA.” The High-Level Bilateral Commission was established for ongoing discussion which will include enrichment and reprocessing, holding out the possibility of future concessions on both. According to the Ministry of Foreign Affairs, South Korea achieved three goals in the agreement: the right to deal with used nuclear fuel; a stable supply of nuclear fuel; and promoting the export of nuclear power plants. The new agreement, approved by both presidents, brings South Korea closer to what the USA allows for Japan. The Bilateral Commission held its first meeting in April 2016 and formally established four working groups through which US and South Korean experts would collaborate on the management of used nuclear fuel, the promotion of nuclear exports and export control cooperation, assured fuel supply, and nuclear security.
+
+In May 2021 a joint US-South Korea [presidential statement](https://www.whitehouse.gov/briefing-room/statements-releases/2021/05/21/u-s-rok-leaders-joint-statement/ "U.S.-ROK Leaders’ Joint Statement (21 May 2021)") stated: “We commit to develop cooperation in overseas nuclear markets, including joint participation in nuclear power plant projects, while ensuring the highest standards of international nuclear safety, security, and non-proliferation are maintained.”
+
+## Waste management
+
+The Korea Radioactive Waste Management Corporation (KRMC) was set up at the beginning of 2009 under the Radioactive Waste Management Act as an umbrella organization to resolve South Korea's waste management issues and waste disposition, and particularly to forge a national consensus on high-level waste. It is accountable to MOTIE. Until then, KHNP had been responsible for managing all its radioactive waste. In mid-2013 KRMC's name changed to the [Korea Radioactive Waste Agency](https://www.korad.or.kr/korad/eng/index.jsp "KORAD website") (KORAD).
+
+### Used fuel
+
+The Atomic Energy Act of 1988 established the principle under which KHNP was levied a fee based on power generated to cover the cost of waste management and disposal. A fee was also levied on Korea Nuclear Fuel. The fees were collected by the Ministry of Education, Science, and Technology (MEST) and paid into the national Nuclear Waste Management Fund. A revised waste programme was drawn up by the Nuclear Environment Technology Institute (NETEC) and approved by the Atomic Energy Commission in 1998. These arrangements are superseded by KORAD, and KHNP now contributes a fee of KRW 900,000 (US$ 705) per kilogram of used fuel to KORAD.
+
+Used fuel is stored on each reactor site pending construction of a centralized interim storage facility, which is planned to be operational by 2035, eventually with 20,000 tonnes capacity. About 14,000 tonnes was stored at the end of 2015, onsite pool capacity being 12,000 tonnes, about half of both figures being for Candu fuel at Wolsong. Dry storage in MACSTOR/KN-400 modules is used for Candu fuel after six years of cooling in pools. Dry storage is also proposed for used fuel at other sites as pools at reactors reach capacity, notably Kori and Hanul/Ulchin.
+
+A public consultation on storage of used fuel pending disposal was announced in November 2012, since at-reactor storage was reported at the time to already be 71% full. In October 2013 the Public Engagement Commission on Spent Nuclear Fuel Management (PECOS) of 13 nuclear experts, professors, city council members, and an official from a private environmental watchdog was formally set up to take account of public opinion on spent nuclear fuel issues and feed into policy decisions. Following PECOS' recommendations in June 2015, the government established its National Policy on High Level Radioactive Waste Management in May 2016. The policy aims to use a consent-based process to select a final repository site by about 2028, following which an underground research laboratory would be operational 14 years later, followed by a further 10 years to construct the final repository, which would be operational by the mid-2050s. MOTIE is also considering disposing of used nuclear fuel overseas if a suitable repository is constructed. In February 2025 the National Assembly passed the Special Act on High-Level Radioactive Waste Management, requiring an interim storage facility to be operational by 2050 and a permanent disposal facility by 2060. In 2025 MOTIE and KORAD invited candidate sites for an underground research laboratory, with construction planned to begin in 2026.
+
+Reprocessing, either domestic or overseas, is not possible under constraints imposed by the country's cooperation agreement with the USA, which was extended for 20 years in June 2015. The ban was being appealed in the renegotiations, and ‘pyroprocessing’ proposed, which addressed US concerns. The extended agreement provided for US consent for some research on electrometallurgical reprocessing. KHNP has considered offshore reprocessing to be too expensive, and recent figures based on Japanese contracts with Areva in France support this view, largely due to transport costs.
+
+### Low- and intermediate-level waste
+
+Low- and intermediate-level waste (LILW) has been stored at each reactor site, with a current accumulation of about 60,000 drums of 200 litres. Volume reduction (drying, compaction) is undertaken at each site.
+
+NETEC took over the task of finding repository sites after several abortive attempts by KAERI and MEST over 1988-96. In 2000 it called for local communities to volunteer to host a disposal facility. Seven did so, including Yonggwang county in South Jeolla province with 44% citizen support, but in 2001 all local governments vetoed the proposal. The Ministry of Commerce, Industry & Energy (now MOTIE) selected four sites for detailed consideration and preliminary environmental review in 2003 with a view to negotiating acceptance with local governments from 2004. Buan, in North Jeolla province was reported to be favoured.
+
+The area selected for the LILW facility would get KRW 300 billion (US$ 260 million) in community support according to The Act for Promoting the Radioactive Waste Management Project and Financial Support for the Local Community 2000. The aim of this is to compensate for the psychological burden on residents, to reward a community participating in an important national project, and to facilitate amicable implementation of radioactive waste management.
+
+In November 2005, after votes in four provincial cities, Gyeongju in North Gyeongsang province on the east coast, 370 km southeast from Seoul, was designated as the site. Almost 90% of its voters approved, compared with Gunsan (84%), and Yeongdeok (79%). It is close to Wolsong, and the official name of the facility is the Wolseong Low and Intermediate Level Radioactive waste Disposal Center (WLDC).
+
+In June 2006 the government announced that the WLDC would provide shallow geological disposal of conditioned wastes, with vitrification being used on ILW to increase public acceptability. Construction started on the first phase in April 2008, and was completed in June 2014, at a cost of KRW 1.56 trillion (about $1.4 billion). The first phase, with a capacity of 100,000 drums, is formed of six underground silos 24m in diameter more than 80m below sea level. In August 2022 the second phase of construction began for the Gyeongju facility, comprising a near-surface disposal facility for low-level radioactive waste, with the capacity to handle 1.25 million 200-litre drums.
+
+The final capacity of the facility would be 800,000 drums, covering an area of about 2,100,000 m2, although a further 700,000 drum capacity could be built later.
+
+### Decommissioning
+
+The country’s oldest reactor, Kori 1, of 576 MWe net, was finally closed in June 2017 after 40 years of service, having had a ten-year licence extension. Decommissioning was approved by the NSSC in June 2025, with dismantling beginning the following month. Completion is expected by 2037.
+
+Wolsong 1, the country's first Candu 6 unit, was taken offline in May 2018 and its final closure was confirmed in December 2019.
+
+**South Korean reactors being decommissioned**
+
+var RDB\_WIDGET\_CONFIG\_widget\_wm7df = { "id": "widget\_wm7df", "type": "table\_reactor", "query": { "query": { "filtered": { "filter": { "bool": { "must": [ { "terms": { "reactor.status.exact": [ "Permanent Shutdown" ] } }, { "terms": { "reactor.country.exact": [ "South Korea" ] } } ] } }, "query": { "match\_all": {} } } } }, "base": "https://reactordb.world-nuclear.org", "include": "/embed.html", "settings": { "order": { "field": "reactor.permanent\_shutdown", "dir": "asc" }, "limit": "100", "countryPageTemplate": "/nuclear-reactor-database/summary/{country}", "reactorPageTemplate": "/nuclear-reactor-database/details/{reactor}", "reactor": [ { "field": "reactor.name", "display": "Reactor Name", "formatting": "reactor\_link" }, { "field": "reactor.model", "display": "Model" }, { "field": "reactor.process", "display": "Reactor Type" }, { "field": "reactor.reference\_unit\_power\_capacity\_net", "display": "Reference Unit Power (MWe)" }, { "field": "reactor.permanent\_shutdown", "display": "Permanent Shutdown", "formatting": "year\_month" } ] }}
+
+## Technology & R&D
+
+The main roles of nuclear R&D are to ensure that the national energy supply is secure, and to build the country's nuclear technology base to support nuclear exports. The Korea Atomic Energy Research Institute (KAERI) is the main body responsible for R&D. Particular goals established in 1997 include reactor design and nuclear fuel, nuclear safety, radioactive waste management, radiation and radioisotopes application, and basic technology research. The last, taking 27% of the funds, includes: development of liquid metal reactors, direct use of spent PWR fuel In Candu reactors (DUPIC), application of lasers, and research reactor utilization.
+
+Media reports in October 2020 said that KAERI's research in pyroprocessing and fast neutron reactors would end in 2020 after expenditure over 23 years of KRW 793 billion (about $700 million).
+
+In May 2025 the Korea Atomic Industrial Forum (KAIF) selected five startups for the 2025 Ultra-Gap Startup Incubation Project (DIPS 1000), a government-backed initiative to support next-generation nuclear technologies with funding and commercialization support. Awardees include Green Radiation, Samhong Machinery, Sanglim MSP, QTOP, and Fabtamer, each developing innovations in areas such as waste treatment, SAMR components, isotope separation, and i-SMR systems.
+
+### HANA
+
+High-performance alloy for nuclear applications (HANA) is a zirconium-based alloy being developed by Kepco’s nuclear fuel division for rod cladding, guide tubes and grids of nuclear fuel assemblies. The programme has two goals: to achieve a burn-up of 70 GWd/tU, compared to the global norm of about 60 GWd/tU, and to create a fully domestic technology which Korea could export.
+
+Starting in the 2010s Kepco irradiated HANA test rods in Habit 1-5 and HANA assemblies in Hanbit 2 and Hanul 6, achieving 65 GWd/tU. These were transported to Studsvik in Sweden for analysis and qualification. In 2026 an agreement was signed with both Studsvik and the Belgian Nuclear Research Centre (SCK CEN) for a programme of performance testing of irradiated HANA fuel.
+
+Kepco has said it plans to use HANA fuel assemblies in Korean reactors from 2028.
+
+### DUPIC
+
+KAERI's [DUPIC programme](http://www.kaeri.re.kr:8080/english/sub/sub03_02_01_04.jsp "DUPIC program") is the subject of South Korea's national case study for the IAEA's International Project on Innovative Nuclear Reactors and Fuel Cycles (INPRO), evaluating new fuel cycle technologies. It involves taking used fuel from light water reactors, crushing it, heating it in oxygen to drive off some 40% of the fission products, and re-forming it into PHWR fuel. It still contains all the actinides including about 1% plutonium, and about 96% uranium including approx 1% U-235. So the fissile content is about 1.5%, more than double that of natural uranium used for today's PHWRs. DUPIC research has been supported by Canada and is described more fully in the [Processing Used Nuclear Fuel](https://world-nuclear.org/info/inf69.html#Recycled_LWR_Uranium "Processing Used Nuclear Fuel") paper.
+
+### ACPF, electrometallurgical 'pyroprocessing'
+
+The other major research initiative by KAERI related to used fuel is an [advanced spent fuel conditioning process facility](https://www.kaeri.re.kr/english/sub/sub03_02_01_03.jsp "ACP") (ACPF). Development of this process involves substantial US-South Korean nuclear cooperation, since the USA effectively controls what is done with the country's used fuel. Much of the R&D has been done in the USA, based on earlier US work in the 1970s, but paid for by KAERI. However, the US government then suspended this. South Korea has declined an approach from China to cooperate on electrolytic reprocessing, and it has been rebuffed by Japan's [Central Research Institute of Electric Power Industry](http://criepi.denken.or.jp/en/ "CRIEPI website") (CRIEPI) due to government policy.
+
+The US Department of Energy (DOE) included funding for pyroprocessing R&D in its 2008 budget. This was significant in that the USA had strongly discouraged reprocessing in South Korea previously. But after the USA announced its Global Nuclear Energy Partnership (GNEP) early in 2006, the South Korean government pressed it to include KAERI's R&D, including particularly ACPF. The US DOE funding request for KAERI links pyroprocessing research to GNEP (now IFNEC), while DOE laboratories work with KAERI staff on the ACPF. In 2011, the USA and South Korea signed a 10-year R&D agreement to experiment with pyroprocessing technology and verify whether it is more resistant to proliferation.
+
+Using electrometallurgical pyroprocessing to close the fuel cycle with oxide fuels however requires them to be reduced to the metal on a commercial basis. It involves heating the pulverized used fuel to drive off volatile fission products and then reducing it to metal. This is put into a bath of molten lithium and potassium chloride, and uranium is recovered electrolytically (95.1% of the used fuel). The transuranics (notably plutonium, neptunium, americium and curium) remaining are concentrated and removed with some fission products (notably cerium, neodymium and lanthanum) to be fabricated into fast reactor fuel without any further treatment (1.6% of the used fuel). This is intrinsically proliferation-resistant because it is so hot radiologically, and the curium provides a high level of spontaneous neutrons. Also it recycles over 95% of the used fuel, leaving about 3.3% as separated waste.
+
+### Fast reactors
+
+Closely related to the ACPF development, and designed to be fuelled by the product of it, KAERI has proposed development of a pool-type sodium-cooled fast reactor which will operate in burner (not breeder) mode. This was supported by the USA in connection with GNEP/IFNEC and a Korean-prototype Generation IV sodium-cooled fast reactor (PGSFR) is planned for 2028. Building on decades of cooperation already, a formal agreement with the [US Argonne National Laboratory](http://www.anl.gov/ "ANL website") (ANL) was signed in August 2014 to progress this towards NSSC licensing approval by 2020 and commissioning by the end of 2028. The [US Electric Power Research Institute](http://www.epri.com/#/ "EPRI website") (EPRI) is also supporting the project.
+
+The prototype would produce 150 MWe for the grid, but its main purpose would be to demonstrate its fuel: PGSFR is to use metal fuel pins composed of low-enriched uranium and zirconium, and it can be subsequently reloaded with fuel that also contains transuranic elements recovered from reprocessing used oxide fuels. Argonne announced: "The metal fuel technology base was developed at Argonne in the 1980s and 1990s; its inherent safety potential was demonstrated in the landmark tests conducted on the Experimental Breeder Reactor-II (EBR-II) in April 1986. They demonstrated the safe shutdown and cooling of the reactor without operator action following a simulated loss-of-cooling accident... The PGSFR is the world's first fast reactor that exploits inherent safety characteristics to prevent severe accidents." (Metal fuel was previously used in Fermi 1 reactor in the USA and the Dounreay reactor in the UK.)
+
+In November 2015 KAERI signed an agreement with Russia’s [Research Institute of Atomic Reactors](http://www.niiar.ru/eng/about "RIAR website") (RIAR) to irradiate PGSFR fuel rods in Russia’s BOR-60 fast research reactor, and a further broad agreement with RIAR was signed in June 2016.
+
+KALIMER (Korea Advanced Liquid Metal Reactor) is a 600 MWe pool-type sodium-cooled fast reactor designed since 1992 to operate at 510ºC. A transmuter core consisting of uranium and transuranics in metal form from pyroprocessing is being designed, and no breeding blanket is involved. Future deployment of KALIMER as a Generation IV type was envisaged.
+
+Another stream of fast reactor development is via the [Nuclear Transmutation Energy Research Centre of Korea](http://peacer.org/new/index.php "Nuclear Transmutation Energy Research Centre of Korea") (NuTrECK) at Seoul University (SNU), drawing on Russian experience. It is working on lead-bismuth cooled designs of 35, 300 and 550 MW which would operate on pyroprocessed fuel. The 35 MW unit is designed to be leased for 20 years and operated without refuelling, and then returned to the supplier. It would be refuelled at the pyroprocessing plant and have a design operating lifetime of 60 years.
+
+As well as the fast reactor means of burning actinides, KAERI is researching HYPER (Hybrid Power Extraction Reactor), a kind of subcritical reactor which will be activated by a proton accelerator.
+
+### Research reactors
+
+KAERI has constructed a 30 MWt research reactor based on the Canadian Maple design called HANARO, which started up in 1995. In contrast to Canada's experience with Maple, this apparently works very well. It is light water moderated and cooled, with heavy water reflector, and is the basis of the Jordan Research and Training Reactor (JRTR) designed for Jordan and commissioned in December 2016. The JRTR is 5 MWt with the potential to upgrade to 10 MWt.
+
+In February 2012, the Ministry of Education, Science and Technology announced that the 15 MW Ki-Jang Research Reactor (KJRR) light water moderated and cooled research reactor and radioisotope facility (notably for Mo-99) would be built in Busan by 2017, with the KRW 290 billion ($260 million) project partly funded by Busan. The justification includes export of radioisotopes.
+
+In May 2023 first concrete was poured for the KJRR. It was announced that the project would cost KRW765 billion ($580 million). In late December 2025 the NSSC approved the start of operations, with trial operation to begin in 2026 and full operation expected in 2027.
+
+### VHTR and hydrogen
+
+KAERI has also submitted a very high temperature reactor (VHTR) design to the Generation IV International Forum with a view to hydrogen production from it. This is envisaged as 300 MWt modules operating at 900-950ºC each producing 30,000 tonnes of hydrogen per year. With engineering design completed in 2014, KAERI had expected operation by 2020. An agreement with steelmaker Posco envisages using the VHTR for smelting iron.
+
+### Fusion
+
+Beyond fission, Korea Superconducting Tokamak Advanced Research (KSTAR) was launched in December 1995 and began operating in September 2007 at Daejeon. The US$ 330 million facility was the world's eighth fusion device and in 2016 achieved a world record 70 seconds in high-performance plasma operation. In early 2024 KSTAR set a new record by sustaining plasma at 100 million degrees Celsius for 48 seconds.
+
+### North Korean project
+
+In the 1990s there was a proposal to build two South Korean KSNP reactors at Kumho in North Korea, paid for by international subscription. The project was aborted after the first one was about 30% complete. See: North Korea section of [Emerging Nuclear Energy Countries](https://world-nuclear.org/information-library/country-profiles/others/emerging-nuclear-energy-countries#NorthKorea "Emerging Nuclear Energy Countries") paper for details.
+
+### Nuclear export policy
+
+KEPCO is actively marketing OPR-1000 and APR1400 units in Middle East and North African countries, as well as Latin America. In December 2009 the APR1400 was selected as the basis of the United Arab Emirates (UAE) nuclear power programme, with the first four reactors initially due to be operating at Barakah by 2020 under a $20.4 billion contract. The choice was on the basis of cost and reliability of building schedule. An application for US design certification was made in October 2013, and revised in March 2015. The design was certified in May 2019.
+
+Shortly following its sale of four modern nuclear power reactors to the UAE, MOTIE declared in January 2010 that it aimed to achieve exports of 80 nuclear power reactors worth $400 billion by 2030, in the course becoming the world's third largest supplier of such technology, with a 20% share of the world market (behind the USA and France or Russia). This was under a plan known as Nu-Tech 2030, which proposed the development of indigenous reactor technology with full intellectual property rights known as the Innovative, Passive, Optimized, Worldwide Economical Reactor (I-POWER) by late 2012. "Nuclear power-related business will be the most profitable market after automobiles, semiconductors and shipbuilding," it said, adding: "We will promote the industry as a major export business." The Korean industry aimed to be 100% self-sufficient by 2012, with no residual intellectual property constraints.
+
+In November 2014 there were 200 UAE engineers at Korean nuclear plants, gaining experience for Barakah. The workforce of 18,000 at Barakah includes 2300 Koreans.
+
+In April 2015 KEPCO signed an agreement with Brazil’s Eletrobras and Eletronuclear, as a bridgehead into Latin America.
+
+In August 2016 KEPCO signed an agreement with Kenya Nuclear Electricity Board (KNEB) to cooperate on construction of nuclear power plants in Kenya.
+
+In 2016 KHNP signed an agreement with Ukraine’s Energotatom, one objective of which is to complete the construction of the Khmelnitski 3&4, partly-built Russian nuclear power reactors. An associated objective is to cooperate in the Ukraine-EU 'energy bridge' project, exporting power from Khmelnitski 2 to Poland.
+
+In June 2019, the US Nuclear Regulatory Commission agreed to certify the APR1400 reactor design.
+
+In March 2022 the incoming Yoon administration announced that it planned to win 10 new nuclear power plant orders abroad by 2030. In July 2024 KHNP was selected as preferred bidder for a contract to build two APR-1000 units at Dukovany in the Czech Republic, worth approximately $18.6 billion. The contract was signed in June 2025, with the first unit expected online by 2036. This is South Korea's first overseas reactor project since the UAE contract in 2009.
+
+Earlier in January 2015 the [SMART Power Company](http://www.smart-nuclear.com/ "SPC website") (SPC) was launched with support from six supply chain companies as the sole entity responsible for the export and construction of the small reactor technology, particularly to the Middle East for desalination. See section on [SMART reactor](#Smartreactors)[s](#SMARTreactors) below.
+
+In December 2009 the Jordan Atomic Energy Commission (JAEC) selected a consortium headed by KAERI with Daewoo to build a 5 MW research and test reactor (JRTR) at the Jordan University for Science & Technology – the country's first. The reactor is similar to South Korea's HANARO reactor, and is financed partly by a $70 million soft loan from South Korea, with 0.2% interest rate and repayment over 30 years. The reactor achieved first criticality in April 2016.
+
+### Reactor development, intellectual property
+
+The first three commercial units – Kori 1&2 and Wolsong 1 – were bought as turnkey projects. The next six – Kori 3&4, Hanbit 1&2, Hanul 1&2 – comprised the country's second generation of plants and involved local contractors and manufacturers. At that stage the country had six PWR units derived from Combustion Engineering in the USA, two from Framatome in Europe and one pressurized heavy water reactor (PHWR) from AECL in Canada.
+
+Then in the mid-1980s the Korean nuclear industry embarked upon a plan to standardize the design of nuclear plants and to achieve much greater self-sufficiency in building them. In 1987 the industry entered a ten-year technology transfer programme with Combustion Engineering (now part of Westinghouse) to achieve technical self-reliance, and this was extended in 1997.
+
+A sidetrack from this was the ordering of three more Candu-6 PHWR units from AECL in Canada, to complete the Wolsong power plant. These units were built with substantial local input and were commissioned in 1997-99.
+
+In 1987 the industry selected the CE System 80 (two-loop) steam supply system as the basis of standardization. Hanbit/Yonggwang 3&4 were the first to use this, with great success, and they marked significant technical independence for Korea. A further step in standardization was the Korean Standard Nuclear Plant (KSNP), which from 1984 brought in some further CE System 80 features and incorporated many of the US advanced light water reactor design requirements. It is the type used for all further 1000 MWe units as well as the two that were briefly under construction in North Korea.
+
+In the late 1990s, to meet evolving requirements, a programme to produce an improved KSNP, or KSNP+, was started. This involved design improvement of many components, improved safety and economic competitiveness, and optimising plant layout with streamlining of construction programmes to reduce capital cost. Shin Kori 1&2 represent the first units of the KSNP+ programme and were followed by Shin Wolsong 1&2. This design was offered for export as the Optimized Power Reactor (OPR-1000).
+
+Beyond this, the Generation III Advanced Pressurized Reactor-1400 (APR1400) draws on CE System 80+ innovations, which are evolutionary rather than radical. The System 80+ has US Nuclear Regulatory Commission design certification as a third-generation reactor. The APR1400 was originally known as the Korean Next-Generation Reactor when work started on the project in 1992. The basic design was completed in 1999 and design certification by the Korean Institute of Nuclear Safety (KINS) was awarded in May 2003. It offers enhanced safety with seismic design to withstand 300 Gal ground acceleration, and has a 60-year design operating lifetime. It is 1455 MWe gross in Korean conditions according to an IAEA status report, 1350-1400 MWe net with two-loop primary circuit. In a warm climate such as the UAE's, gross power is about 1400 MWe. It is designed "not only for the base load full power operation but also for a part load operation such as the load following operation. A standard 100-50-100% daily load follow operation has been considered in the reactor core design as well as in the plant control systems" (IAEA [status report 83](https://aris.iaea.org/PDF/APR1400.pdf "International Atomic Energy Agency, Advanced Reactors Information System (ARIS), Status report 83 - Advanced Power Reactor 1400 MWe (APR1400)")). Its cost was expected to be 10-20% less than that of the KSNP/OPR-1000. The first APR1400 unit – Shin Kori 3 – started commercial operation in December 2016. A 48-month construction period is envisaged normally. Korea Power Engineering Company (KOPEC) is the main designer, and Doosan the main manufacturer. In June 2010 Doosan signed a $3.9 billion contract to supply heavy reactor components and turbines to KEPCO for four APR1400 reactors in the UAE.
+
+KHNP decided not to renew its reactor technology licence agreement with Westinghouse in 2007 but to embark upon a business cooperation agreement instead, whereby KHNP would join with Westinghouse in marketing jointly-developed technology while KHNP completes the development of its own components to replace those (*e.g.* in the APR1400) dependent on the licensing. This led into a $200 million KHNP programme to develop an exportable advanced APR+ large (1500 MWe net) reactor design by 2015, though Westinghouse is not expected to let it compete in main markets such as the USA and China without KEPCO buying the rights to the design. However, securing the $20.4 billion contract to build four APR1400 reactors in the UAE was a major boost for KEPCO.
+
+In February 2016, KHNP and Westinghouse signed a long-term supply agreement for replacement parts for nuclear power plants. In October 2016 KHNP signed a new bilateral agreement with Westinghouse to jointly develop technology projects worldwide through technical cooperation based on "the mutual nuclear expertise and capabilities of their respective owners."
+
+KHNP submitted a design certification application for the APR1400 to the US Nuclear Regulatory Commission (NRC) in October 2013. However, further detail was requested, and the revised submission was accepted by the NRC in March 2015. The APR1400 received standard design approval from the NRC in October 2018. In January 2025 Westinghouse, KEPCO and KHNP signed a global settlement of their intellectual property dispute. Under the settlement, KHNP must pay Westinghouse for goods, services and technology licensing fees for each reactor it exports, and is restricted from bidding for new projects in North America, the EU (except the Czech Republic), the UK, Japan and Ukraine.
+
+KHNP’s 4308 MWt, 1500 MWe APR+ gained design approval from the NSSC in August 2014. It was “developed with original domestic technology,” up to 100% localized, over the seven years since 2007, with export markets in view. It has modular construction which is expected to give 36-month construction time instead of 52 months for the APR1400. It has 16 more fuel assemblies than the APR1400, of a new design, and passive decay heat removal as well as active safety. Also it is more highly reinforced against aircraft impact than any earlier designs.
+
+KEPCO has also developed the EU-APR1400 for the European market, with double containment, core-catcher and extra safety train redundancy. The design, more recently referred to as the EU-APR, was approved by European Utility Requirements (EUR) – a technical advisory group for European utilities on nuclear power plants – in October 2017.
+
+Early in 2010 KEPCO announced that it was designing an APR1000 as a Generation III type, based on the OPR-1000 but incorporating APR performance and safety features and with a 60-year operating lifetime. Basic design was due to be finished in August 2011, but there is no schedule for the detailed design. KEPCO Engineering & Construction in 2017 said it was derived from both the APR1400 and APR+.
+
+KEPCO signed an agreement with Indonesia's PT Medco Energi Internasional, an independent power producer, in 2007 to conduct a feasibility study – with KHNP – for Indonesia's first nuclear power plant. In February 2017 KEPCO E&C opened a branch in Jakarta.
+
+In December 2017 KEPCO was named as the preferred bidder to acquire 100% of the shares in NuGeneration (NuGen), the UK power development company owned by Toshiba. Subject to completion of the deal and approval from the UK government, KEPCO's APR1400 would replace previous plans for AP1000 units at Moorside. However, in July 2018, Toshiba informed KEPCO that it was no longer the preferred bidder for the company.
+
+### Small modular reactors
+
+In December 2022 Korea announced a commitment of 400 billion won ($310 million) a year for the development of small nuclear reactors.
+
+**SMART reactor**
+
+KAERI has been developing the SMART (System-integrated Modular Advanced Reactor) – a 330 MWt pressurized water reactor with integral steam generators and advanced passive safety features. It is designed for generating electricity (up to 100 MWe) and/or thermal applications such as seawater desalination – up to 40,000 m3/day. Design operating lifetime is 60 years, with a three-year refuelling cycle. In mid-2010 a consortium of 13 South Korean companies led by KEPCO pledged KRW 100 billion (about $90 million) to complete the design work. US-based engineering company URS provided technical services to KAERI. NSSC licensed the design (standard design approval) in 2012 and KAERI incorporated post-Fukushima modifications to 2016, making cooling fully passive. The cost is expected to be about $5000/kWe. It has 57 fuel assemblies very similar to normal PWR ones but shorter, and it operates with a 36-month fuel cycle. KAERI planned to build a 90 MWe demonstration plant to operate from 2017, but this is not practical or economic in South Korea.
+
+The SMART100 design, an advanced version of SMART, received standard design approval from the NSSC in September 2024. Samsung Heavy Industries received Approval in Principle from the American Bureau of Shipping in December 2025 for a floating nuclear power platform featuring two SMART100 reactors.
+
+In January 2015 the SMART Power Company Ltd (SPC) was launched with support from six supply chain companies as the sole entity responsible for the export and construction of SMART, particularly to the Middle East for desalination. The Ministry for Science, ICT and Future Planning (MSIP) formed a government-supported consultative body with the Office for Government Policy Coordination, MOTIE and the Ministry of Foreign Affairs (MOFA) to support SMART export cooperation activities and private businesses.
+
+In March 2015 KAERI signed an agreement with Saudi Arabia’s King Abdullah City for Atomic and Renewable Energy (KA-CARE) to assess the potential for building at least two South Korean SMART reactors in the country, and possibly more. The cost of building the first SMART unit in Saudi Arabia was estimated at $1 billion. The agreement is seen by South Korea as opening opportunities for major involvement in Saudi nuclear power plans, and it also calls for the commercialization and promotion of the SMART reactor to other countries. Through to November 2018 studies are being undertaken jointly including first-of-a-kind engineering design and preparations for building two units. KEPCO E&C is undertaking the pre-project planning and feasibility studies for KAERI’s $130 million contract. SPC will be the principal EPC contactor, with construction start planned in 2018. KAERI sees this as a new business model for SMR development.
+
+**BANDI-60S**
+
+The BANDI-60S is a two-loop PWR being developed since 2016 by South Korea’s Kepco Engineering & Construction company. It is a 200 MWt/60 MWe reactor designed for niche markets, particularly floating nuclear power plants. It is described as ‘block type’ with the external steam generators connected directly nozzle-to-nozzle. Initially the steam generators are conventional U-tube, but Kepco is working on a plate and shell design which will greatly reduce their size. Apart from steam generators, most main components including control rod drives are within the pressure vessel. Primary pumps are canned motor, and decay heat removal is passive. There are 52 conventional fuel assemblies, giving 35 GWd/t burn-up with 48-60 month fuel cycle. Burnable absorbers are used instead of soluble boron. Design operating lifetime is 60 years. The pressure vessel is 11.2 m high and 2.8 m diameter. In September 2020 Kepco signed an agreement with Daewoo Shipbuilding & Engineering to develop offshore nuclear power plants using the reactor. In October 2023 the American Bureau of Shipping issued an in-principle approval for the nuclear power barge design.
+
+**i-SMR**
+
+South Korea is developing the i-SMR, a 170 MWe integrated pressurized water reactor with 520 MWt thermal output. It features a passive safety system and an integral reactor coolant system configuration. The standard design was expected to be completed by the end of 2025, with regulatory approval targeted for 2028 and commercialization planned for 2033.
+
+## Institutional and regulatory framework
+
+The Atomic Energy Commission (AEC) is the highest decision-making body for nuclear energy policy and is chaired by the prime minister. It was set up under the Atomic Energy Act.
+
+The government launched the Nuclear Safety and Security Commission (NSSC) in October 2011. It is independent, reporting to the president, and its chairman has ministerial rank. The Korean Institute of Nuclear Safety (KINS), formerly the expert safety regulator under the Ministry of Education, Science, and Technology (MEST), became a technical support organization under it, while MEST simply promoted nuclear power. The NSSC's scope covers licensing, inspection, enforcement, incident response and emergency response, non-proliferation and safeguards, export/import control and physical protection. In 2012 the NSSC signed an agreement with its Canadian counterpart (CNSC) to strengthen cooperation. In December 2013 the NSSC agreed with Japan and China regulators to form a network to cooperate on nuclear safety and quickly exchange information in nuclear emergencies. The Korean regulatory framework is largely modelled on the US Nuclear Regulatory Commission.
+
+Prior to the NSSC's inception, the high-level Nuclear Safety Commission (NSC) chaired by the Ministry of Trade, Industry and Energy (MOTIE) was responsible for nuclear safety regulation until 2011. It was independent of the AEC and was set up by amendment of the Atomic Energy Act in 1996. The Korea Atomic Energy Research Institute (KAERI), responsible for R&D, comes under the [National Research Council of Science & Technology](http://www.nst.re.kr/nst_en/about/01_03.jsp "NST website") (NST). The Technology Centre for Nuclear Control, responsible for nuclear material accounting and the international safeguards regime, was transferred from KAERI to KINS at the end of 2004 and was then replaced by the National Nuclear Management and Control Agency (NNCA). In June 2006 this was replaced by the Korean Institute of Nuclear Non-proliferation and Control (KINAC), with greater independence, under MEST. However this role has now apparently been transferred to the NSSC.
+
+MOTIE is responsible for energy policy, for the construction and operation of nuclear power plants, nuclear fuel supply and radioactive waste management. KEPCO, KHNP, KNFC, NETEC and heavy engineering operations come under MOTIE, and KEPCO seems to have a controlling role with respect to the others. The Korea Nuclear Energy Foundation (KNEF) is a public information body also under MOTIE.
+
+The Ministry of Education, Science & Technology (MEST) had overall responsibility for nuclear R&D, nuclear safety and nuclear safeguards. Having been joined to it in 2008, in 2013 the Ministry of Education was split from this, and the remnant became the Ministry for Science, ICT and Future Planning (MSIP).
+
+The Korea Nuclear Energy Promotion Agency (KONEPA) changed its name to Korea Nuclear Energy Agency (KNEA) in mid-2015.
+
+The Korea Nuclear Association for International Cooperation (KNA) was set up in 2011 as an industry association linking Kepco with suppliers and contractors, and is supported by MOTIE.
+
+The Korea Atomic Industry Forum (KAIF) is supported by MOTIE, and is domestic-focused. In April 2016 it signed a cooperation agreement with Rosatom International Network.
+
+### Recent regulatory actions
+
+After the Fukushima accident there was immediate assessment of each site followed by a special ministerial safety review of all plants (with special attention to Kori 1) and then an IAEA Integrated Regulatory Review Service check of the whole South Korean situation. A number of measures were initiated: the coastal barrier at Kori 1 was raised to 10m, watertight doors were fitted to emergency diesel generator buildings, battery power supplies were secured from the possibility of flooding, a truck with a portable diesel generator was situated at each site, pumps were waterproofed, passive hydrogen removal systems not dependent on electricity were installed, exhaust and decompression equipment was improved, and the seismic performance of automatic shutdown and cooling systems was improved. All this represents an investment of about US$ 1 billion over five years.
+
+In 2012 KHNP discovered that it had been supplied with falsely-certified non-safety-critical parts for at least five power reactors. The utility told the ministry that eight unnamed suppliers – reportedly seven domestic companies and one US company – forged some 60 quality control certificates covering 7682 components delivered between 2003 and 2012. The majority of the parts were installed at Hanbit (Yonggwang) units 5&6, while the rest were used at Hanbit units 3&4 and Hanul (Ulchin) unit 3. The Hanbit units were taken offline while the parts were replaced.
+
+Then in May 2013 safety-related control cabling with falsified documentation was found to have been installed at four reactors. The NSSC ordered KHNP immediately to stop operation of its Shin Kori 2 and Shin Wolsong 1 units and to keep Shin Kori 1, which had been offline for scheduled maintenance, shut down. In addition, the newly-constructed Shin Wolsong 2, which was awaiting approval to start commercial operation, could not start up. Shin Kori 1&2 and Shin Wolsong 1 were cleared to restart in January 2014. Completion of Shin Kori 3&4 was delayed, to 2015, due to the need to replace control cabling which failed tests. In October 2013 about 100 people were indicted for their part in the falsification of documentation.
+
+## Non-proliferation
+
+South Korea is a party to the Nuclear Non-Proliferation Treaty (NPT) as a non-nuclear weapons state. Its safeguards agreement under the NPT came into force in 1975 and it has signed the Additional Protocol in relation to this.
+
+---
+
+## Notes & References
+
+### Notes
+
+a. US Energy Information Administration [country profile for South Korea](https://www.eia.gov/beta/international/country.cfm?iso=KOR "Energy Information Administration country profile for South Korea") [[Back](#NotesReferencesa)]
+
+### General References
+
+*Country Nuclear Power Profiles,* International Atomic Energy Agency
+
+## Related information
+
+[Processing of Used Nuclear Fuel](https://world-nuclear.org/information-library/nuclear-fuel-cycle/fuel-recycling/processing-of-used-nuclear-fuel)
+
+Contents
+
+---
+
+[Electricity sector](#electricity-sector)
+[Energy policy](#energy-policy)
+[Nuclear power industry](#nuclear-power-industry)
+[History of the nuclear sector](#history-of-the-nuclear-sector)
+[Fuel cycle](#fuel-cycle)
+[Waste management](#waste-management)
+[Technology & R&D](#technology-amp-rampd)
+[Institutional and regulatory framework](#institutional-and-regulatory-framework)
+[Non-proliferation](#non-proliferation)
+[Notes & References](#notes-amp-references)
+[Related Information](#related-information)

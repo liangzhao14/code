@@ -1,0 +1,66 @@
+-- MySQL 数据库 Schema
+
+CREATE TABLE IF NOT EXISTS `user` (
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
+    `username` VARCHAR(50) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    `avatar` VARCHAR(500) DEFAULT 'preset:1' COMMENT '头像：preset:N 预设头像 或 上传文件路径',
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS `credit_card` (
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
+    `card_name` VARCHAR(100) NOT NULL,
+    `bank_name` VARCHAR(100) NOT NULL,
+    `card_last_four` VARCHAR(4) NOT NULL,
+    `billing_day` INT NOT NULL,
+    `due_day` INT NOT NULL,
+    `credit_limit` DECIMAL(12,2) DEFAULT 0,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS `credit_card_bill` (
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
+    `card_id` BIGINT NOT NULL,
+    `bill_month` VARCHAR(7) NOT NULL,
+    `bill_amount` DECIMAL(12,2) NOT NULL,
+    `minimum_payment` DECIMAL(12,2) DEFAULT NULL,
+    `repayment_status` TINYINT NOT NULL DEFAULT 0,
+    `actual_payment` DECIMAL(12,2) DEFAULT NULL,
+    `payment_date` DATE DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (`card_id`) REFERENCES `credit_card`(`id`) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS `income` (
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
+    `amount` DECIMAL(12,2) NOT NULL,
+    `income_type` VARCHAR(50) NOT NULL,
+    `income_date` DATE NOT NULL,
+    `remark` VARCHAR(255) DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS `expense_category` (
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(50) NOT NULL UNIQUE,
+    `sort_order` INT DEFAULT 0,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS `expense` (
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
+    `amount` DECIMAL(12,2) NOT NULL,
+    `category_id` BIGINT NOT NULL,
+    `expense_date` DATE NOT NULL,
+    `remark` VARCHAR(255) DEFAULT NULL,
+    `card_id` BIGINT DEFAULT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (`category_id`) REFERENCES `expense_category`(`id`),
+    FOREIGN KEY (`card_id`) REFERENCES `credit_card`(`id`) ON DELETE SET NULL
+);

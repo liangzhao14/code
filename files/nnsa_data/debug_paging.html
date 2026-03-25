@@ -1,0 +1,717 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>检索结果页面</title>
+
+    <link class="stylefile" href="images/NNSA_fgk_iframe_list.css" rel="stylesheet" type="text/css" ignoreapd="true">
+    
+    <script type="text/javascript" src="images/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="images/respond.src.js"></script>
+    <script type="text/javascript" src="images/jquery.SuperSlide.2.1.1.js"></script>
+    <!--分页js/css-->
+    <script src="images/jqueryPage/query_2023.js"></script>
+    <script src="images/jqueryPage/paging_2023.js"></script>
+
+    <script src="images/replace.js"></script>
+
+    <link href="/images/paging.css" type="text/css" rel="stylesheet" ignoreapd="true">
+
+    <script>
+        var isPC = IsPC();//获取是否为PC端
+        if (isPC) {//如果是PC端加载PC的js和css
+            $(".mobileStyle").remove();
+        } else {//如果是移动端加载移动端的js和css
+            $(".stylefile").remove();
+            dynamicLoadJs('/images/NNSA_mobile_v2019.js')
+           
+        }
+        function IsPC() {//获取设备是否为PC的方法
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) >= 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        };
+
+        function dynamicLoadCss(url) {//加载css方法
+            var head = document.getElementsByTagName('head')[0];
+            var link = document.createElement('link');
+            link.type = 'text/css';
+            link.rel = 'stylesheet';
+            link.href = url;
+            head.appendChild(link);
+        }
+
+        function dynamicLoadJs(url, callback) {//加载js方法
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            if (typeof(callback) == 'function') {
+                script.onload = script.onreadystatechange = function () {
+                    if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                        callback();
+                        script.onload = script.onreadystatechange = null;
+                    }
+                };
+            }
+            head.appendChild(script);
+        }
+    </script>
+</head>
+<body>
+<div class="iframe-box">
+    <div class="date-line" style="display:none">
+        <div class="date-main-box">
+            <span class="date-arrow-left prevStop"></span>
+            <span class="date-arrow-right"></span>
+            <div class="bd">
+                <div class="tempWrap" style="overflow:hidden; position:relative; width:0px"><ul style="width: 0px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                <li value="" style="float: left; width: 0px;">2026年</li><li value="" style="float: left; width: 0px;">2025年</li><li value="" style="float: left; width: 0px;">2024年</li><li value="" style="float: left; width: 0px;">2023年</li><li value="" style="float: left; width: 0px;">2022年</li><li value="" style="float: left; width: 0px;">2021年</li><li value="" style="float: left; width: 0px;">2020年</li><li value="" style="float: left; width: 0px;">2019年</li><li value="" style="float: left; width: 0px;">2018年</li><li value="" style="float: left; width: 0px;">2017年</li><li value="" style="float: left; width: 0px;">2016年</li><li value="" style="float: left; width: 0px;">2015年</li><li value="" style="float: left; width: 0px;">2014年</li><li value="" style="float: left; width: 0px;">2013年</li><li value="" style="float: left; width: 0px;">2012年</li><li value="" style="float: left; width: 0px;">2011年</li><li value="" style="float: left; width: 0px;">2010年</li><li value="" style="float: left; width: 0px;">2009年</li><li value="" style="float: left; width: 0px;">2008年</li><li value="" style="float: left; width: 0px;">2007年</li><li value="" style="float: left; width: 0px;">2006年</li><li value="" style="float: left; width: 0px;">2005年</li><li value="" style="float: left; width: 0px;">2004年</li><li value="" style="float: left; width: 0px;">2003年</li><li value="" style="float: left; width: 0px;">2002年</li><li value="" style="float: left; width: 0px;">2001年</li><li value="" style="float: left; width: 0px;">2000年</li><li value="" style="float: left; width: 0px;">1999年</li><li value="" style="float: left; width: 0px;">1998年</li><li value="" style="float: left; width: 0px;">1997年</li><li value="" style="float: left; width: 0px;">1996年</li><li value="" style="float: left; width: 0px;">1995年</li><li value="" style="float: left; width: 0px;">1994年</li><li value="" style="float: left; width: 0px;">1993年</li><li value="" style="float: left; width: 0px;">1992年</li><li value="" style="float: left; width: 0px;">1991年</li><li value="" style="float: left; width: 0px;">1990年</li><li value="" style="float: left; width: 0px;">1989年</li><li value="" style="float: left; width: 0px;">1988年</li><li value="" style="float: left; width: 0px;">1987年</li></ul></div>
+            </div>
+        </div>
+    </div>
+    <!--排序方式-->
+    <!--/排序方式-->
+    <table class="i_nav">
+        <tbody><tr>
+		 
+            <td class="i_1" style="display:none">成文日期</td>
+            <td class="i_rt">标题</td>
+            <td class="i_3 i_rt" style="display:none">发文字号</td>
+		 
+            
+        </tr>
+    </tbody></table>
+    
+    
+    <div class="iframe-list" id="iframe-list">
+        <table style="border-collapse:separate;">
+            <tbody><tr>
+                
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<td class="td-date" style="display:none"><span style="display:none">2019-08-26</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211214_964042.shtml?keywords=" target="_blank" title="">
+							核动力厂、研究堆、核燃料循环设施安全许可程序规定
+							   <!--核动力厂、研究堆、核燃料循环设施安全许可程序规定-->
+						</a></td>
+						<td class="td-right" style="display:none">部令&nbsp;第8号
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">2021-01-29</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211214_964075.shtml?keywords=" target="_blank" title="">
+							民用核设施操作人员资格管理规定
+							   <!--民用核设施操作人员资格管理规定-->
+						</a></td>
+						<td class="td-right" style="display:none">部令&nbsp;第22号
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">1995-06-14</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211213_963926.shtml?keywords=" target="_blank" title="">
+							核设施的安全监督
+							   <!--核设施的安全监督-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">2020-11-20</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211214_964050.shtml?keywords=" target="_blank" title="">
+							核动力厂营运单位核安全报告规定
+							   <!--核动力厂营运单位核安全报告规定-->
+						</a></td>
+						<td class="td-right" style="display:none">部令&nbsp;第13号
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">2024-08-02</span></td>
+						<td><a href="https://www.mee.gov.cn/gzk/gz/202408/t20240802_1083222.shtml?keywords=" target="_blank" title="">
+							研究堆营运单位核安全报告规定
+							   <!--研究堆营运单位核安全报告规定-->
+						</a></td>
+						<td class="td-right" style="display:none">部令&nbsp;第34号
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">1995-06-14</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211215_964187.shtml?keywords=" target="_blank" title="">
+							核燃料循环设施的报告制度
+							   <!--核燃料循环设施的报告制度-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">1998-05-12</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211213_963960.shtml?keywords=" target="_blank" title="">
+							核电厂营运单位的应急准备和应急响应
+							   <!--核电厂营运单位的应急准备和应急响应-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">1991-07-27</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211213_963881.shtml?keywords=" target="_blank" title="">
+							核电厂质量保证安全规定
+							   <!--核电厂质量保证安全规定-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">2013-12-30</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211214_964017.shtml?keywords=" target="_blank" title="">
+							核与辐射安全监督检查人员证件管理办法
+							   <!--核与辐射安全监督检查人员证件管理办法-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">2021-01-04</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211214_964057.shtml?keywords=" target="_blank" title="">
+							核动力厂管理体系安全规定
+							   <!--核动力厂管理体系安全规定-->
+						</a></td>
+						<td class="td-right" style="display:none">部令&nbsp;第18号
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none"></span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211213_963901.shtml?keywords=" target="_blank" title="">
+							核电厂换料、修改和事故停堆管理
+							   <!--核电厂换料、修改和事故停堆管理-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">1995-06-06</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211213_963911.shtml?keywords=" target="_blank" title="">
+							研究堆设计安全规定
+							   <!--研究堆设计安全规定-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">1995-06-06</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211213_963919.shtml?keywords=" target="_blank" title="">
+							研究堆运行安全规定
+							   <!--研究堆运行安全规定-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">1993-06-17</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211213_963883.shtml?keywords=" target="_blank" title="">
+							民用核燃料循环设施安全规定
+							   <!--民用核燃料循环设施安全规定-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">1997-11-05</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211213_963930.shtml?keywords=" target="_blank" title="">
+							放射性废物安全监督管理规定
+							   <!--放射性废物安全监督管理规定-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none"></span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211214_964019.shtml?keywords=" target="_blank" title="">
+							放射性固体废物贮存和处置许可管理办法（2019年修正）
+							   <!--放射性固体废物贮存和处置许可管理办法（2019年修正）-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none"></span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211213_963873.shtml?keywords=" target="_blank" title="">
+							中华人民共和国核材料管制条例实施细则
+							   <!--中华人民共和国核材料管制条例实施细则-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none"></span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211215_964144.shtml?keywords=" target="_blank" title="">
+							民用核安全设备设计制造安装和无损检验监督管理规定（2019年修正）
+							   <!--民用核安全设备设计制造安装和无损检验监督管理规定（2019年修正）-->
+						</a></td>
+						<td class="td-right" style="display:none">
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">2019-06-13</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211214_964041.shtml?keywords=" target="_blank" title="">
+							民用核安全设备无损检验人员资格管理规定
+							   <!--民用核安全设备无损检验人员资格管理规定-->
+						</a></td>
+						<td class="td-right" style="display:none">部令&nbsp;第6号
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+                
+                
+		        
+                
+				<!--开始-->
+				     
+										
+						<tr><td class="td-date" style="display:none"><span style="display:none">2019-06-12</span></td>
+						<td><a href="http://www.mee.gov.cn/gzk/gz/202112/t20211214_964040.shtml?keywords=" target="_blank" title="">
+							民用核安全设备焊接人员资格管理规定
+							   <!--民用核安全设备焊接人员资格管理规定-->
+						</a></td>
+						<td class="td-right" style="display:none">部令&nbsp;第5号
+						</td>
+					 
+					 
+					 
+				
+				<!--结束-->
+				
+            </tr>
+
+            
+
+        </tbody></table>
+        
+        
+        <div class="page"><div id="Paging_07084629048694066" class="ui-paging-container"><ul>共2页<li class="js-page-first js-page-action ui-pager ui-pager-disabled">首页</li><li class="js-page-prev js-page-action ui-pager ui-pager-disabled">上一页</li><li data-page="1" class="ui-pager focus">1</li><li data-page="2" class="ui-pager">2</li><li class="js-page-next js-page-action ui-pager">下一页</li><li class="js-page-last js-page-action ui-pager">尾页</li><li class="ui-paging-toolbar"><select class="ui-select-pagesize" onchange="changes(value)"><option value="20">20条/页</option></select>转到第<input type="text" class="ui-paging-count">页<a href="javascript:void(0)">提交</a></li></ul></div></div>
+    </div>
+    <!--列表-->
+
+    <div class="pageInfo list_navigator" id="list_navigator"></div>
+    <div id="divNoObjectFound" style="display:none;">
+        <div class="no_object_found">没有找到符合条件的记录</div>
+    </div>
+    <form name="pageform" action="simp_gov_list_20180820.jsp" method="get">
+        
+
+        <input type="hidden" name="SType" value="2">
+        <input type="hidden" name="searchColumn" value="1">
+        <input type="hidden" name="searchYear" value="">
+        <input type="hidden" name="title" value="">
+        <input type="hidden" name="content" value="">
+        <input type="hidden" name="keyword" value="">
+
+        <input type="hidden" name="filetype" value="">
+        <input type="hidden" name="channelid" value="33638">
+        <input type="hidden" name="themecat" value="">
+        <input type="hidden" name="organcat" value="">
+        <input type="hidden" name="pubdatestart" value="">
+        <input type="hidden" name="pubdateend" value="">
+        <input type="hidden" name="Abolishstart" value="">
+        <input type="hidden" name="Abolishend" value="">
+        <input type="hidden" name="dateredio" value="">
+        <input type="hidden" name="orderby" value="">
+
+        <input type="hidden" name="page" value="1">
+        <input type="hidden" name="pubURL" value="">
+    </form>
+
+    <script type="text/javascript">
+        var my = new Date();
+        // 获取当前年份
+        var endYear = my.getFullYear();
+        for (var i = endYear; i >= 1987; i--) {
+            jQuery(".bd ul").append('<li value="">' + i + "年" + '</li>');
+        }
+    </script>
+    <script>
+        window.onload = function () {
+            pagin();
+            
+            
+            
+        }
+
+        //日期滚动效果
+        jQuery(".date-main-box").slide({mainCell: ".bd ul", autoPage: false, effect: "left", vis: 10, pnLoop: false});
+        // jQuery(".date-main-box").slide({callback: {
+        //     loaded: function(number) {
+        //         // 幻灯片载入完成时
+        //         $("#u").css("left","-500px");
+        //     },}})
+        var url = location.href;
+        $(".bd ul li").each(function (i, item) {
+            if (jsUrlHelper.getUrlParam(url, "searchYear") && jsUrlHelper.getUrlParam(url, "searchYear") == (item.textContent.substring(0, 4))) {
+                $(this).addClass("cur").siblings().removeClass("cur");
+                // jQuery(".date-main-box").slide({mainCell: ".bd ul", autoPage: false, effect: "left", vis: 10, pnLoop: false, defaultIndex: i});
+                jQuery(".date-main-box").slide({mainCell: ".bd ul", autoPage: false, effect: "left", vis: 10, pnLoop: false,defaultIndex:i-9<0?0:(i-4)});
+            }
+        })
+        $(".xxgk-px span").each(function (i, item) {
+            if (jsUrlHelper.getUrlParam(url, "orderby")) {
+                switch (jsUrlHelper.getUrlParam(url, "orderby")) {
+                    case "mr" :
+                        $("[value='mr']").addClass("cur").siblings().removeClass("cur");
+                        break;
+                    case "xgd":
+                        $("[value = 'xgd']").addClass("cur").siblings().removeClass("cur");
+                        break;
+                    case "date":
+                        $("[value = 'date']").addClass("cur").siblings().removeClass("cur");
+                        break;
+                }
+            }
+            return false;
+        })
+        $(".bd ul li").click(function () {
+            $(".bd ul li").each(function (i, item) {
+                console.log(item);
+            });
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(this).attr("id", "nian").siblings().removeAttr("id");
+            $(".bd ul .cur").attr("value", this.textContent.substring(0, 4)).siblings().removeAttr("value");
+            var url = window.location.href;
+            var newurl = jsUrlHelper.putUrlParam(url, "searchYear", $("#nian").attr("value"));
+            if (newurl.indexOf("page")>-1){
+                var us = newurl.substring(0,newurl.indexOf("page"))+"page=1";
+                newurl = jsUrlHelper.putUrlParam(us, "searchYear", $("#nian").attr("value"));
+            }
+            location.href = newurl;
+        });
+
+        $(".xxgk-px span").click(function () {
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(".xxgk-px .cur").text();
+            $(this).attr("id", "paixu").siblings().removeAttr("id");
+            var url = window.location.href;
+            var newurl = jsUrlHelper.putUrlParam(url, "orderby", $("#paixu").attr("value"));
+            location.href = newurl;
+        });
+
+        function pagin() {
+            var m_nRecordCount = 25;
+
+            if (m_nRecordCount.length == 0) {
+                m_nRecordCount = 0;
+            }
+
+            var m_nCurrPage = 1;
+            var m_nPageSize = 20;
+            var nPageCount = 0;
+            if (m_nRecordCount % m_nPageSize == 0) {
+                nPageCount = m_nRecordCount / m_nPageSize;
+            } else {
+                nPageCount = m_nRecordCount / m_nPageSize + 1;
+            }
+            if (m_nCurrPage > nPageCount) {
+                m_nCurrPage = nPageCount;
+            }
+            var url = location.href;
+            $(".page").Paging(
+                {
+                    pagesize: m_nPageSize,
+                    count: m_nRecordCount == 0 ? 1 : m_nRecordCount,
+                    current: m_nCurrPage == 0 ? 1 : m_nCurrPage,
+                    hash: true,
+                    toolbar: true,
+                    prevTpl: "上一页",
+                    nextTpl: "下一页",
+                    firstTpl: "首页",
+                    lastTpl: "尾页",
+                    pageSizeList: [m_nPageSize],
+                    callback: function (current) {
+
+                        var newurl = jsUrlHelper.putUrlParam(url, "page", current);
+                        pagin();
+                        var aPageForm = document.getElementsByName('pageform');
+                        var pagefrom = aPageForm[aPageForm.length - 1];
+                        //pagefrom.page.value = current;
+                        window.location.href = newurl;
+                        //pagefrom.submit();
+
+                    }
+                });
+        }
+    </script>
+
+
+
+</div></body></html>

@@ -1,0 +1,53 @@
+name: "国家核安全局法规标准文件库"
+base_url: "https://nnsa.mee.gov.cn"
+output_dir: "nnsa_data"
+
+discovery:
+  - type: selector
+    start_url: "/govsearch/haqj.jsp?Stype=2&type=1&channelid={channel_id}"
+    link_selector: "a[href]"
+    filter_pattern: "\\.(pdf|shtml?)$|/t\\d+_\\d+"
+    parameters:
+      channel_id:
+        "国家法律": 33636
+        "行政法规": 33637
+        "规章": 33638
+        "规范性文件": 33639
+        "核安全导则-通用系列导则": 33736
+        "核安全导则-核动力厂系列导则": 33643
+        "核安全导则-研究堆系列导则": 33644
+        "核安全导则-非堆核燃料循环设施系列导则": 33742
+        "核安全导则-放射性废物管理系列导则": 33741
+        "核安全导则-核材料管制系列导则": 33740
+        "核安全导则-民用核安全设备监督管理系列导则": 33739
+        "核安全导则-放射性物品运输管理系列导则": 33743
+        "标准-通用系列": 33729
+        "标准-核动力厂系列": 33730
+        "标准-研究堆系列": 33731
+        "标准-放射性废物管理系列": 33732
+        "标准-放射性物品运输管理系列": 33733
+        "标准-放射性同位素和射线装置监督管理系列": 33734
+        "标准-辐射环境系列": 33735
+        "国际公约": 33642
+
+fetch:
+  mode: playwright
+  pre_visit: "https://nnsa.mee.gov.cn/ztzl/fgbzwjk/"
+
+clean_selectors:
+  - "header"
+  - "nav"
+  - "footer"
+
+pagination:
+  enabled: true
+  type: "click"
+  next_selector: ".js-page-next"
+  disabled_class: "ui-pager-disabled"
+  wait_after: 2
+
+output:
+  formats:
+    - pdf
+  category_from: "parameter"
+  category_key: "channel_id"

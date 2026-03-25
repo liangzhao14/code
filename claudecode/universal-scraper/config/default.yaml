@@ -1,0 +1,8 @@
+# 全局默认配置
+concurrency: 2
+delay: 2
+timeout: 60
+retry: 3
+output_formats:
+  - pdf
+user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/121.0.0.0 Safari/537.36"

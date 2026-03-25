@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇小游戏</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        canvas {
+            background-color: #34495e;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border: 2px solid #7f8c8d;
+            border-radius: 5px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            margin-bottom: 10px;
+        }
+        .score-board {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .controls {
+            margin-top: 15px;
+            color: #bdc3c7;
+            font-size: 14px;
+            text-align: center;
+        }
+        .settings {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #bdc3c7;
+        }
+        .settings select, .settings button {
+            background-color: #34495e;
+            color: #ecf0f1;
+            border: 1px solid #7f8c8d;
+            border-radius: 4px;
+            padding: 5px;
+            outline: none;
+        }
+        .settings button {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .settings button:hover {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="score-board">分数: <span id="score">0</span></div>
+        <div class="score-board">最高分: <span id="highScore">0</span></div>
+    </div>
+
+    <div class="settings">
+        <label for="speedSelect">速度: </label>
+        <select id="speedSelect">
+            <option value="6">慢速</option>
+            <option value="4" selected>中速</option>
+            <option value="2">快速</option>
+        </select>
+
+        <label for="sizeSelect">地图大小: </label>
+        <select id="sizeSelect">
+            <option value="15">小 (15x15)</option>
+            <option value="20" selected>中 (20x20)</option>
+            <option value="25">大 (25x25)</option>
+        </select>
+        <button id="applySettings">应用</button>
+    </div>
+
+    <!-- 游戏画布，默认20x20个网格(每个20px) -->
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <div class="controls">
+        <p>使用 <b>↑ ↓ ← →</b> 或 <b>W A S D</b> 控制移动</p>
+        <p>撞墙或咬到自己会重新开始</p>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreElement = document.getElementById('score');
+        const highScoreElement = document.getElementById('highScore');
+
+        const speedSelect = document.getElementById('speedSelect');
+        const sizeSelect = document.getElementById('sizeSelect');
+        const applySettingsBtn = document.getElementById('applySettings');
+
+        // 网格大小
+        const grid = 20;
+        let gridSize = 20; // 默认网格数量 20x20
+        let speed = 6; // 控制速度的帧间隔，越小越快
+        let count = 0;
+        let score = 0;
+        let highScore = localStorage.getItem('snakeHighScore') || 0;
+        highScoreElement.textContent = highScore;
+
+        // 设置按钮事件
+        applySettingsBtn.addEventListener('click', () => {
+            speed = parseInt(speedSelect.value);
+            gridSize = parseInt(sizeSelect.value);
+
+            // 重新设置画布大小
+            canvas.width = gridSize * grid;
+            canvas.height = gridSize * grid;
+
+            // 重置游戏
+            resetGame();
+        });
+
+        // 蛇的对象
+        let snake = {
+            x: 160,
+            y: 160,
+            // 初始向右移动
+            dx: grid,
+            dy: 0,
+            // 记录蛇身体所有方块的坐标
+            cells: [],
+            // 初始长度
+            maxCells: 4
+        };
+
+        // 食物对象
+        let food = {
+            x: 320,
+            y: 320
+        };
+
+        // 获取范围内的随机整数
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        // 随机放置食物
+        function placeFood() {
+            food.x = getRandomInt(0, gridSize) * grid;
+            food.y = getRandomInt(0, gridSize) * grid;
+        }
+
+        // 游戏主循环
+        function loop() {
+            requestAnimationFrame(loop);
+
+            // 控制游戏帧率 (速度越小，需要跳过的帧越少，速度越快)
+            if (++count < speed) {
+                return;
+            }
+            count = 0;
+
+            // 清空画布
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 移动蛇
+            snake.x += snake.dx;
+            snake.y += snake.dy;
+
+            // 碰撞检测：撞墙 (游戏结束)
+            if (snake.x < 0 || snake.x >= canvas.width || snake.y < 0 || snake.y >= canvas.height) {
+                resetGame();
+            }
+
+            // 在数组头部插入蛇的新头部坐标
+            snake.cells.unshift({x: snake.x, y: snake.y});
+
+            // 移除多余的尾部坐标
+            if (snake.cells.length > snake.maxCells) {
+                snake.cells.pop();
+            }
+
+            // 绘制食物 (红色)
+            ctx.fillStyle = '#e74c3c';
+            ctx.beginPath();
+            ctx.arc(food.x + grid / 2, food.y + grid / 2, grid / 2 - 2, 0, 2 * Math.PI);
+            ctx.fill();
+
+            // 绘制蛇 (绿色)
+            ctx.fillStyle = '#2ecc71';
+            snake.cells.forEach(function(cell, index) {
+                // 蛇头颜色稍深
+                if (index === 0) {
+                    ctx.fillStyle = '#27ae60';
+                } else {
+                    ctx.fillStyle = '#2ecc71';
+                }
+
+                // 绘制蛇的方块，稍微留一点间隙
+                ctx.fillRect(cell.x + 1, cell.y + 1, grid - 2, grid - 2);
+
+                // 吃食物检测
+                if (cell.x === food.x && cell.y === food.y) {
+                    snake.maxCells++;
+                    score += 10;
+                    scoreElement.textContent = score;
+                    placeFood();
+                }
+
+                // 碰撞检测：碰到自己 (游戏结束)
+                for (let i = index + 1; i < snake.cells.length; i++) {
+                    if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+                        resetGame();
+                    }
+                }
+            });
+        }
+
+        // 重置游戏
+        function resetGame() {
+            if (score > highScore) {
+                highScore = score;
+                localStorage.setItem('snakeHighScore', highScore);
+                highScoreElement.textContent = highScore;
+            }
+
+            snake.x = 160;
+            snake.y = 160;
+            snake.cells = [];
+            snake.maxCells = 4;
+            snake.dx = grid;
+            snake.dy = 0;
+            score = 0;
+            scoreElement.textContent = score;
+            placeFood();
+        }
+
+        // 键盘控制事件
+        document.addEventListener('keydown', function(e) {
+            // 防止按键默认行为（例如按空格/方向键时页面滚动）
+            if([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+
+            // 左箭头 或 A
+            if ((e.keyCode === 37 || e.keyCode === 65) && snake.dx === 0) {
+                snake.dx = -grid;
+                snake.dy = 0;
+            }
+            // 上箭头 或 W
+            else if ((e.keyCode === 38 || e.keyCode === 87) && snake.dy === 0) {
+                snake.dy = -grid;
+                snake.dx = 0;
+            }
+            // 右箭头 或 D
+            else if ((e.keyCode === 39 || e.keyCode === 68) && snake.dx === 0) {
+                snake.dx = grid;
+                snake.dy = 0;
+            }
+            // 下箭头 或 S
+            else if ((e.keyCode === 40 || e.keyCode === 83) && snake.dy === 0) {
+                snake.dy = grid;
+                snake.dx = 0;
+            }
+        });
+
+        // 初始化速度设置
+        speed = parseInt(speedSelect.value);
+        gridSize = parseInt(sizeSelect.value);
+        canvas.width = gridSize * grid;
+        canvas.height = gridSize * grid;
+        resetGame();
+
+        // 启动游戏
+        requestAnimationFrame(loop);
+    </script>
+</body>
+</html>

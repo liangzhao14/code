@@ -1,0 +1,44 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Claude
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build outputs
+dist/
+build/
+out/
+target/
+*.egg-info/
+*.class
+*.jar
+*.war
+
+# Frontend build
+frontend/dist/
+
+# Env
+.env
+.env.local
+
+# Large files
+*.zip
+*.rar
+*.7z

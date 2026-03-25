@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日新闻查看器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="top-bar"></div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="header-brand">
+                <h1 class="logo">每日新闻</h1>
+                <span class="logo-sub">实时资讯聚合</span>
+                <span class="live-badge" id="live-badge">
+                    <span class="live-dot"></span>
+                    LIVE
+                </span>
+            </div>
+            <div class="header-controls">
+                <div class="date-picker">
+                    <label for="news-date">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        日期
+                    </label>
+                    <input type="date" id="news-date">
+                </div>
+                <button class="refresh-btn" id="refresh-btn" title="刷新新闻">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M23 4v6h-6M1 20v-6h6"/>
+                        <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="news-section beijing-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-icon" aria-hidden="true">🏛️</span>
+                    北京新闻
+                </h2>
+                <span class="news-count" id="beijing-count">0 条</span>
+            </div>
+            <div class="news-list" id="beijing-news"></div>
+            <div class="loading-skeleton" id="beijing-skeleton">
+                <div class="skeleton-card">
+                    <div class="skeleton-meta"><div class="skeleton-tag"></div><div class="skeleton-time"></div></div>
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-meta"><div class="skeleton-tag"></div><div class="skeleton-time"></div></div>
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-meta"><div class="skeleton-tag"></div><div class="skeleton-time"></div></div>
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                </div>
+            </div>
+            <div class="empty-state" id="beijing-empty" style="display: none;">
+                <span class="empty-icon" aria-hidden="true">📭</span>
+                <p class="empty-title">暂无北京新闻</p>
+                <p class="empty-hint">所选日期的 RSS 数据暂不可用，RSS 源通常仅保留近期内容</p>
+            </div>
+        </section>
+
+        <section class="news-section ai-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-icon" aria-hidden="true">🤖</span>
+                    AI 科技新闻
+                </h2>
+                <span class="news-count" id="ai-count">0 条</span>
+            </div>
+            <div class="news-list" id="ai-news"></div>
+            <div class="loading-skeleton" id="ai-skeleton">
+                <div class="skeleton-card">
+                    <div class="skeleton-meta"><div class="skeleton-tag"></div><div class="skeleton-time"></div></div>
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-meta"><div class="skeleton-tag"></div><div class="skeleton-time"></div></div>
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-meta"><div class="skeleton-tag"></div><div class="skeleton-time"></div></div>
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                </div>
+            </div>
+            <div class="empty-state" id="ai-empty" style="display: none;">
+                <span class="empty-icon" aria-hidden="true">📭</span>
+                <p class="empty-title">暂无 AI 新闻</p>
+                <p class="empty-hint">所选日期的 RSS 数据暂不可用，RSS 源通常仅保留近期内容</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>每日新闻查看器 &copy; 2026 &nbsp;·&nbsp; 数据来源于公开 RSS 订阅源</p>
+    </footer>
+
+    <div class="error-toast hidden" id="error-toast" role="alert">
+        <svg class="error-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span class="error-message"></span>
+        <button class="retry-btn" id="retry-btn">重试</button>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

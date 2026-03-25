@@ -1,0 +1,863 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>法规标准文件库_国家核安全局</title>
+
+    <script src="https://hm.baidu.com/hm.js?79829a78dfa6e5d83e0f1e3495e1818e"></script><script src="https://hm.baidu.com/hm.js?41ca702941bd609cb52b0a48bb1f6631"></script><script type="text/javascript" src="/images/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../../images/NNSA_mobile_v2023.js"></script>
+
+    <link class="stylefile" rel="stylesheet" type="text/css" href="../../images/NNSA_base_fgk_pc_v2023.css">
+    <link class="stylefile" href="../../images/NNSA_xxgk.css" rel="stylesheet" type="text/css">
+    <link class="stylefile" href="../../images/NNSA_fgk_v2023.css" rel="stylesheet" type="text/css">
+    <link class="stylefile" href="../../images/NNSA_paging.css" rel="stylesheet" type="text/css">
+    <link class="" href="../../images/datetimepicker.css" rel="stylesheet" type="text/css">
+
+    
+    
+    
+
+    <script type="text/javascript" src="../../images/respond.src.js"></script>
+    <script type="text/javascript" src="../../images/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="../../images/datetimepicker.js"></script>
+    <script type="text/javascript" src="../../images/jquery.select.js"></script>
+    <script src="../../images/replace.js"></script>
+
+    <script>
+        //iframe高度
+	// function setIframeHeight(iframe) {
+	// 	var ulHeight = $(".xxgk-left-menu").innerHeight();
+	// 	var headHeight = $(".theme-head").innerHeight();
+	// 	var leftHeight = headHeight+ulHeight;
+	// 	var height = xxgklist.document.body.scrollHeight > leftHeight ? xxgklist.document.body.scrollHeight : leftHeight;
+	// 	iframe.height = height;
+	// 	$("#left").height(height + 5 + "px");
+	// }
+
+	function setIframeHeight(iframe) {
+		if (iframe) {
+			var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+			//console.log(iframeWin)
+			if (iframeWin.document.body) {
+				//console.log(iframeWin.document.documentElement.scrollHeight)
+				//console.log(iframeWin.document.body.scrollHeight)
+				//iframe.style.height = (iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight) + 'px';
+				iframe.style.height = (iframeWin.document.body.scrollHeight) + 'px';
+				//console.log(iframe.style.height)
+			}
+		}
+	};
+
+        $(function(){
+            $(".xxgkLBtnLi").click(function(){
+                if($(this).hasClass("active")){
+                    $(".xxgkLBtnLi").removeClass("active")
+                    $(".xxgkLBtnLi").removeClass("active2");
+                    $(".xxgk-left-menu").removeClass("active");
+
+                }else{
+                    $(".xxgkLBtnLi").removeClass("active")
+                    $(".xxgkLBtnLi").removeClass("active2");
+                    $(this).addClass("active");
+                    $(".xxgk-left-menu").removeClass("active");
+                    $(".xxgk-left-menu li").removeClass("active");
+                    $(this).next(".xxgk-left-menu").addClass("active")
+                }
+            })
+            $(".alongLi").click(function(){
+                $(this).addClass("active2");
+            })
+        })
+
+        var isPC = IsPC();//获取是否为PC端
+        if (isPC) {//如果是PC端加载PC的js和css
+            $(".mobileStyle").remove();
+            dynamicLoadJs('/images/NNSA_base_fgk_pc_v2023.js')
+            $(function(){
+                /*左侧导航*/
+                $(".xxgk-left-menu li h4").click(function(){
+                    if($(this).parent().hasClass("active")){
+                        $(this).parent().removeClass("active");
+                        $(this).parent().parent().prev().addClass("active");
+                        $(this).parent().parent().prev().addClass("active2");
+                    }else{
+                        $(".xxgk-left-menu li").removeClass("active");
+                        $(this).parent().addClass("active");
+                        $(this).parent().parent().prev().addClass("active");
+                        $(this).parent().parent().prev().addClass("active2");
+                    }
+                });
+            })
+        } else {//如果是移动端加载移动端的js和css
+            $(".stylefile").remove();
+            dynamicLoadJs('/images/NNSA_base_fgk_mobile_v2023.js')
+            dynamicLoadJs('/images/NNSA_xxgk_mobile_v2023.js')
+            $(function(){
+                /*左侧导航*/
+                $(".xxgk-left-menu li h4").click(function(){
+                    if($(this).parent().hasClass("active")){
+                        $(this).parent().removeClass("active");
+                        $(this).parent().parent().prev().addClass("active");
+                        $(this).parent().parent().prev().addClass("active2");
+                    }else{
+                        $(".xxgk-left-menu li").removeClass("active");
+                        $(this).parent().addClass("active");
+                        $(this).parent().parent().prev().addClass("active");
+                        $(this).parent().parent().prev().addClass("active2");
+                        var iframeTop = $("#myiframe").offset().top;
+                        /*console.log("iframeTop")*/
+                        $('body,html').animate({'scrollTop':iframeTop},300)
+                    }
+                });
+                $(".xxgkLDropdown a").click(function(){
+                    var iframeTop = $("#myiframe").offset().top;
+                    /*console.log("iframeTop")*/
+                    $('body,html').animate({'scrollTop':iframeTop},300)
+
+                });
+                $("#quickSearch,#advSearch").click(function(){
+                    var iframeTop = $("#myiframe").offset().top;
+                    $('body,html').animate({'scrollTop':iframeTop},300)
+                });
+            })
+        }
+
+        function dynamicLoadCss(url) {//加载css方法
+            var head = document.getElementsByTagName('head')[0];
+            var link = document.createElement('link');
+            link.type = 'text/css';
+            link.rel = 'stylesheet';
+            link.href = url;
+            head.appendChild(link);
+        }
+
+        function dynamicLoadJs(url, callback) {//加载js方法
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            if (typeof(callback) == 'function') {
+                script.onload = script.onreadystatechange = function () {
+                    if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                        callback();
+                        script.onload = script.onreadystatechange = null;
+                    }
+                };
+            }
+            head.appendChild(script);
+        }
+    </script><script type="text/javascript" src="/images/NNSA_base_fgk_pc_v2023.js"></script>
+    <script>
+        function getChannel(channelid){
+            //$("#myiframe").attr("src",encodeURI(delUrlParam($("#myiframe").attr("src"),"channelid")+"&channelid="+channelid));
+            //$("#myiframe").attr("src", encodeURI("/govsearch/wenjiankujs.jsp?Stype=2&type=1&channelid=" + channelid));
+            $("#channelid1").val(channelid);
+            var parm=getParm();
+            // $("#myiframe").attr("src",delUrlParam($("#myiframe").attr("src"),"orderby")+"&"+parm);
+            $('#form1').submit();
+            $("#channelid1").val("");
+
+
+        }
+    </script>
+</head>
+<body>
+<div class="xxgkGbHeader">
+    <img class="xxgkGbBg" src="../../images/xxgkGb2021_bg.png">
+    <div class="xxgkGbHeaderC">
+        <div class="xxgkGbHeaderLogoBox">
+            <a class="xxgkGbHeaderLogo" href="http://nnsa.mee.gov.cn">
+                <img src="../../images/nnsa_logo_2023.png">
+            </a>
+        </div>
+        <img class="xxgkGbHeaderTitle" src="../../images/nnsa_fgklogo_2023.png">
+    </div>
+</div>
+<!--  机构分类-开始  -->
+
+<div class="xxgk-main2-bg">
+    <!--  检索-开始  -->
+    <script>
+        $(function(){
+            $(".select_option li").click(function(){
+                $("#channelid").val($(this).val())
+            });
+
+            if(getUrlParam("keyword")!=""){
+                //加载初级检索参数并显示检索结果
+                var keyword=getUrlParam("keyword");
+                if(keyword=="请输入查询的内容"){
+                    keyword="";
+                }
+                $("#myiframe").attr("src", encodeURI("http://www.mee.gov.cn/govsearch/wenjiankujs.jsp?Stype=2&type=1&keyword=" + keyword));
+                $("#keyword").val(keyword);
+            }
+        })
+
+        function getSelectValue(id) {
+            return $("#" + id + "Chooses li[class=selected]").attr("value")
+        }
+
+        //删除url后面的指定参数
+        function delUrlParam(url,name){
+            if (url.indexOf(name) == -1)
+                return url;
+            var arr_url = url.split('?');
+            var base = arr_url[0];
+            var arr_param = arr_url[1].split('&');
+            var index = -1;
+            for (i = 0; i < arr_param.length; i++) {
+                var paired = arr_param[i].split('=');
+                if (paired[0] == name) {
+                    index = i;
+                    break;
+                }
+            }
+            if (index == -1) {
+                return url;
+            }else{
+                arr_param.splice(index, 1);
+                return base + "?" + arr_param.join('&');
+            }
+        }
+        function setOrderby(orderby){
+            if(orderby=="date"){
+                $(".search_btn2 li").eq(0).removeClass("active")
+                $(".search_btn2 li").eq(1).addClass("active")
+                $(".orderby").val("date");
+                $("#orderby").val("date");
+            }else if(orderby=="xgd"){
+                $(".search_btn2 li").eq(1).removeClass("active")
+                $(".search_btn2 li").eq(0).addClass("active")
+                $(".orderby").val("xgd");
+                $("#orderby").val("xgd");
+            }
+            var parm=getParm();
+            //$("#myiframe").attr("src",delUrlParam($("#myiframe").attr("src"),"orderby")+"&"+parm);
+            $('#form1').submit();
+
+        }
+
+        function setSearchscope(searchscope){
+            if(searchscope=="1"){
+                //$("#myiframe").attr("src",delUrlParam($("#myiframe").attr("src"),"Stype")+"&Stype=1");
+                $(".wjkBtnUl li").eq(2).removeClass("active");
+                $(".wjkBtnUl li").eq(1).addClass("active");
+                $(".type").val("1");
+                $("#type").val("1");
+            }else if(searchscope=="2"){
+                $(".wjkBtnUl li").eq(1).removeClass("active");
+                $(".wjkBtnUl li").eq(2).addClass("active");
+                $(".type").val("2");
+                $("#type").val("2");
+            }
+            var parm=getParm();
+            // $("#myiframe").attr("src",delUrlParam($("#myiframe").attr("src"),"orderby")+"&"+parm);
+            $('#form1').submit();
+        }
+
+        function getParm(){
+            var Stype=$("#Stype").val();
+            var orderby=$("#orderby").val();
+            var type=$("#type").val();
+            var channelid=$("#channelid").val();
+            var keyword=$("#keyword").val();
+            var parm="Stype="+Stype+"&orderby="+orderby+"&type="+type+"&channelid="+channelid+"&keyword="+keyword;
+            return parm;
+        }
+
+        function checkForm1(){
+            $("#keyword").val($("#keyword").val().replace(/[\-\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+            if($("#keyword").val()==""){
+                $(".search_btn1").show();
+                $(".search_btn2").hide();
+            } else {
+                $(".search_btn1").hide();
+                $(".search_btn2").show();
+            }
+            //if($("#keyword").val()==""){
+            //  alert("请输入您要搜索的内容");
+            //  return false;
+            //}
+            $(".xxgkLBtnLi").removeClass("active")
+            $(".xxgk-left-menu li").removeClass("active");
+
+        }
+        function checkForm2(){
+            $("#title").val($("#title").val().replace(/[\-\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+            $("#channelid").val(getSelectValue("channelid_temp").replace(/[\-\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+            $("#filenum").val($("#filenum").val().replace(/[\-\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+            $("#pubdateStart").val($("#pubdateStart_temp").val().replace(/[\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+            $("#pubdateEnd").val($("#pubdateEnd_temp").val().replace(/[\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+            $("#abolishStart").val($("#abolishStart_temp").val().replace(/[\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+            $("#abolishEnd").val($("#abolishEnd_temp").val().replace(/[\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+            $("#content").val($("#content").val().replace(/[\-\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\;\"\L\<\>\?]/g, ''));
+
+        }
+
+        //获取本页url上的参数然后提交表单
+        function getUrlParam(param){
+            var query = window.location.search;
+            var iLen = param.length;
+            var iStart = query.indexOf(param);
+            if (iStart == -1){
+                return "";
+            }
+            iStart += iLen + 1;
+            var iEnd = query.indexOf("&", iStart);
+            if (iEnd == -1){
+                if (param =="subcat" ){
+                    return decodeURIComponent(query.substring(iStart)).replace(/[\-\_\!\|\~\`\(\)\#\$\^\&\*\{\}\:\;\"\L\<\>\?\']/g, '');
+                }else if(param =="pubdatestart" || param =="pubdateend" || param =="abolishstart" || param =="abolishend"){
+                    return decodeURIComponent(query.substring(iStart)).replace(/[\_\,\!\|\~\`\(\)\#\$\^\&\*\{\}\:\;\"\L\<\>\?\']/g, '');
+                }else{
+                    return decodeURIComponent(query.substring(iStart)).replace(/[\-\_\,\!\|\~\`\(\)\#\$\^\&\*\{\}\:\;\"\L\<\>\?\']/g, '');
+                }
+            }
+            if (param =="subcat" ){
+                return decodeURIComponent(query.substring(iStart, iEnd)).replace(/[\-\_\!\|\~\`\(\)\#\$\^\&\*\{\}\:\;\"\L\<\>\?\']/g, '');
+            }else if(param =="pubdatestart" || param =="pubdateend" || param =="abolishstart" || param =="abolishend"){
+                return decodeURIComponent(query.substring(iStart, iEnd)).replace(/[\_\,\!\|\~\`\(\)\#\$\^\&\*\{\}\:\;\"\L\<\>\?\']/g, '');
+            }else{
+                return decodeURIComponent(query.substring(iStart, iEnd)).replace(/[\-\_\,\!\|\~\`\(\)\#\$\^\&\*\{\}\:\;\"\L\<\>\?\']/g, '');
+            }
+        }
+    </script>
+
+    <div class="xxgk_v2019Center">
+        <div class="xxgk_SearchBox">
+            <div class="p_search_2019 radius6">
+                <form name="form1" id="form1" action="/govsearch/haqj.jsp" method="get" target="xxgklist" onsubmit="return checkForm1();">
+                    <input type="hidden" name="orderby" value="xgd" id="orderby" style="">
+                    <input type="hidden" name="Stype" value="2" id="Stype" style="">
+                    <input type="hidden" name="type" value="1" id="type" style="">
+                    <input type="hidden" name="channelid" value="" id="channelid1" style="">
+                    <div class="xxgk_SInputBox">
+                        <input class="inp_srh_2019" id="keyword" name="keyword" placeholder="请输入您要搜索的内容" autocomplete="off" style="">
+                        <span class="clear" id="delete2">×</span>
+                        <input class="btn_srh_2019" type="button" id="quickSearch" value="搜索" style="">
+                    </div>
+                </form>
+                <script>
+                    document.getElementById("keyword").addEventListener("keyup", function (){
+                        if (this.value.length > 0) {
+                            document.getElementById("delete2").style.visibility = "visible";
+                            document.getElementById("delete2").onclick = function () {
+                                document.getElementById("keyword").value = "";
+                                document.getElementById("delete2").style.visibility = "hidden";
+                                $(".search_btn1").show();
+                                $(".search_btn2").hide();
+                                $(".search_btn2 li").eq(1).removeClass("active");
+                                $(".search_btn2 li").eq(0).addClass("active");
+$("#orderby").val("xgd");
+                            }
+                        } else {
+                            document.getElementById("delete2").style.visibility = "hidden";
+                            $(".search_btn1").show();
+                            $(".search_btn2").hide();
+                            $(".search_btn2 li").eq(1).removeClass("active");
+                            $(".search_btn2 li").eq(0).addClass("active");
+$("#orderby").val("xgd");
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="wjk_font">检索方式：</div>
+        <ul class="wjkBtnUl search_btn1">
+            <li><a href="javascript:void(0);" style="cursor:auto;color: #ccc;">相关程度排序</a></li>
+            <li><a href="javascript:void(0);" style="cursor:auto;color: #ccc;">发布时间排序</a></li>
+        </ul>
+        <ul class="wjkBtnUl search_btn2" style="display: none;">
+            <li class="active"><a href="javascript:void(0);" onclick="setOrderby('xgd');">相关程度排序</a></li>
+            <li><a href="javascript:void(0);" onclick="setOrderby('date');">发布时间排序</a></li>
+        </ul>
+    </div>
+    <!--  检索-结束  -->
+    <div class="main-box">
+        <div class="p_left_box" id="left">
+            <a class="xxgkLLiBox xxgkLLiBox1 active">
+                目录导航
+            </a>
+            <div class="xxgkLDropdown">
+                
+                    <a href="javascript:void(0)" onclick="getChannel(33636)" class="xxgkLBtnLi" target="xxgklist">国家法律
+                    
+                    </a>
+                    <ul class="xxgk-left-menu">
+                        
+                    </ul>
+                
+                    <a href="javascript:void(0)" onclick="getChannel(33637)" class="xxgkLBtnLi" target="xxgklist">行政法规
+                    
+                    </a>
+                    <ul class="xxgk-left-menu">
+                        
+                    </ul>
+                
+                    <a href="javascript:void(0)" onclick="getChannel(33638)" class="xxgkLBtnLi" target="xxgklist">规章
+                    
+                    </a>
+                    <ul class="xxgk-left-menu">
+                        
+                    </ul>
+                
+                    <a href="javascript:void(0)" onclick="getChannel(33639)" class="xxgkLBtnLi" target="xxgklist">规范性文件
+                    
+                    </a>
+                    <ul class="xxgk-left-menu">
+                        
+                    </ul>
+                
+                
+                    <a href="javascript:void(0)" onclick="getChannel(33640)" class="xxgkLBtnLi alongLi" target="xxgklist">核安全导则
+                    <i></i>
+                    </a>
+                    <ul class="xxgk-left-menu">
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33736)" target="xxgklist">通用系列导则</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33643)" target="xxgklist">核动力厂系列导则</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33644)" target="xxgklist">研究堆系列导则</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33742)" target="xxgklist">非堆核燃料循环设施系列导则</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33741)" target="xxgklist">放射性废物管理系列导则</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33740)" target="xxgklist">核材料管制系列导则</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33739)" target="xxgklist">民用核安全设备监督管理系列导则</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33743)" target="xxgklist">放射性物品运输管理系列导则</a></h4>
+                            </li>
+                        
+                    </ul>
+                
+                    <a href="javascript:void(0)" onclick="getChannel(33641)" class="xxgkLBtnLi alongLi" target="xxgklist">标准
+                    <i></i>
+                    </a>
+                    <ul class="xxgk-left-menu">
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33729)" target="xxgklist">通用系列</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33730)" target="xxgklist">核动力厂系列</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33731)" target="xxgklist">研究堆系列</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33732)" target="xxgklist">放射性废物管理系列</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33733)" target="xxgklist">放射性物品运输管理系列</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33734)" target="xxgklist">放射性同位素和射线装置监督管理系列</a></h4>
+                            </li>
+                        
+                            <li>
+                                <h4><a href="javascript:void(0)" onclick="getChannel(33735)" target="xxgklist">辐射环境系列</a></h4>
+                            </li>
+                        
+                    </ul>
+                
+                
+                    <a href="javascript:void(0)" onclick="getChannel(33642)" class="xxgkLBtnLi" target="xxgklist">国际公约
+                    
+                    </a>
+                    <ul class="xxgk-left-menu">
+                        
+                    </ul>
+                
+            </div>
+        </div>
+        <div class="p_right_box">
+            <!--<iframe id="myiframe" scrolling="no" name="xxgklist" onload="setIframeHeight(this)" src="/govsearch/haqj.jsp?Stype=2&type=1&orderby=date" frameborder="0" width="100%" ></iframe>-->
+<iframe id="myiframe" scrolling="no" name="xxgklist" onload="setIframeHeight(this)" src="/govsearch/haqj.jsp?Stype=2&amp;type=1" frameborder="0" width="100%" style="height: 1086px;"></iframe>
+        </div>
+    </div>
+
+</div>
+<div class="footer">
+	<div class="footerTopUl">
+		<div class="center">
+			<ul class="active">
+
+				<li><a href="https://www.gov.cn/" target="_blank">中国政府网</a></li>
+
+				<li><a href="https://www.mee.gov.cn/" target="_blank">生态环境部</a></li>
+
+				<li><a href="https://www.nea.gov.cn/" target="_blank">国家能源局</a></li>
+
+				<li><a href="https://www.sastind.gov.cn/" target="_blank">国防科工局</a></li>
+
+				<li><a href="https://www.caea.gov.cn/" target="_blank">国家原子能机构</a></li>
+
+			</ul>
+			<ul>
+
+				<li><a href="https://nro.mee.gov.cn/" target="_blank">华北核与辐射安全监督站</a></li>
+
+				<li><a href="https://ecro.mee.gov.cn/" target="_blank">华东核与辐射安全监督站</a></li>
+
+				<li><a href="https://scro.mee.gov.cn" target="_blank">华南核与辐射安全监督站</a></li>
+
+				<li><a href="https://swnro.mee.gov.cn" target="_blank">西南核与辐射安全监督站</a></li>
+
+				<li><a href="https://nero.mee.gov.cn/" target="_blank">东北核与辐射安全监督站</a></li>
+
+				<li><a href="https://nwro.mee.gov.cn/" target="_blank">西北核与辐射安全监督站</a></li>
+
+			</ul>
+			<ul>
+
+				<li><a href="http://www.chinansc.cn/" target="_blank">生态环境部核与辐射安全中心</a></li>
+
+				<li><a href="http://www.secmep.cn/" target="_blank">生态环境部卫星环境应用中心</a></li>
+
+				<li><a href="https://www.nmemc.org.cn/" target="_blank">国家海洋环境监测中心</a></li>
+
+				<li><a href="https://www.rmtc.org.cn/" target="_blank">生态环境部辐射环境监测技术中心</a></li>
+
+				<li><a href="http://www.pcmi.com.cn/" target="_blank">中机生产力促进中心</a></li>
+
+				<li><a href="http://www.snpi.ac.cn/" target="_blank">苏州核安全中心</a></li>
+
+				<li><a href="http://www.cnpe.cc/" target="_blank">北京核安全审评中心</a></li>
+
+				<li><a href="https://www.snerdi.com.cn/" target="_blank">上海核安全审评中心</a></li>
+
+				<li><a href="https://www.cirp.org.cn/" target="_blank">辐射安全中心</a></li>
+
+			</ul>
+			<ul>
+
+				<li><a href="https://www.iaea.org/" target="_blank">国际原子能机构</a></li>
+
+				<li><a href="https://gnssn.iaea.org/main/pages/default.aspx" target="_blank">GNSSN</a></li>
+
+				<li><a href="https://ansn.iaea.org/default.aspx" target="_blank">ANSN</a></li>
+
+				<li><a href="https://www.oecd-nea.org/" target="_blank">经济合作与发展组织核能署</a></li>
+
+				<li><a href="https://www.wano.info" target="_blank">世界核运营者协会</a></li>
+
+				<li><a href="https://www.nrc.gov/" target="_blank">美国核管制委员会</a></li>
+
+				<li><a href="https://www.epri.com/" target="_blank">美国电力研究协会</a></li>
+
+				<li><a href="https://ncrponline.org/" target="_blank">美国国家辐射防护和测量委员会</a></li>
+
+				<li><a href="https://www.gosnadzor.ru/" target="_blank">俄罗斯联邦环境、技术与核能监督总局</a></li>
+
+				<li><a href="https://www.onr.org.uk/" target="_blank">英国核办公室</a></li>
+
+				<li><a href="https://www.french-nuclear-safety.fr/" target="_blank">法国核安全局</a></li>
+
+				<li><a href="https://en.irsn.fr/" target="_blank">法国核安全与辐射防护研究院</a></li>
+
+				<li><a href="https://www.nra.go.jp/english/" target="_blank">日本原子力规制委员会</a></li>
+
+				<li><a href="https://nuclearsafety.gc.ca/eng/" target="_blank">加拿大核安全委员会</a></li>
+
+				<li><a href="http://www.pnra.org/" target="_blank">巴基斯坦核监管局</a></li>
+
+				<li><a href="http://www.stuk.fi/en_GB/" target="_blank">芬兰核与辐射安全局</a></li>
+
+				<li><a href="https://www.nnr.co.za/" target="_blank">南非国家监管局</a></li>
+
+			</ul>
+			<ul>
+
+				<li><a href="http://www.cnnc.com.cn/" target="_blank">中国核工业集团有限公司</a></li>
+
+				<li><a href="http://www.cgnpc.com.cn/" target="_blank">中国广核集团有限公司</a></li>
+
+				<li><a href="http://www.spic.com.cn/" target="_blank">国家电力投资集团有限公司</a></li>
+
+				<li><a href="https://www.chng.com.cn/" target="_blank">中国华能集团有限公司</a></li>
+
+			</ul>
+			<ul>
+
+				<li><a href="http://www.chinansecpa.cn/" target="_blank">中国核安全与环境文化促进会</a></li>
+
+				<li><a href="http://www.china-nea.cn/" target="_blank">中国核能行业协会</a></li>
+
+				<li><a href="http://www.ns.org.cn/" target="_blank">中国核学会</a></li>
+
+				<li><a href="http://www.csrp.org.cn/" target="_blank">中国辐射防护学会</a></li>
+
+				<li><a href="https://www.kepuchina.cn/" target="_blank">科普中国</a></li>
+
+				<li><a href="http://www.nrspc.cn/" target="_blank">核与辐射安全公众沟通多媒体信息平台</a></li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="center">
+		<div class="footer_web_linkBox">
+			<!--<a class="footer_web_linkLA" href="">中国政府网</a>-->
+			<ul class="footer_web_linkUl">
+				<li class="footer_web_linkLi footer_web_linkLi2" style="padding-left: 0px;">政府网站<img src="/images/NNSA_base_footer_v2019_03.png"></li>
+				<li class="footer_web_linkLi footer_web_linkLi2">监督站<img src="/images/NNSA_base_footer_v2019_03.png"></li>
+				<li class="footer_web_linkLi footer_web_linkLi2">技术支持机构<img src="/images/NNSA_base_footer_v2019_03.png"></li>
+				<li class="footer_web_linkLi footer_web_linkLi2">国外相关网站<img src="/images/NNSA_base_footer_v2019_03.png"></li>
+				<li class="footer_web_linkLi footer_web_linkLi2">相关企业<img src="/images/NNSA_base_footer_v2019_03.png"></li>
+				<li class="footer_web_linkLi footer_web_linkLi2">其他链接<img src="/images/NNSA_base_footer_v2019_03.png"></li>
+			</ul>
+		</div>
+
+		<div class="footer_BBox">
+			<a href="http://bszs.conac.cn/sitename?method=show&amp;id=1ACC49F8764D14F7E053012819ACEFF4" target="_blank"><img class="footer_BLImg" src="/images/NNSA_base_footer_v2019_14.png"></a>
+			<div class="footer_BZBox">
+				<ul>
+					<li style="padding-left: 0px;"><a href="/wzdt/" target="_blank">网站地图</a></li>
+					<li style="border-right: 0px;"><a href="/lxwm/" target="_blank">联系我们</a></li>
+				</ul>
+				<p>
+					主办：中华人民共和国生态环境部
+				</p>
+				<p>
+					网站标识码：bm17000016<span>|</span>ICP备案编号: <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #000;">京ICP备05009132号</a><span>|</span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700072" target="_blank" style="color:#000"><img src="/images/babs.png" style="position:absolute; bottom: 20px;">　　京公网安备 11040102700072号</a>
+				</p>
+			</div>
+			<div class="footer_BRBox">
+				<a style="cursor: auto;"><img src="/images/ico_mobile.png" width="60" height="60">手机版</a>
+				<!--<a href="http://121.43.68.40/exposure/jiucuo.html" style="cursor: auto;" target="_blank"><img class="footer_BR_zfzc" src="/images/NNSA_base_footer_v2019_11.png" /></a>-->
+
+                   
+                                <a style="cursor: auto;">
+                                <script id="_jiucuo_" sitecode="bm17000016" src="/images/jiucuo.js"></script><span id="_span_jiucuo"><img onclick="Link('bm17000016')" style="margin:0;border:0;cursor: pointer;" src="https://zfwzgl.www.gov.cn/exposure/images/jiucuo.png?v=bm17000016"></span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footerMoble">
+	<p>主办：中华人民共和国生态环境部 </p>
+	<p>ICP备案编号: <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #000;">京ICP备05009132号</a></p>
+	<p>网站标识码：bm17000016</p>
+	<p class="footerMobleP">
+		<a href="http://bszs.conac.cn/sitename?method=show&amp;id=1ACC49F8764D14F7E053012819ACEFF4" target="_blank"><img class="footerMobleImg" src="/images/NNSA_base_footer_v2019_14.png"></a>
+		<!--<a href="http://121.43.68.40/exposure/jiucuo.html" target="_blank">
+			<img class="footerMobleImg2" src="/images/NNSA_base_footer_v2019_11.png" />
+		</a>-->
+
+            <a style="cursor: auto;">
+              <span id="_span_jiucuo"><img onclick="Link('bm17000016')" style="margin:0;border:0;cursor: pointer;width: 1.3rem;" src="https://zfwzgl.www.gov.cn/exposure/images/jiucuo.png?v=bm17000016"></span>
+            </a>
+
+
+	</p>
+	<!--<a class="goTopBtn"></a>-->
+</div>
+<script type="text/javascript" src="/images/NNSA_input_del.js"></script>
+<!--统计202008-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?41ca702941bd609cb52b0a48bb1f6631";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--统计202204-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?79829a78dfa6e5d83e0f1e3495e1818e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+    $(function(){
+
+        /*  定义placeholder插件，支持ie8下显示问题 */
+        (function ($) {
+            $.fn.extend({
+                placeholder : function () {
+                    if ("placeholder" in document.createElement("input")) {
+                        return this //如果原生支持placeholder属性，则返回对象本身
+                    } else {
+                        return this.each(function () {
+                            var _this = $(this);
+                            _this.val(_this.attr("placeholder")).focus(function () {
+                                if (_this.val() === _this.attr("placeholder")) {
+                                    _this.val("")
+                                }
+                            }).blur(function () {
+                                if (_this.val().length === 0) {
+                                    _this.val(_this.attr("placeholder"))
+                                }
+                            })
+                        })
+                    }
+                }
+            })
+        })(jQuery);
+
+        init()
+
+        function init() {
+            loadPlaceholder();
+            bindEvent();
+        }
+
+        function loadPlaceholder() {
+            //支持IE，加载输入框提示
+            $("#keyword").placeholder();//主检索框
+            $("#title").placeholder();//标题
+            $("#subcat").placeholder();//主题
+            $("#filenum").placeholder();//文号
+            $("#pubdateStart").placeholder();//发布时间起始
+            $("#pubdateEnd").placeholder();//发布时间结束
+            $("#abolishStart").placeholder();//废止时间起始
+            $("#abolishEnd").placeholder();//废止时间结束
+            $("#content").placeholder();//正文
+        }
+
+        function bindEvent() {
+            //日期控件加载
+            $('input[name="datetimepicker"]').datetimepicker({
+                format: 'Y-m-d',
+                formatDate: 'Y-m-d',
+                closeOnDateSelect: true,
+                validateOnBlur: true
+            });
+
+            //高级检索按钮绑定
+            $(".p_gaoji").click(function(){
+                $(".hsearch-box-bg").slideDown();
+            });
+            $(".xxgk-hsearch-hide").click(function(){
+                $(".hsearch-box-bg").slideUp();
+            });
+
+            //普通检索点击事件
+            $("#keyword").keypress(function (e) {
+                if (e.which == 13) {
+                    $('#form1').submit();
+                }
+            });
+            $(".btn_srh_2019").on("click",function(){
+                $('#form1').submit();
+            })
+
+            //绑定重置事件
+            $(".reset").on("click",reset);
+            $(".submt").on("click",function(){
+                var title = $("#title").val();//标题
+                var channelid = $("#channelid").val();//文件分类
+                var filenum = $("#filenum").val();//文号
+                var pubdatestart = $("#pubdateStart_temp").val();//发布日期开始
+                var pubdateend = $("#pubdateEnd_temp").val();//发布日期结束
+                var abolishstart = $("#abolishStart_temp").val();//废止日期开始
+                var abolishend = $("#abolishEnd_temp").val();//废止日期结束
+                var searchColumn = $("#content").val();//正文
+                var orderby = $("#orderby").val();//排序
+                var parm="";
+
+
+                if(title=="请输入标题"){
+                    title="";
+                }
+                if(channelid=="请选择"){
+                    channelid="";
+                }
+                if(filenum=="请输入发文字号"){
+                    filenum="";
+                }
+                if(pubdatestart=="请选择起始日期"){
+                    pubdatestart="";
+                }
+                if(pubdateend=="请选择结束日期"){
+                    pubdateend="";
+                }
+                if(abolishstart=="请选择起始日期"){
+                    abolishstart="";
+                }
+                if(abolishend=="请选择结束日期"){
+                    abolishend="";
+                }
+                if(searchColumn=="请输入查询的正文内容"){
+                    searchColumn="";
+                }
+
+
+                if(title!=""&&title!=undefined){
+                    parm=parm+"&title="+title;
+                }
+                if(channelid!=""&&channelid!=undefined){
+                    parm=parm+"&channelid="+channelid;
+                }
+                if(filenum!=""&&filenum!=undefined){
+                    parm=parm+"&filenum="+filenum;
+                }
+                if(pubdatestart!=""&&pubdatestart!=undefined){
+                    parm=parm+"&pubdatestart="+pubdatestart;
+                }
+                if(pubdateend!=""&&pubdateend!=undefined){
+                    parm=parm+"&pubdateend="+pubdateend;
+                }
+                if(abolishstart!=""&&abolishstart!=undefined){
+                    parm=parm+"&abolishstart="+abolishstart;
+                }
+                if(abolishend!=""&&abolishend!=undefined){
+                    parm=parm+"&abolishend="+abolishend;
+                }
+                if(searchColumn!=""&&searchColumn!=undefined){
+                    parm=parm+"&content="+searchColumn;
+                }
+                if(title!="" || channelid!="" || filenum!="" || pubdatestart!="" || pubdateend!="" || abolishstart!="" || abolishend!="" || searchColumn!=""){
+                    $("#myiframe").attr("src", encodeURI("111="+orderby+""+parm));
+                }
+
+                var result = "SType=2&";
+
+                //reset()
+                //$(".hsearch-box-bg").slideUp();
+            });
+        }
+
+
+        /**
+         * 清空表单
+         */
+        function reset() {
+            var form2 = document.getElementsByName('form2');
+            form2[0].reset();
+            $("#channelid_tempChooses .select_option li").eq(0).addClass("selected").siblings().removeClass("selected");
+            $("#channelid_tempChooses .select_showbox").html("请选择");
+            $("#channelid").val("");
+        }
+
+    })
+</script>
+
+</body></html>

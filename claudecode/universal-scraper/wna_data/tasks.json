@@ -1,0 +1,1712 @@
+{
+  "site": "World Nuclear Association",
+  "last_run": "2026-03-24T23:58:01.695786",
+  "articles": {
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/argentina": {
+      "title": "Argentina",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "57512d06553e0d36d723fefb4de9363b530e84a6be97f8dc0caba8b3e254fe9a",
+      "last_downloaded": "2026-03-24T23:49:34.245752",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Country Profiles - Countries A F\\Argentina.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Argentina.md"
+      ],
+      "file_size": 356213,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/armenia": {
+      "title": "Armenia",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "c9d93127139df145dcdff40a2d5553c4c6b7928594c3b894be000e3ae935384d",
+      "last_downloaded": "2026-03-24T23:49:41.758623",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Country Profiles - Countries A F\\Armenia.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Armenia.md"
+      ],
+      "file_size": 213862,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/australia": {
+      "title": "Australia",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "12542d83624833e8cc0630cf91a305a1a4e6b375287eab65e8b68f4fb6afc88b",
+      "last_downloaded": "2026-03-24T23:49:48.654769",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Country Profiles - Countries A F\\Australia.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Australia.md"
+      ],
+      "file_size": 699901,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/bangladesh": {
+      "title": "Bangladesh",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "be04faebf9d7b72059d1c48cf9ed0f11a6ccd998596004ce78886eeefba8ec1b",
+      "last_downloaded": "2026-03-24T23:49:54.359049",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Country Profiles - Countries A F\\Bangladesh.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Bangladesh.md"
+      ],
+      "file_size": 294258,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/belarus": {
+      "title": "Belarus",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "0eb443246dd5ee247f9164f6233b3912b69bb2b87d2302b5a27784a15d0bcca3",
+      "last_downloaded": "2026-03-24T23:50:01.590273",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Country Profiles - Countries A F\\Belarus.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Belarus.md"
+      ],
+      "file_size": 424857,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/belgium": {
+      "title": "Belgium",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "07ccfc035d22a75649849b5fc01a27b575e26144f9de496551ecb0dd597587aa",
+      "last_downloaded": "2026-03-24T23:53:12.047786",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Country Profiles - Countries A F\\Belgium.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Belgium.md"
+      ],
+      "file_size": 546026,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/brazil": {
+      "title": "Brazil",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "4d01bfd443ff767fce9052493f5550f0b343fa7c864f809b1fc043b50d5387fa",
+      "last_downloaded": "2026-03-24T23:53:16.156383",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Brazil.md"
+      ],
+      "file_size": 35746,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/bulgaria": {
+      "title": "Bulgaria",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "9149fd9b646877036528d7a3071925c0eac1efcc4971ffe0c12ba90ac13e18d6",
+      "last_downloaded": "2026-03-24T23:53:19.551471",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Country Profiles - Countries A F\\Bulgaria.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Bulgaria.md"
+      ],
+      "file_size": 465285,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/canada-nuclear-power": {
+      "title": "Canada: Nuclear Power",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "3ab9324388f58a46f0fce3fd1680604249db7d3541d85857d9168b9b8e747cb0",
+      "last_downloaded": "2026-03-24T23:53:19.176742",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Canada_ Nuclear Power.md"
+      ],
+      "file_size": 83942,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/canada-uranium": {
+      "title": "Canada: Uranium",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "0778cd11658837f050d3b30dc832bb42ec1181d441634caf6504e7dfb709176e",
+      "last_downloaded": "2026-03-24T23:53:22.449902",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Canada_ Uranium.md"
+      ],
+      "file_size": 51616,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/china-nuclear-fuel-cycle": {
+      "title": "China: Nuclear Fuel Cycle",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "dfcc628c78145d8a43c552e6c7d9aabfa89e34c8cadba026d53a3a5e7c2bbcba",
+      "last_downloaded": "2026-03-24T23:53:26.200077",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Country Profiles - Countries A F\\China_ Nuclear Fuel Cycle.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\China_ Nuclear Fuel Cycle.md"
+      ],
+      "file_size": 101973,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/china-nuclear-power": {
+      "title": "China: Nuclear Power",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "9a57db2b075f7ceb7a01652e128e1ef20a4977903f191f57337130c4456af8be",
+      "last_downloaded": "2026-03-24T23:53:26.019068",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\China_ Nuclear Power.md"
+      ],
+      "file_size": 189459,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/czech-republic": {
+      "title": "Czech Republic",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "9f8d42d025989e21b7f740ffe627572ffe938f01f21c5d5d47d46ee4421e0eac",
+      "last_downloaded": "2026-03-24T23:53:28.601977",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Czech Republic.md"
+      ],
+      "file_size": 47421,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/denmark": {
+      "title": "Denmark",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "e8c3bfd1f82de232eebb0790e3d6ad4e95a6497d3e2cac52cfee5532e749e13a",
+      "last_downloaded": "2026-03-24T23:53:42.848565",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Denmark.md"
+      ],
+      "file_size": 18864,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/egypt": {
+      "title": "Egypt",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "a9142a3f880f46eb3b8b9050cfedb38eb24062b73467d888dbe0f52676e0a385",
+      "last_downloaded": "2026-03-24T23:53:31.000850",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Egypt.md"
+      ],
+      "file_size": 14408,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/finland": {
+      "title": "Finland",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "76b3a483238bf853bdfe7db525bfd3cb50f03ebe038f4dabafb599bf0259285a",
+      "last_downloaded": "2026-03-24T23:53:33.647403",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Finland.md"
+      ],
+      "file_size": 58465,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/france": {
+      "title": "France",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "6e60cca446f4d2b9817d95eaf8d1915ac4fdf2b659d114cbde1f8cadef05a26f",
+      "last_downloaded": "2026-03-24T23:53:36.242940",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\France.md"
+      ],
+      "file_size": 110079,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-a-f/estonia": {
+      "title": "Estonia",
+      "category": "Country Profiles - Countries A F",
+      "status": "completed",
+      "content_hash": "69dd7bdc3db0eb6d371535ec650e41512a07c739fe827ebdf8a073795d9abfc0",
+      "last_downloaded": "2026-03-24T23:53:38.926276",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries A F\\Estonia.md"
+      ],
+      "file_size": 10353,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/germany": {
+      "title": "Germany",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "065740f3366f0215d17b22fbe54cc41b6a07c11c43663160e4b0b76d76bdf77d",
+      "last_downloaded": "2026-03-24T23:53:42.220352",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Germany.md"
+      ],
+      "file_size": 102147,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/hungary": {
+      "title": "Hungary",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "277d579412960943076640b61b4b704f81b34d885c39b4869172d854476aa4a2",
+      "last_downloaded": "2026-03-24T23:53:44.902736",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Hungary.md"
+      ],
+      "file_size": 30761,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/india": {
+      "title": "India",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "2e327de684cc8ab4b539a9a08ba17624046f47676d7ddb285f6daf932dfa10d6",
+      "last_downloaded": "2026-03-24T23:54:48.950203",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Country Profiles - Countries G N\\India.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\India.md"
+      ],
+      "file_size": 1165163,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/nuclear-power-in-indonesia": {
+      "title": "Indonesia",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "3da163f3cf946496c44895e5db0a599ff70eca1559bc9bd67f11dd868f92a344",
+      "last_downloaded": "2026-03-24T23:53:47.314232",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Indonesia.md"
+      ],
+      "file_size": 26318,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/iran": {
+      "title": "Iran",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "a5dee5838a7c763370ca7c4a0c99e1644d930311b6a390a801328a1e41e8d509",
+      "last_downloaded": "2026-03-24T23:53:49.884182",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Iran.md"
+      ],
+      "file_size": 74174,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/italy": {
+      "title": "Italy",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "7a926646285beee8c2175393eba7f1b172fd3c5732bda7f84e547dfeb25d2a26",
+      "last_downloaded": "2026-03-24T23:53:52.364780",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Italy.md"
+      ],
+      "file_size": 33413,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/japan-nuclear-fuel-cycle": {
+      "title": "Japan: Nuclear Fuel Cycle",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "a2ad05c89b00f2dab97938e5b6189f09c236979be64296cdad931b1ecc8c34e8",
+      "last_downloaded": "2026-03-24T23:53:54.786412",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Japan_ Nuclear Fuel Cycle.md"
+      ],
+      "file_size": 85242,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/japan-nuclear-power": {
+      "title": "Japan: Nuclear Power",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "8804aa791fa60dd31e2e64847709a85c4cb6b0e6630d63de3f12cfaeeab5c30e",
+      "last_downloaded": "2026-03-24T23:53:57.464633",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Japan_ Nuclear Power.md"
+      ],
+      "file_size": 88066,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/jordan": {
+      "title": "Jordan",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "ea85aae0ad939c640d30ff0f4d7270f0b2c10c4af549aa69588379d8ff3d625a",
+      "last_downloaded": "2026-03-24T23:53:59.809756",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Jordan.md"
+      ],
+      "file_size": 22987,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/kazakhstan": {
+      "title": "Kazakhstan",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "a2e4b601435d4a4e555dc9fa13ee98bfc59bfbc51c772726ced50352bc9383ff",
+      "last_downloaded": "2026-03-24T23:54:03.046694",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Kazakhstan.md"
+      ],
+      "file_size": 94544,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/kyrgyzstan": {
+      "title": "Kyrgyzstan",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "5f4e79b5dfc4870958853c738c9fe4a25ef98392249af1ba66a7524eb223c6ac",
+      "last_downloaded": "2026-03-24T23:54:05.398102",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Kyrgyzstan.md"
+      ],
+      "file_size": 17609,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/lithuania": {
+      "title": "Lithuania",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "4d06f6103b91bf7cb8ba4cdf1c29ac2a8bf3baa18e758fb86a9d770cd6cd1d83",
+      "last_downloaded": "2026-03-24T23:54:07.834156",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Lithuania.md"
+      ],
+      "file_size": 38687,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/mexico": {
+      "title": "Mexico",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "5a48aad8e8661353d246d25e90ba1a1c8fc69f642f6993a81e361ff68b1a267b",
+      "last_downloaded": "2026-03-24T23:54:10.267932",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Mexico.md"
+      ],
+      "file_size": 14285,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/mongolia": {
+      "title": "Mongolia",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "169b6470e98a12045a50f155b74c6d561496d9b9d900617f039f9be43a6b3f7b",
+      "last_downloaded": "2026-03-24T23:54:12.751603",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Mongolia.md"
+      ],
+      "file_size": 36624,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/namibia": {
+      "title": "Namibia",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "aa62e8c0b4cd9b78296bdabddcaaa348305778e063dcd092553c098d3371eacc",
+      "last_downloaded": "2026-03-24T23:54:15.270537",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Namibia.md"
+      ],
+      "file_size": 41176,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/netherlands": {
+      "title": "Netherlands",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "5d920d07e7132a29aba7f50502f65fbef413df728601071b01aeb79bab7f536c",
+      "last_downloaded": "2026-03-24T23:54:17.812261",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Netherlands.md"
+      ],
+      "file_size": 34931,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/new-zealand": {
+      "title": "New Zealand",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "0e92696e16ff1b189bf9e23569f52729677ff37c246ae7a46d7d7914fd45151f",
+      "last_downloaded": "2026-03-24T23:54:20.335513",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\New Zealand.md"
+      ],
+      "file_size": 10954,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-g-n/niger": {
+      "title": "Niger",
+      "category": "Country Profiles - Countries G N",
+      "status": "completed",
+      "content_hash": "936779ea1469c1fe1dccd7bcd99ee71ebd06ce5d0d953cf155e6bb07fd6b44ef",
+      "last_downloaded": "2026-03-24T23:54:22.754023",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries G N\\Niger.md"
+      ],
+      "file_size": 21133,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/pakistan": {
+      "title": "Pakistan",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "29d37b572866ecded2fe8528f8dc984ca700268dcbdcc022fb358658085a4da3",
+      "last_downloaded": "2026-03-24T23:54:25.156958",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Pakistan.md"
+      ],
+      "file_size": 36006,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/philippines": {
+      "title": "Philippines",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "ce42e4372a799ebce83ced6acbcc7b3c658eff438eaf36928d42cc67f7cf7325",
+      "last_downloaded": "2026-03-24T23:54:27.798005",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Philippines.md"
+      ],
+      "file_size": 16708,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/poland": {
+      "title": "Poland",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "617a5128dd373f97fe3a02786afa25795fd68135016fffa61d70a7cc3c6d1048",
+      "last_downloaded": "2026-03-24T23:54:30.309918",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Poland.md"
+      ],
+      "file_size": 36902,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/romania": {
+      "title": "Romania",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "dcd9357fd9e6c35a290abacb57238778678ec6f91bf662d416692e3bed3c135e",
+      "last_downloaded": "2026-03-24T23:54:32.821750",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Romania.md"
+      ],
+      "file_size": 28237,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/russia-nuclear-fuel-cycle": {
+      "title": "Russia: Nuclear Fuel Cycle",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "304615abb26bc837bfa562bf240949a26a09c41479fffc2c83561dd619d254a5",
+      "last_downloaded": "2026-03-24T23:54:35.736055",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Russia_ Nuclear Fuel Cycle.md"
+      ],
+      "file_size": 187656,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/saudi-arabia": {
+      "title": "Saudi Arabia",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "a4444f4444abcf5d5ab8eed5d7eb9bdd9a3988889367201c193fb7e073fc8737",
+      "last_downloaded": "2026-03-24T23:54:38.074977",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Saudi Arabia.md"
+      ],
+      "file_size": 19364,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/slovakia": {
+      "title": "Slovakia",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "a9109ecedac568754f1791f817521b5475e77e7b0c3777bbeeca8b39ecdcfec0",
+      "last_downloaded": "2026-03-24T23:54:40.505196",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Slovakia.md"
+      ],
+      "file_size": 41367,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/slovenia": {
+      "title": "Slovenia",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "ff960af6a42ab8c6e4c26c36ad8668fcbc8fcb31f280700d05dc4af2756c54b3",
+      "last_downloaded": "2026-03-24T23:54:42.977567",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Slovenia.md"
+      ],
+      "file_size": 10972,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/south-africa": {
+      "title": "South Africa",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "03cbcd43f4d678c2cad03e325939e87e951017b12d39f48bc0224b444e579525",
+      "last_downloaded": "2026-03-24T23:54:45.446021",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\South Africa.md"
+      ],
+      "file_size": 60093,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/south-korea": {
+      "title": "South Korea",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "8fbcc24a6148739860d27ca950dd2285f136047aaa44ef9082fcbea79c92c7be",
+      "last_downloaded": "2026-03-24T23:54:48.033771",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\South Korea.md"
+      ],
+      "file_size": 73514,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/spain": {
+      "title": "Spain",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "797169fa7ba7952240187f6749b70a0348756950e94dc84537a330a420bac5b5",
+      "last_downloaded": "2026-03-24T23:54:50.463754",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Spain.md"
+      ],
+      "file_size": 37141,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/sweden": {
+      "title": "Sweden",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "b2d00b8f407035e1e140a570fe0735cf30211f60c7241a015236677a46b19d98",
+      "last_downloaded": "2026-03-24T23:55:14.125095",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Sweden.md"
+      ],
+      "file_size": 56907,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-o-s/switzerland": {
+      "title": "Switzerland",
+      "category": "Country Profiles - Countries O S",
+      "status": "completed",
+      "content_hash": "daa7150d3ba65c122e6b8279e3737fb438d8589c10f2eed052f841ec2ca3fff3",
+      "last_downloaded": "2026-03-24T23:54:52.819846",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries O S\\Switzerland.md"
+      ],
+      "file_size": 28112,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/tajikistan": {
+      "title": "Tajikistan",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "89f947288a0300140f4bcaf3b58e4d7d5c5a5cc532dae38ad52a8ea99af54b25",
+      "last_downloaded": "2026-03-24T23:54:55.236663",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\Tajikistan.md"
+      ],
+      "file_size": 14784,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/turkey": {
+      "title": "Turkey",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "de45afe35834bac36cd35282b1e496b305e9544e13ad5d6609c0dc52d791399a",
+      "last_downloaded": "2026-03-24T23:54:57.618628",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\Turkey.md"
+      ],
+      "file_size": 30815,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/ukraine": {
+      "title": "Ukraine",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "baf36c160536267de654277c371cd1237f88d724d60617048e8d61a16cac5024",
+      "last_downloaded": "2026-03-24T23:55:00.108017",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\Ukraine.md"
+      ],
+      "file_size": 75704,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/ukraine-russia-war-and-nuclear-energy": {
+      "title": "Ukraine: Russia-Ukraine War and Nuclear Energy",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "9724a5df47f179927fb1ab159e8df595b6fd1af73856608d5e57bc68ab4b230c",
+      "last_downloaded": "2026-03-24T23:55:02.660396",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\Ukraine_ Russia-Ukraine War and Nuclear Energy.md"
+      ],
+      "file_size": 71853,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/united-arab-emirates": {
+      "title": "United Arab Emirates",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "4180d6365e632c9fa25151a1966cabb4c7f2bcf0a0ff7858579e3d3a6c70d825",
+      "last_downloaded": "2026-03-24T23:55:05.024497",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\United Arab Emirates.md"
+      ],
+      "file_size": 30478,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/united-kingdom": {
+      "title": "United Kingdom",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "5e4bd687124a26f01f4259b18237de137207679c7fbed2e9038026cf1f5537a3",
+      "last_downloaded": "2026-03-24T23:55:07.775755",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\United Kingdom.md"
+      ],
+      "file_size": 149139,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/usa-nuclear-fuel-cycle": {
+      "title": "USA: Nuclear Fuel Cycle",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "f62513de7167259281532da2bcd086073dcb9cd2c3af3692b4cf63dd6ec26825",
+      "last_downloaded": "2026-03-24T23:55:10.824319",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\USA_ Nuclear Fuel Cycle.md"
+      ],
+      "file_size": 121459,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/usa-nuclear-power": {
+      "title": "USA: Nuclear Power",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "a94a8aeea0e5c8a6645e2f3965b9beb6f443497d8fb96517365917dcacc99ade",
+      "last_downloaded": "2026-03-24T23:55:13.539472",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\USA_ Nuclear Power.md"
+      ],
+      "file_size": 140937,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/usa-nuclear-power-policy": {
+      "title": "USA: Nuclear Power Policy",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "27f1d26dcf132c0705603b81f906861667bd45b5d30b959ffa3485c4ed2fe5a5",
+      "last_downloaded": "2026-03-24T23:55:16.396923",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\USA_ Nuclear Power Policy.md"
+      ],
+      "file_size": 104949,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/us-uranium-mining": {
+      "title": "USA: Uranium Mining and Exploration",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "a27b3412e57243c158c297743bed43ed9e8af2c7044132d1adbec2459f080f2a",
+      "last_downloaded": "2026-03-24T23:55:40.809970",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\USA_ Uranium Mining and Exploration.md"
+      ],
+      "file_size": 63540,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/uzbekistan": {
+      "title": "Uzbekistan",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "814aaff0c7a5c10997f12c1ad6a41ee2ea51be45395f231c16f9f88c97882287",
+      "last_downloaded": "2026-03-24T23:55:18.777019",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\Uzbekistan.md"
+      ],
+      "file_size": 25501,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/countries-t-z/vietnam": {
+      "title": "Vietnam",
+      "category": "Country Profiles - Countries T Z",
+      "status": "completed",
+      "content_hash": "b4d29ce7a206f4639cb4e75f522ae1e0748781e3add3293905194ca14bebf3b8",
+      "last_downloaded": "2026-03-24T23:55:21.130413",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Countries T Z\\Vietnam.md"
+      ],
+      "file_size": 19310,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/others/asias-nuclear-energy-growth": {
+      "title": "Asia's Nuclear Energy Growth",
+      "category": "Country Profiles - Others",
+      "status": "completed",
+      "content_hash": "d7223e2622336cb9eb2d4c1798e46601c1738925f76fce5c50280e03f494957d",
+      "last_downloaded": "2026-03-24T23:55:23.505647",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Others\\Asia's Nuclear Energy Growth.md"
+      ],
+      "file_size": 7946,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/others/californias-electricity": {
+      "title": "California's Electricity",
+      "category": "Country Profiles - Others",
+      "status": "completed",
+      "content_hash": "7e072ed87f17acc3bca9e625000b8448fc7cbb8581e41b87d9b0987f32f0fd27",
+      "last_downloaded": "2026-03-24T23:55:25.956457",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Others\\California's Electricity.md"
+      ],
+      "file_size": 32096,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/others/emerging-nuclear-energy-countries": {
+      "title": "Emerging Nuclear Energy Countries",
+      "category": "Country Profiles - Others",
+      "status": "completed",
+      "content_hash": "a64911f3462bd32b8dfafc0ba34fb0192ef1b3d510bc822781e46a7b483e99cd",
+      "last_downloaded": "2026-03-24T23:55:28.546825",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Others\\Emerging Nuclear Energy Countries.md"
+      ],
+      "file_size": 126182,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/others/european-union": {
+      "title": "European Union",
+      "category": "Country Profiles - Others",
+      "status": "completed",
+      "content_hash": "e6423b4be9e45e3994468d55acd639628ff8005471dce822b5043a29606c07e4",
+      "last_downloaded": "2026-03-24T23:55:31.632196",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Others\\European Union.md"
+      ],
+      "file_size": 50062,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/others/nuclear-power-in-taiwan": {
+      "title": "Nuclear Power in Taiwan",
+      "category": "Country Profiles - Others",
+      "status": "completed",
+      "content_hash": "23f103fcadc824397be879ba4cc76931b913871c2c6510167efe4d75f7d0c577",
+      "last_downloaded": "2026-03-24T23:55:34.138911",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Others\\Nuclear Power in Taiwan.md"
+      ],
+      "file_size": 23578,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/country-profiles/others/uranium-in-africa": {
+      "title": "Uranium in Africa",
+      "category": "Country Profiles - Others",
+      "status": "completed",
+      "content_hash": "f1d699fb6ee1b16fc50daf2d5f8f52acc7bd561788a38fb13a2394a9c2b22e0c",
+      "last_downloaded": "2026-03-24T23:55:36.682462",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Country Profiles - Others\\Uranium in Africa.md"
+      ],
+      "file_size": 28840,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/introduction/nuclear-fuel-cycle-overview": {
+      "title": "Nuclear Fuel Cycle Overview",
+      "category": "Nuclear Fuel Cycle - Introduction",
+      "status": "completed",
+      "content_hash": "1cbe62faa9446a88c818a7bbac9f1741eb62b5b7edeca792a90865397432e441",
+      "last_downloaded": "2026-03-24T23:55:39.826389",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Introduction\\Nuclear Fuel Cycle Overview.md"
+      ],
+      "file_size": 30299,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/introduction/what-is-uranium-how-does-it-work": {
+      "title": "What is Uranium? How Does it Work?",
+      "category": "Nuclear Fuel Cycle - Introduction",
+      "status": "completed",
+      "content_hash": "420a7e22aa1faa735603eafa296c81a75b162a47163f88ca64c5a1ce301db33e",
+      "last_downloaded": "2026-03-24T23:55:42.363706",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Introduction\\What is Uranium_ How Does it Work_.md"
+      ],
+      "file_size": 20407,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/introduction/physics-of-nuclear-energy": {
+      "title": "Physics of Nuclear Energy",
+      "category": "Nuclear Fuel Cycle - Introduction",
+      "status": "completed",
+      "content_hash": "bfc07b107c6120f14803a7bb55bb19cb3197d9849ee2d10500d39ec6c2a94b6b",
+      "last_downloaded": "2026-03-24T23:55:46.421488",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Nuclear Fuel Cycle - Introduction\\Physics of Nuclear Energy.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Introduction\\Physics of Nuclear Energy.md"
+      ],
+      "file_size": 462574,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources/uranium-markets": {
+      "title": "Uranium Markets",
+      "category": "Nuclear Fuel Cycle - Uranium Resources",
+      "status": "completed",
+      "content_hash": "a2611d2589b480c40622991febb7fa77b1afd5ec1e85f4c5bd2afe624b442ae2",
+      "last_downloaded": "2026-03-24T23:55:44.897589",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Uranium Resources\\Uranium Markets.md"
+      ],
+      "file_size": 12986,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources/supply-of-uranium": {
+      "title": "Supply of Uranium",
+      "category": "Nuclear Fuel Cycle - Uranium Resources",
+      "status": "completed",
+      "content_hash": "2540eebcc506982d9b98dc1f1ea26b41c7a7d3b6cffaf278b751bbdc4541dc30",
+      "last_downloaded": "2026-03-24T23:55:47.769245",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Uranium Resources\\Supply of Uranium.md"
+      ],
+      "file_size": 59964,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources/geology-of-uranium-deposits": {
+      "title": "Geology of Uranium Deposits",
+      "category": "Nuclear Fuel Cycle - Uranium Resources",
+      "status": "completed",
+      "content_hash": "2ed77d25b336915d04b940fe828767e620a8ed07f2ec841b348fa1f127a4aa16",
+      "last_downloaded": "2026-03-24T23:55:52.283739",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Nuclear Fuel Cycle - Uranium Resources\\Geology of Uranium Deposits.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Uranium Resources\\Geology of Uranium Deposits.md"
+      ],
+      "file_size": 185980,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources/military-warheads-as-a-source-of-nuclear-fuel": {
+      "title": "Military Warheads as a Source of Nuclear Fuel",
+      "category": "Nuclear Fuel Cycle - Uranium Resources",
+      "status": "completed",
+      "content_hash": "b62cb0e36c18fa7599bec04d1721ede639242e4f7eca33f2b09c91bfc480271c",
+      "last_downloaded": "2026-03-24T23:55:50.848256",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Uranium Resources\\Military Warheads as a Source of Nuclear Fuel.md"
+      ],
+      "file_size": 30440,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources/uranium-and-depleted-uranium": {
+      "title": "Uranium and Depleted Uranium",
+      "category": "Nuclear Fuel Cycle - Uranium Resources",
+      "status": "completed",
+      "content_hash": "237105d5ff52d5b9cff95852e6d16cad43d843ce059cfb014e23c245c21c2691",
+      "last_downloaded": "2026-03-24T23:55:53.491893",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Uranium Resources\\Uranium and Depleted Uranium.md"
+      ],
+      "file_size": 39417,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources/uranium-from-phosphates": {
+      "title": "Uranium from Phosphates",
+      "category": "Nuclear Fuel Cycle - Uranium Resources",
+      "status": "completed",
+      "content_hash": "7498f9cc1dbc0e3f95f0cb9a00dac99f2bedb8570b2591680a07c32f51c4465e",
+      "last_downloaded": "2026-03-24T23:56:01.725094",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Nuclear Fuel Cycle - Uranium Resources\\Uranium from Phosphates.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Uranium Resources\\Uranium from Phosphates.md"
+      ],
+      "file_size": 106464,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources/uranium-from-rare-earths-deposits": {
+      "title": "Uranium From Rare Earths Deposits",
+      "category": "Nuclear Fuel Cycle - Uranium Resources",
+      "status": "completed",
+      "content_hash": "4ae506118f7b3facc9300b1eb77aeff52475ae4bf2878ccf2dc4313894fdab50",
+      "last_downloaded": "2026-03-24T23:55:56.023632",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Uranium Resources\\Uranium From Rare Earths Deposits.md"
+      ],
+      "file_size": 31414,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources/the-cosmic-origins-of-uranium": {
+      "title": "The Cosmic Origins of Uranium",
+      "category": "Nuclear Fuel Cycle - Uranium Resources",
+      "status": "completed",
+      "content_hash": "446a44c793737352ba9ad0929304020b82620e43ee879e4319b9185d31b1858f",
+      "last_downloaded": "2026-03-24T23:55:58.402598",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Uranium Resources\\The Cosmic Origins of Uranium.md"
+      ],
+      "file_size": 20934,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production": {
+      "title": "World Uranium Mining Production",
+      "category": "Nuclear Fuel Cycle - Mining Of Uranium",
+      "status": "completed",
+      "content_hash": "f1a13bd822e5a0758119bbf7dbf13c6e7a040200a92fc8d19d820ac728025b61",
+      "last_downloaded": "2026-03-24T23:56:00.897587",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Mining Of Uranium\\World Uranium Mining Production.md"
+      ],
+      "file_size": 7429,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/uranium-mining-overview": {
+      "title": "Uranium Mining Overview",
+      "category": "Nuclear Fuel Cycle - Mining Of Uranium",
+      "status": "completed",
+      "content_hash": "7b7c89e93471f1f56cefaa4a22d75a3e745e68fbdb7669b572b30a931c6414e8",
+      "last_downloaded": "2026-03-24T23:56:03.731536",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Mining Of Uranium\\Uranium Mining Overview.md"
+      ],
+      "file_size": 36235,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/in-situ-leach-mining-of-uranium": {
+      "title": "In-Situ Leach Mining of Uranium",
+      "category": "Nuclear Fuel Cycle - Mining Of Uranium",
+      "status": "completed",
+      "content_hash": "c70a925768ff1de63eab8fde00f4f0e033c0bdd1984e6ac49f9b4ab821417bee",
+      "last_downloaded": "2026-03-24T23:56:11.970982",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Mining Of Uranium\\In-Situ Leach Mining of Uranium.md"
+      ],
+      "file_size": 27736,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/environmental-aspects-of-uranium-mining": {
+      "title": "Environmental Aspects of Uranium Mining",
+      "category": "Nuclear Fuel Cycle - Mining Of Uranium",
+      "status": "completed",
+      "content_hash": "8b3aefe4e7ce6baf255cf0167470983d341afb9ae9931a0809df7274fdd0f640",
+      "last_downloaded": "2026-03-24T23:56:06.145210",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Mining Of Uranium\\Environmental Aspects of Uranium Mining.md"
+      ],
+      "file_size": 33390,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/conversion-and-deconversion": {
+      "title": "Conversion and Deconversion",
+      "category": "Nuclear Fuel Cycle - Conversion Enrichment And Fabrication",
+      "status": "completed",
+      "content_hash": "eae462c036112fcad2bca124e1cd0b682671257f319af31611e1ff3ae8d8278a",
+      "last_downloaded": "2026-03-24T23:56:08.714412",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Conversion Enrichment And Fabrication\\Conversion and Deconversion.md"
+      ],
+      "file_size": 10167,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/uranium-enrichment": {
+      "title": "Uranium Enrichment",
+      "category": "Nuclear Fuel Cycle - Conversion Enrichment And Fabrication",
+      "status": "completed",
+      "content_hash": "5bf95da952a81411a6f496421f23e8d23b7dfb23358d5c253c29bee4dcc49f05",
+      "last_downloaded": "2026-03-24T23:56:11.410703",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Conversion Enrichment And Fabrication\\Uranium Enrichment.md"
+      ],
+      "file_size": 46785,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/fuel-fabrication": {
+      "title": "Fuel Fabrication",
+      "category": "Nuclear Fuel Cycle - Conversion Enrichment And Fabrication",
+      "status": "completed",
+      "content_hash": "c8eb3e50f292981d1658753efc23fe1eee8f1ba90f927a1096ae7a7049d9b4c0",
+      "last_downloaded": "2026-03-24T23:56:14.067286",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Conversion Enrichment And Fabrication\\Fuel Fabrication.md"
+      ],
+      "file_size": 70468,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/high-assay-low-enriched-uranium-haleu": {
+      "title": "High-Assay Low-Enriched Uranium (HALEU)",
+      "category": "Nuclear Fuel Cycle - Conversion Enrichment And Fabrication",
+      "status": "completed",
+      "content_hash": "7733169344d823ec2652a07404c22ef0103a7ebe0e40e1f03d96c10245da7db7",
+      "last_downloaded": "2026-03-24T23:56:20.272176",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Conversion Enrichment And Fabrication\\High-Assay Low-Enriched Uranium (HALEU).md"
+      ],
+      "file_size": 20061,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/fuel-recycling/processing-of-used-nuclear-fuel": {
+      "title": "Processing of Used Nuclear Fuel",
+      "category": "Nuclear Fuel Cycle - Fuel Recycling",
+      "status": "completed",
+      "content_hash": "713dfd94fd829099958c38a9d3b752b5c9e6f8755aff33c21c6d42c1ed5c04b2",
+      "last_downloaded": "2026-03-24T23:56:16.779407",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Fuel Recycling\\Processing of Used Nuclear Fuel.md"
+      ],
+      "file_size": 58647,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/fuel-recycling/mixed-oxide-fuel-mox": {
+      "title": "Mixed Oxide Fuel MOX",
+      "category": "Nuclear Fuel Cycle - Fuel Recycling",
+      "status": "completed",
+      "content_hash": "a19c7881d9e289e13bda135b5be22880a747cf69b1e88bc3a51149ecf5e6ec74",
+      "last_downloaded": "2026-03-24T23:56:19.425783",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Fuel Recycling\\Mixed Oxide Fuel MOX.md"
+      ],
+      "file_size": 30413,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/fuel-recycling/plutonium": {
+      "title": "Plutonium",
+      "category": "Nuclear Fuel Cycle - Fuel Recycling",
+      "status": "completed",
+      "content_hash": "5735fbf19e05cbac52776634e0a9194f48f636594cb3d1802fbf05438a1f507a",
+      "last_downloaded": "2026-03-24T23:56:22.143908",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Fuel Recycling\\Plutonium.md"
+      ],
+      "file_size": 34882,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-waste/radioactive-waste-management": {
+      "title": "Radioactive Waste Management",
+      "category": "Nuclear Fuel Cycle - Nuclear Waste",
+      "status": "completed",
+      "content_hash": "4f46583f7b481a839eb9debb6fe81cd8a76cde3dcd740fa70d06f83e5e36e36c",
+      "last_downloaded": "2026-03-24T23:56:38.811402",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Nuclear Waste\\Radioactive Waste Management.md"
+      ],
+      "file_size": 46902,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-waste/treatment-and-conditioning-of-nuclear-wastes": {
+      "title": "Treatment and Conditioning of Nuclear Waste",
+      "category": "Nuclear Fuel Cycle - Nuclear Waste",
+      "status": "completed",
+      "content_hash": "eb92075ad5fbf14974c068fd96b9e051b0192d1eb9e8be0b1591049f2fa8a3ac",
+      "last_downloaded": "2026-03-24T23:56:24.497949",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Nuclear Waste\\Treatment and Conditioning of Nuclear Waste.md"
+      ],
+      "file_size": 14956,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-waste/storage-and-disposal-of-radioactive-waste": {
+      "title": "Storage and Disposal of Radioactive Waste",
+      "category": "Nuclear Fuel Cycle - Nuclear Waste",
+      "status": "completed",
+      "content_hash": "9f2a34f0ec745e40ec8333906d570803a4dc908bb3f20edbd0fe051fbdb769c1",
+      "last_downloaded": "2026-03-24T23:56:27.037064",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Nuclear Waste\\Storage and Disposal of Radioactive Waste.md"
+      ],
+      "file_size": 75358,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-waste/international-nuclear-waste-disposal-concepts": {
+      "title": "International Nuclear Waste Disposal Concepts",
+      "category": "Nuclear Fuel Cycle - Nuclear Waste",
+      "status": "completed",
+      "content_hash": "38ed10b8496a4536fb88eba40792a7731b80fefa04dc69b56499ad84fa3f9bc9",
+      "last_downloaded": "2026-03-24T23:56:29.407200",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Nuclear Waste\\International Nuclear Waste Disposal Concepts.md"
+      ],
+      "file_size": 40785,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-waste/radioactive-wastes-myths-and-realities": {
+      "title": "Radioactive Waste – Myths and Realities",
+      "category": "Nuclear Fuel Cycle - Nuclear Waste",
+      "status": "completed",
+      "content_hash": "f7acc510fb7e507f234057a1cd4211443f50245ca04d769f3e93406bc1487dc2",
+      "last_downloaded": "2026-03-24T23:56:31.845594",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Nuclear Waste\\Radioactive Waste – Myths and Realities.md"
+      ],
+      "file_size": 23388,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-waste/decommissioning-nuclear-facilities": {
+      "title": "Decommissioning Nuclear Facilities",
+      "category": "Nuclear Fuel Cycle - Nuclear Waste",
+      "status": "completed",
+      "content_hash": "4a14e4b9e391ab4a46cd232df64d0bfb22a105406a06db2f0af5b4fb690bc8e6",
+      "last_downloaded": "2026-03-24T23:56:35.652532",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Nuclear Waste\\Decommissioning Nuclear Facilities.md"
+      ],
+      "file_size": 58432,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/transport-of-nuclear-materials/transport-of-radioactive-materials": {
+      "title": "Transport of Radioactive Material",
+      "category": "Nuclear Fuel Cycle - Transport Of Nuclear Materials",
+      "status": "completed",
+      "content_hash": "a847d57e5c85714e516e35b8b347b947fdc0c60b62fcf240e921ecdb81b6f334",
+      "last_downloaded": "2026-03-24T23:56:38.126136",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Transport Of Nuclear Materials\\Transport of Radioactive Material.md"
+      ],
+      "file_size": 40849,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-fuel-cycle/transport-of-nuclear-materials/japanese-waste-and-mox-shipments-from-europe": {
+      "title": "Japanese Waste and MOX Shipments From Europe",
+      "category": "Nuclear Fuel Cycle - Transport Of Nuclear Materials",
+      "status": "completed",
+      "content_hash": "7e8ecbc96695aabadb300729615371c382cb2924e4b38e569b5927df9074f790",
+      "last_downloaded": "2026-03-24T23:56:41.114993",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Fuel Cycle - Transport Of Nuclear Materials\\Japanese Waste and MOX Shipments From Europe.md"
+      ],
+      "file_size": 13852,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/safety-of-nuclear-power-reactors": {
+      "title": "Safety of Nuclear Power Reactors",
+      "category": "Safety And Security - Safety Of Plants",
+      "status": "completed",
+      "content_hash": "60a71f8740a017eb02f7ee9ac8450483b38c6dbf11e50a16241d7fa5b6bd12d9",
+      "last_downloaded": "2026-03-24T23:56:56.538769",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Safety Of Plants\\Safety of Nuclear Power Reactors.md"
+      ],
+      "file_size": 91173,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/chernobyl-accident": {
+      "title": "Chernobyl Accident",
+      "category": "Safety And Security - Safety Of Plants",
+      "status": "completed",
+      "content_hash": "50b6d0e50cfb3fce2be97ec020c5f87e88e7fa828fa53d226d2de32dba14b77e",
+      "last_downloaded": "2026-03-24T23:56:44.273144",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Safety Of Plants\\Chernobyl Accident.md"
+      ],
+      "file_size": 72228,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/fukushima-daiichi-accident": {
+      "title": "Fukushima Daiichi Accident",
+      "category": "Safety And Security - Safety Of Plants",
+      "status": "completed",
+      "content_hash": "a8547f1496f0ded5eecc927644c8018ebfca01704499500d9b5b25ecbdc470e0",
+      "last_downloaded": "2026-03-24T23:56:47.419796",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Safety Of Plants\\Fukushima Daiichi Accident.md"
+      ],
+      "file_size": 115662,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/liability-for-nuclear-damage": {
+      "title": "Liability for Nuclear Damage",
+      "category": "Safety And Security - Safety Of Plants",
+      "status": "completed",
+      "content_hash": "ad3abb892c9032494c14978f73259d596f522c65c9ec6e5294402a30edd71b45",
+      "last_downloaded": "2026-03-24T23:56:50.231992",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Safety Of Plants\\Liability for Nuclear Damage.md"
+      ],
+      "file_size": 53190,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/nuclear-power-plants-and-earthquakes": {
+      "title": "Nuclear Power Plants and Earthquakes",
+      "category": "Safety And Security - Safety Of Plants",
+      "status": "completed",
+      "content_hash": "cb5ab1f7f543223f0b700672fef3a8582f79dc86d0a140cc0435e7da49f7c50d",
+      "last_downloaded": "2026-03-24T23:56:52.853496",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Safety Of Plants\\Nuclear Power Plants and Earthquakes.md"
+      ],
+      "file_size": 33447,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/three-mile-island-accident": {
+      "title": "Three Mile Island Accident",
+      "category": "Safety And Security - Safety Of Plants",
+      "status": "completed",
+      "content_hash": "12b2da4e1ffb5bd7056d2e6c0f1276707f27e6f6354f0fcd7e4c1ec766320f86",
+      "last_downloaded": "2026-03-24T23:56:55.795970",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Safety Of Plants\\Three Mile Island Accident.md"
+      ],
+      "file_size": 25552,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/safety-of-plants/tokaimura-criticality-accident": {
+      "title": "Tokaimura Criticality Accident",
+      "category": "Safety And Security - Safety Of Plants",
+      "status": "completed",
+      "content_hash": "7a3202763fef9c94d6cb9f124f745337887e00d311a0f705925defb989942bc7",
+      "last_downloaded": "2026-03-24T23:56:58.477940",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Safety Of Plants\\Tokaimura Criticality Accident.md"
+      ],
+      "file_size": 16100,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/radiation-and-health/radiation-and-health-effects": {
+      "title": "Radiation and Health Effects",
+      "category": "Safety And Security - Radiation And Health",
+      "status": "completed",
+      "content_hash": "3a47a6cb57604d5c498b3d23bd44f83986fcce66af30abc182bbd6b81ac2d17a",
+      "last_downloaded": "2026-03-24T23:57:10.808417",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Safety And Security - Radiation And Health\\Radiation and Health Effects.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Radiation And Health\\Radiation and Health Effects.md"
+      ],
+      "file_size": 338244,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/radiation-and-health/occupational-safety-in-uranium-mining": {
+      "title": "Occupational Safety in Uranium Mining",
+      "category": "Safety And Security - Radiation And Health",
+      "status": "completed",
+      "content_hash": "c70cf15114bde8a025c7af689d4b41f39c0ac5c2b219d2d7c516ec2e4f136f24",
+      "last_downloaded": "2026-03-24T23:57:01.023386",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Radiation And Health\\Occupational Safety in Uranium Mining.md"
+      ],
+      "file_size": 15713,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/radiation-and-health/naturally-occurring-radioactive-materials-norm": {
+      "title": "Naturally-Occurring Radioactive Materials NORM",
+      "category": "Safety And Security - Radiation And Health",
+      "status": "completed",
+      "content_hash": "f47f16510691551e15c1301ff2635d12d63ebe5de693e0f66b7b29e3b74516ec",
+      "last_downloaded": "2026-03-24T23:57:04.160578",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Radiation And Health\\Naturally-Occurring Radioactive Materials NORM.md"
+      ],
+      "file_size": 54076,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/non-proliferation/safeguards-to-prevent-nuclear-proliferation": {
+      "title": "Safeguards to Prevent Nuclear Proliferation",
+      "category": "Safety And Security - Non Proliferation",
+      "status": "completed",
+      "content_hash": "115f89fd557cc48f3ed4d349ca871b61bb4b4e04b24978e57baf09cad22317e0",
+      "last_downloaded": "2026-03-24T23:57:07.074208",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Non Proliferation\\Safeguards to Prevent Nuclear Proliferation.md"
+      ],
+      "file_size": 48197,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/non-proliferation/hiroshima-nagasaki-and-subsequent-weapons-testin": {
+      "title": "Hiroshima, Nagasaki, and Subsequent Weapons Testing",
+      "category": "Safety And Security - Non Proliferation",
+      "status": "completed",
+      "content_hash": "81f00395dc0dedb79a7b965aa4489eb931b5ab9cfc75a4518357e6ea4f5ec166",
+      "last_downloaded": "2026-03-24T23:57:09.608069",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Non Proliferation\\Hiroshima, Nagasaki, and Subsequent Weapons Testing.md"
+      ],
+      "file_size": 17784,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/safety-and-security/security/security-of-nuclear-facilities-and-material": {
+      "title": "Security of Nuclear Facilities and Material",
+      "category": "Safety And Security - Security",
+      "status": "completed",
+      "content_hash": "f378ea80666493ccdb486b12ee252370ab30a765ef8c2a8f631021bc2349fe59",
+      "last_downloaded": "2026-03-24T23:57:12.040493",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Safety And Security - Security\\Security of Nuclear Facilities and Material.md"
+      ],
+      "file_size": 23108,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-power-reactors/overview/nuclear-power-reactors": {
+      "title": "Nuclear Power Reactors",
+      "category": "Nuclear Power Reactors - Overview",
+      "status": "completed",
+      "content_hash": "5f0a22d0e907c2f33a782696fdb5b9b2351341d89bd566b00123a44bfcc00b4d",
+      "last_downloaded": "2026-03-24T23:57:24.216107",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Nuclear Power Reactors - Overview\\Nuclear Power Reactors.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Power Reactors - Overview\\Nuclear Power Reactors.md"
+      ],
+      "file_size": 416241,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-power-reactors/small-modular-reactors/small-modular-reactor-smr-global-tracker": {
+      "title": "Small Modular Reactor (SMR) Global Tracker",
+      "category": "Nuclear Power Reactors - Small Modular Reactors",
+      "status": "completed",
+      "content_hash": "476579d66c95e9be662d884b88fcd279a829cadcd9cf6c89b3508cd4071aa55c",
+      "last_downloaded": "2026-03-24T23:57:14.542355",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Power Reactors - Small Modular Reactors\\Small Modular Reactor (SMR) Global Tracker.md"
+      ],
+      "file_size": 8026,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-power-reactors/small-modular-reactors/small-modular-reactor-smr-design-database": {
+      "title": "Small Modular Reactor (SMR) Design Database",
+      "category": "Nuclear Power Reactors - Small Modular Reactors",
+      "status": "completed",
+      "content_hash": "3be987520a63f75b619fd8b445f986c12bacfb4f3be827bda305ea8ed545c918",
+      "last_downloaded": "2026-03-24T23:57:17.214101",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Power Reactors - Small Modular Reactors\\Small Modular Reactor (SMR) Design Database.md"
+      ],
+      "file_size": 376401,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-power-reactors/small-modular-reactors/small-modular-reactors": {
+      "title": "Small Modular Reactors",
+      "category": "Nuclear Power Reactors - Small Modular Reactors",
+      "status": "completed",
+      "content_hash": "642506fd441437ac1578970ec2b104daf687b35fb79c4524b0bd85526eb41ebb",
+      "last_downloaded": "2026-03-24T23:57:19.857897",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Power Reactors - Small Modular Reactors\\Small Modular Reactors.md"
+      ],
+      "file_size": 48504,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-power-reactors/other/advanced-nuclear-power-reactors": {
+      "title": "Advanced Nuclear Power Reactors",
+      "category": "Nuclear Power Reactors - Other",
+      "status": "completed",
+      "content_hash": "2206e8f72ee6fd02c2887e2ce2b5e069bea0e386e6f651aef1e407e1ff8fa6e0",
+      "last_downloaded": "2026-03-24T23:57:23.205962",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Power Reactors - Other\\Advanced Nuclear Power Reactors.md"
+      ],
+      "file_size": 79393,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-power-reactors/other/heavy-manufacturing-of-power-plants": {
+      "title": "Heavy Manufacturing of Power Plants",
+      "category": "Nuclear Power Reactors - Other",
+      "status": "completed",
+      "content_hash": "8ed51511fcee235313c1ca848141fb4e59e1fc1d470a0ae47ad0c2d59f5ddc49",
+      "last_downloaded": "2026-03-24T23:57:26.202786",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Power Reactors - Other\\Heavy Manufacturing of Power Plants.md"
+      ],
+      "file_size": 85640,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-power-reactors/other/generation-iv-nuclear-reactors": {
+      "title": "Generation IV Nuclear Reactors",
+      "category": "Nuclear Power Reactors - Other",
+      "status": "completed",
+      "content_hash": "9b79f674ad1aa80d7d809525b9a64421372a659c8a17c210bcf1cae61617c8b5",
+      "last_downloaded": "2026-03-24T23:57:35.825372",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Nuclear Power Reactors - Other\\Generation IV Nuclear Reactors.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Power Reactors - Other\\Generation IV Nuclear Reactors.md"
+      ],
+      "file_size": 123605,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/nuclear-power-reactors/other/molten-salt-reactors": {
+      "title": "Molten Salt Reactors",
+      "category": "Nuclear Power Reactors - Other",
+      "status": "completed",
+      "content_hash": "b01ba70c48e9a55d7748c8afd4f34d0cefd62020cb3af111d4e69d437f44f11f",
+      "last_downloaded": "2026-03-24T23:57:28.904662",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Nuclear Power Reactors - Other\\Molten Salt Reactors.md"
+      ],
+      "file_size": 54658,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/overview/the-many-uses-of-nuclear-technology": {
+      "title": "The Many Uses of Nuclear Technology",
+      "category": "Non Power Nuclear Applications - Overview",
+      "status": "completed",
+      "content_hash": "9a8c6d248a7d998c2aa7d3f588cac531b510ef950544785927f221feb9d5a976",
+      "last_downloaded": "2026-03-24T23:57:31.360278",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Overview\\The Many Uses of Nuclear Technology.md"
+      ],
+      "file_size": 27062,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/radioisotopes-research/radioisotopes-in-consumer-products": {
+      "title": "Radioisotopes in Consumer Products",
+      "category": "Non Power Nuclear Applications - Radioisotopes Research",
+      "status": "completed",
+      "content_hash": "4620c4b0f02cd1ae4b5c38ea3b7405a1145aa0f482194469ce308e91216471af",
+      "last_downloaded": "2026-03-24T23:57:33.905457",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Radioisotopes Research\\Radioisotopes in Consumer Products.md"
+      ],
+      "file_size": 10522,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/radioisotopes-research/radioisotopes-in-food-agriculture": {
+      "title": "Radioisotopes in Food & Agriculture",
+      "category": "Non Power Nuclear Applications - Radioisotopes Research",
+      "status": "completed",
+      "content_hash": "e54ece212150f244448a6dba68e37af78a957f96752361bc7a1a70424a1dcccf",
+      "last_downloaded": "2026-03-24T23:57:36.375474",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Radioisotopes Research\\Radioisotopes in Food & Agriculture.md"
+      ],
+      "file_size": 13215,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/radioisotopes-research/radioisotopes-in-industry": {
+      "title": "Radioisotopes in Industry",
+      "category": "Non Power Nuclear Applications - Radioisotopes Research",
+      "status": "completed",
+      "content_hash": "a833d376263ae1f589e54766dd5e50d201bbf4958250f9b4ecf25a2324cd05e3",
+      "last_downloaded": "2026-03-24T23:57:45.741861",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Radioisotopes Research\\Radioisotopes in Industry.md"
+      ],
+      "file_size": 13070,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/radioisotopes-research/radioisotopes-in-medicine": {
+      "title": "Radioisotopes in Medicine",
+      "category": "Non Power Nuclear Applications - Radioisotopes Research",
+      "status": "completed",
+      "content_hash": "04a2c33fb9d89b67e614a241ee960be59fef1fa10992ee8669c83176c88d49ba",
+      "last_downloaded": "2026-03-24T23:57:39.434333",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Radioisotopes Research\\Radioisotopes in Medicine.md"
+      ],
+      "file_size": 57352,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/radioisotopes-research/radioisotopes-in-water-resources-the-environment": {
+      "title": "Radioisotopes in Water Resources & the Environment",
+      "category": "Non Power Nuclear Applications - Radioisotopes Research",
+      "status": "completed",
+      "content_hash": "f2ed7a86a8d5bf5a51fa9d1583b0f170a424cbac53913914a30f7592598e45f1",
+      "last_downloaded": "2026-03-24T23:57:41.994084",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Radioisotopes Research\\Radioisotopes in Water Resources & the Environment.md"
+      ],
+      "file_size": 4970,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/radioisotopes-research/research-reactors": {
+      "title": "Research Reactors",
+      "category": "Non Power Nuclear Applications - Radioisotopes Research",
+      "status": "completed",
+      "content_hash": "c93bc71bbf3b8bd9d6fb66b51642c733092598598a5847713286a117e52b32ed",
+      "last_downloaded": "2026-03-24T23:57:45.405339",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Radioisotopes Research\\Research Reactors.md"
+      ],
+      "file_size": 38532,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/industry/nuclear-desalination": {
+      "title": "Desalination",
+      "category": "Non Power Nuclear Applications - Industry",
+      "status": "completed",
+      "content_hash": "ac7f62d3ad168b5944668156a8f3f284317a1fac0996d2b02c3e7e30b44a7e24",
+      "last_downloaded": "2026-03-24T23:57:48.137624",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Industry\\Desalination.md"
+      ],
+      "file_size": 61039,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/industry/nuclear-process-heat-for-industry": {
+      "title": "Nuclear Process Heat for Industry",
+      "category": "Non Power Nuclear Applications - Industry",
+      "status": "completed",
+      "content_hash": "f2af63d5ba4e52ddd4fcdee9f12ae90e636e5aa8fed30ea0b64e579b3319631a",
+      "last_downloaded": "2026-03-24T23:57:51.688588",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Industry\\Nuclear Process Heat for Industry.md"
+      ],
+      "file_size": 25742,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/industry/peaceful-nuclear-explosions": {
+      "title": "Peaceful Nuclear Explosions",
+      "category": "Non Power Nuclear Applications - Industry",
+      "status": "completed",
+      "content_hash": "4b04c92c915a9f6e424a2b8dd6a4e8e8da86cf322c4179d458dad5c99b0122e8",
+      "last_downloaded": "2026-03-24T23:57:51.036545",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Industry\\Peaceful Nuclear Explosions.md"
+      ],
+      "file_size": 27178,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/transport/nuclear-reactors-for-space": {
+      "title": "Nuclear Reactors for Space",
+      "category": "Non Power Nuclear Applications - Transport",
+      "status": "completed",
+      "content_hash": "a5dc27e5604e52ee3a33927da447d80e0bcbe6e93351e9656d38e9173bca83ef",
+      "last_downloaded": "2026-03-24T23:57:54.017139",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Transport\\Nuclear Reactors for Space.md"
+      ],
+      "file_size": 47039,
+      "error": null,
+      "retry_count": 0
+    },
+    "https://world-nuclear.org/information-library/non-power-nuclear-applications/transport/nuclear-powered-ships": {
+      "title": "Nuclear-Powered Ships",
+      "category": "Non Power Nuclear Applications - Transport",
+      "status": "completed",
+      "content_hash": "2a9366b14187b99a844347ef7569d12cf1a15cca2ec6c35782914d52f688ee40",
+      "last_downloaded": "2026-03-24T23:57:59.676756",
+      "file_paths": [
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\pdf\\Non Power Nuclear Applications - Transport\\Nuclear-Powered Ships.pdf",
+        "C:\\Users\\iflytek\\Desktop\\code\\claudecode\\universal-scraper\\wna_data\\md\\Non Power Nuclear Applications - Transport\\Nuclear-Powered Ships.md"
+      ],
+      "file_size": 563317,
+      "error": null,
+      "retry_count": 0
+    }
+  }
+}
