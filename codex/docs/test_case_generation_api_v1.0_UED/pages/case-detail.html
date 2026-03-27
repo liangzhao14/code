@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用例详情</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="logo-icon">TC</span><span class="logo-text">CaseFlow API</span></div>
+        <div class="nav-group"><div class="nav-group-title">总览</div><a class="nav-link" href="monitor-dashboard.html"><span class="nav-icon">◉</span>监控工作台</a></div>
+        <div class="nav-group"><div class="nav-group-title">开放接入</div><a class="nav-link" href="app-access.html"><span class="nav-icon">◎</span>接入管理</a></div>
+        <div class="nav-group"><div class="nav-group-title">生成服务</div><a class="nav-link" href="result-center.html"><span class="nav-icon">▣</span>结果中心</a><div class="nav-submenu"><a class="nav-link active" href="case-detail.html"><span class="nav-icon">·</span>用例详情</a></div></div>
+      </aside>
+      <main class="content-shell">
+        <div class="topbar">
+          <div class="topbar-left"><div class="breadcrumb"><a href="monitor-dashboard.html">首页</a><span>/</span><a href="result-center.html">结果中心</a><span>/</span><span class="current">用例详情</span></div></div>
+          <div class="topbar-right">
+            <input type="text" class="topbar-search" placeholder="搜索其他用例">
+            <button class="topbar-icon-btn" onclick="toggleNotifyPanel(event)">🔔<span class="badge-dot"></span>
+              <div class="topbar-dropdown topbar-notify-panel" id="notifyPanel">
+                <div class="topbar-notify-header"><span>消息通知</span><a href="javascript:void(0)">全部已读</a></div>
+                <div class="topbar-notify-item unread"><span class="topbar-notify-dot"></span><div class="topbar-notify-content"><div class="topbar-notify-text">可对该用例进行二次编辑并同步回第三方系统</div><div class="topbar-notify-time">4 分钟前</div></div></div>
+                <div class="topbar-notify-footer"><a href="result-center.html">返回列表</a></div>
+              </div>
+            </button>
+            <div class="topbar-avatar" onclick="toggleAvatarMenu(event)">张
+              <div class="topbar-dropdown topbar-avatar-menu" id="avatarMenu">
+                <div class="topbar-avatar-menu-item" onclick="location.href='result-center.html'">👤 返回结果中心</div>
+                <div class="topbar-avatar-menu-divider"></div>
+                <div class="topbar-avatar-menu-item">🚪 退出登录</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <section class="page-header">
+            <div>
+              <h1 class="page-title">CASE-001 / 任务完成后获取结果成功</h1>
+              <p class="page-subtitle">满足 PRD 中“单条用例详情需便于复制和二次编辑”的要求，采用清晰的描述块和操作按钮布局。</p>
+            </div>
+            <div class="toolbar-right">
+              <span class="tag tag-danger">P0</span>
+              <span class="tag tag-success">正常</span>
+              <button class="btn btn-default" onclick="showToast('已复制用例详情')">复制用例</button>
+            </div>
+          </section>
+          <section class="detail-card">
+            <div class="card-title-row"><h2 class="card-title">用例信息</h2><a href="result-center.html">返回列表</a></div>
+            <div class="desc-grid">
+              <div class="desc-item"><div class="desc-label">所属模块</div><div class="desc-value">结果获取</div></div>
+              <div class="desc-item"><div class="desc-label">场景描述</div><div class="desc-value">任务成功后，调用结果接口获取完整结构化测试用例集合。</div></div>
+              <div class="desc-item"><div class="desc-label">前置条件</div><div class="desc-value">任务状态为成功，结果未过期，调用方具备归属权限。</div></div>
+              <div class="desc-item"><div class="desc-label">标签</div><div class="desc-value">结果获取 / JSON / 权限校验</div></div>
+            </div>
+          </section>
+          <section class="detail-card">
+            <div class="card-title-row"><h2 class="card-title">测试步骤</h2><button class="btn btn-default" onclick="showToast('步骤已复制')">复制步骤</button></div>
+            <div class="notice-box">1. 调用结果接口，传入合法任务 ID 与应用签名。<br>2. 校验响应状态码为 200，返回体包含 resultMeta、summary 和 cases。<br>3. 校验 cases 中每条用例含标题、前置条件、步骤、预期结果、优先级。<br>4. 校验返回体展示生成时间、模板信息与覆盖维度说明。</div>
+          </section>
+          <section class="detail-card">
+            <div class="card-title-row"><h2 class="card-title">预期结果</h2><button class="btn btn-primary" onclick="showToast('已标记为重点用例')">标记重点</button></div>
+            <div class="notice-box">接口返回完整的结构化结果，字段齐全，任务归属合法，未出现“任务尚未完成”或“结果已过期”类错误信息。</div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script>
+    function toggleNotifyPanel(e){e.stopPropagation();document.getElementById('avatarMenu').classList.remove('open');document.getElementById('notifyPanel').classList.toggle('open');}
+    function toggleAvatarMenu(e){e.stopPropagation();document.getElementById('notifyPanel').classList.remove('open');document.getElementById('avatarMenu').classList.toggle('open');}
+    document.addEventListener('click',function(){document.querySelectorAll('.topbar-dropdown').forEach(function(d){d.classList.remove('open');});});
+    function showToast(text){var toast=document.getElementById('toast');toast.textContent=text;toast.classList.add('show');window.clearTimeout(window.toastTimer);window.toastTimer=setTimeout(function(){toast.classList.remove('show');},2000);}
+  </script>
+</body>
+</html>

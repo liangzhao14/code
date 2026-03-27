@@ -4,6 +4,40 @@
 
 ---
 
+## 2026-03-27 18:48
+
+- 删除: "claude code/.claude/settings.json"
+- 删除: "claude code/.claude/settings.local.json"
+- 删除: "claude code/.claude/skills/ab-test-setup/SKILL.md"
+- 删除: "claude code/.claude/skills/ab-test-setup/evals/evals.json"
+- 删除: "claude code/.claude/skills/ab-test-setup/references/sample-size-guide.md"
+- 删除: "claude code/.claude/skills/ab-test-setup/references/test-templates.md"
+- 删除: "claude code/.claude/skills/ad-creative/SKILL.md"
+- 删除: "claude code/.claude/skills/ad-creative/evals/evals.json"
+- 删除: "claude code/.claude/skills/ad-creative/references/generative-tools.md"
+- 删除: "claude code/.claude/skills/ad-creative/references/platform-specs.md"
+- 删除: "claude code/.claude/skills/ai-seo/SKILL.md"
+- 删除: "claude code/.claude/skills/ai-seo/evals/evals.json"
+- 删除: "claude code/.claude/skills/ai-seo/references/content-patterns.md"
+- 删除: "claude code/.claude/skills/ai-seo/references/platform-ranking-factors.md"
+- 删除: "claude code/.claude/skills/analytics-tracking/SKILL.md"
+- 删除: "claude code/.claude/skills/analytics-tracking/evals/evals.json"
+- 删除: "claude code/.claude/skills/analytics-tracking/references/event-library.md"
+- 删除: "claude code/.claude/skills/analytics-tracking/references/ga4-implementation.md"
+- 删除: "claude code/.claude/skills/analytics-tracking/references/gtm-implementation.md"
+- 删除: "claude code/.claude/skills/churn-prevention/SKILL.md"
+- 删除: "claude code/.claude/skills/churn-prevention/evals/evals.json"
+- 删除: "claude code/.claude/skills/churn-prevention/references/cancel-flow-patterns.md"
+- 删除: "claude code/.claude/skills/churn-prevention/references/dunning-playbook.md"
+- 删除: "claude code/.claude/skills/cold-email/SKILL.md"
+- 删除: "claude code/.claude/skills/cold-email/evals/evals.json"
+- 删除: "claude code/.claude/skills/cold-email/references/benchmarks.md"
+- 删除: "claude code/.claude/skills/cold-email/references/follow-up-sequences.md"
+- 删除: "claude code/.claude/skills/cold-email/references/frameworks.md"
+- 删除: "claude code/.claude/skills/cold-email/references/personalization.md"
+- 删除: "claude code/.claude/skills/cold-email/references/subject-lines.md"
+
+
 ## 2026-03-27 18:46
 
 - 新增: codex/docs/test_case_generation_api_v1.0_UED/pages/task-detail.html
