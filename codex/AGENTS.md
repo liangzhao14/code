@@ -11,16 +11,14 @@ This repository is currently a minimal scaffold with no application code checked
 Prefer feature-focused modules inside `src/` (for example, `src/auth/` or `src/api/`) rather than large mixed directories.
 
 ## Build, Test, and Development Commands
-No build tooling is configured yet. When adding a language runtime or framework, expose the common workflows through documented commands and keep them stable.
+This repository now includes a Vite + React frontend scaffold.
 
-Examples to add once tooling exists:
+- `npm install` to install dependencies
+- `npm run dev` to run the local development server
+- `npm run build` to create a production bundle
+- `npm run preview` to preview the production build locally
 
-- `npm install` or `pip install -r requirements.txt` to install dependencies
-- `npm run dev` or `python -m app` to run locally
-- `npm test` or `pytest` to execute tests
-- `npm run lint` or `ruff check .` to enforce style
-
-Record the authoritative commands in `README.md` whenever tooling is introduced.
+Record any future command changes in `README.md` in the same change set.
 
 ## Coding Style & Naming Conventions
 Use 4 spaces for Python and 2 spaces for JavaScript, TypeScript, JSON, YAML, and Markdown lists. Prefer descriptive file and module names such as `user_service.py` or `task-runner.ts`.

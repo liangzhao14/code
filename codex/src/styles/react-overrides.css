@@ -1,0 +1,64 @@
+#root {
+  min-height: 100vh;
+}
+
+.topbar-avatar {
+  overflow: visible;
+}
+
+.page-shell {
+  width: 100%;
+}
+
+.route-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-16);
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+.summary-item {
+  padding: var(--spacing-16);
+  border-radius: var(--radius-3);
+  background: var(--bg-fill-2);
+}
+
+.overlay-grid {
+  display: grid;
+  gap: var(--spacing-16);
+}
+
+.tag-row {
+  display: flex;
+  gap: var(--spacing-8);
+  flex-wrap: wrap;
+}
+
+.plain-list {
+  margin: 0;
+  padding-left: var(--spacing-20);
+  color: var(--color-text-2);
+}
+
+.plain-list li + li {
+  margin-top: var(--spacing-8);
+}
+
+.loading-card {
+  padding: var(--spacing-24);
+  border-radius: var(--radius-3);
+  background: var(--bg-fill-1);
+  box-shadow: var(--shadow1-center);
+  color: var(--color-text-3);
+}
+
+@media (max-width: 1100px) {
+  .route-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
