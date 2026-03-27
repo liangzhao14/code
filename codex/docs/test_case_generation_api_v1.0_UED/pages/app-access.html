@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>接入管理</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="logo-icon">TC</span><span class="logo-text">CaseFlow API</span></div>
+        <div class="nav-group"><div class="nav-group-title">总览</div><a class="nav-link" href="monitor-dashboard.html"><span class="nav-icon">◉</span>监控工作台</a></div>
+        <div class="nav-group"><div class="nav-group-title">开放接入</div><a class="nav-link active" href="app-access.html"><span class="nav-icon">◎</span>接入管理</a><div class="nav-submenu"><a class="nav-link" href="app-detail.html"><span class="nav-icon">·</span>应用详情</a></div></div>
+        <div class="nav-group"><div class="nav-group-title">生成服务</div><a class="nav-link" href="generate-request.html"><span class="nav-icon">◆</span>生成工作台</a><a class="nav-link" href="task-detail.html"><span class="nav-icon">◇</span>任务详情</a><a class="nav-link" href="result-center.html"><span class="nav-icon">▣</span>结果中心</a></div>
+      </aside>
+      <main class="content-shell">
+        <div class="topbar">
+          <div class="topbar-left"><div class="breadcrumb"><a href="monitor-dashboard.html">首页</a><span>/</span><a href="app-access.html">开放接入</a><span>/</span><span class="current">接入管理</span></div></div>
+          <div class="topbar-right">
+            <input type="text" class="topbar-search" placeholder="搜索应用名称或回调地址">
+            <button class="topbar-icon-btn" onclick="toggleNotifyPanel(event)">🔔<span class="badge-dot"></span>
+              <div class="topbar-dropdown topbar-notify-panel" id="notifyPanel">
+                <div class="topbar-notify-header"><span>消息通知</span><a href="javascript:void(0)">全部已读</a></div>
+                <div class="topbar-notify-item unread"><span class="topbar-notify-dot"></span><div class="topbar-notify-content"><div class="topbar-notify-text">新应用待补充联系人信息</div><div class="topbar-notify-time">6 分钟前</div></div></div>
+                <div class="topbar-notify-item"><span class="topbar-notify-dot read"></span><div class="topbar-notify-content"><div class="topbar-notify-text">1 个回调地址已通过健康检查</div><div class="topbar-notify-time">40 分钟前</div></div></div>
+                <div class="topbar-notify-footer"><a href="task-detail.html">查看异常</a></div>
+              </div>
+            </button>
+            <div class="topbar-avatar" onclick="toggleAvatarMenu(event)">张
+              <div class="topbar-dropdown topbar-avatar-menu" id="avatarMenu">
+                <div class="topbar-avatar-menu-item" onclick="location.href='app-detail.html'">👤 个人中心</div>
+                <div class="topbar-avatar-menu-item">⚙️ 账户设置</div>
+                <div class="topbar-avatar-menu-divider"></div>
+                <div class="topbar-avatar-menu-item">🚪 退出登录</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <section class="page-header">
+            <div>
+              <h1 class="page-title">接入管理</h1>
+              <p class="page-subtitle">根据 UC-01 设计的接入应用列表页，支持创建接入应用、查看详情、重置密钥和回调配置状态管理。</p>
+            </div>
+            <div class="toolbar-right">
+              <button class="btn btn-default" onclick="showToast('已导出应用清单')">导出清单</button>
+              <button class="btn btn-primary" onclick="openModal('appCreateModal')">新建接入应用</button>
+            </div>
+          </section>
+          <section class="toolbar">
+            <div class="toolbar-left">
+              <div class="field"><label>应用名称</label><input class="field-input" placeholder="请输入应用名称"></div>
+              <div class="field"><label>应用状态</label><select class="field-select"><option>全部状态</option><option>启用</option><option>禁用</option><option>冻结</option></select></div>
+              <div class="field"><label>回调配置</label><select class="field-select"><option>全部</option><option>已配置</option><option>待配置</option><option>异常</option></select></div>
+            </div>
+            <div class="toolbar-right">
+              <button class="btn btn-default" onclick="showToast('筛选条件已重置')">重置</button>
+              <button class="btn btn-primary" onclick="showToast('已按条件筛选')">查询</button>
+            </div>
+          </section>
+          <section class="table-card">
+            <div class="card-title-row"><h2 class="card-title">接入应用列表</h2><span class="tag tag-info">总数 36</span></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>应用名称</th><th>应用标识</th><th>状态</th><th>回调地址</th><th>联系人</th><th>创建时间</th><th>操作</th></tr></thead>
+                <tbody>
+                  <tr><td>CaseGen-ERP</td><td>APP_91KD28A</td><td><span class="tag tag-success">启用</span></td><td>https://erp.partner.com/callback</td><td>刘洋</td><td>2026-03-22 10:40</td><td><div class="table-actions"><a href="app-detail.html">查看详情</a><a href="javascript:void(0)" onclick="openModal('resetKeyModal')">重置密钥</a></div></td></tr>
+                  <tr><td>QA-Partner</td><td>APP_18KF93M</td><td><span class="tag tag-warning">冻结</span></td><td>未配置</td><td>王敏</td><td>2026-03-20 18:25</td><td><div class="table-actions"><a href="app-detail.html">查看详情</a><a href="javascript:void(0)" onclick="openModal('resetKeyModal')">重置密钥</a></div></td></tr>
+                  <tr><td>Flow-TestHub</td><td>APP_71PS88Q</td><td><span class="tag tag-info">启用</span></td><td>https://hub.test.com/open/case</td><td>赵磊</td><td>2026-03-18 09:10</td><td><div class="table-actions"><a href="app-detail.html">查看详情</a><a href="javascript:void(0)" onclick="openModal('resetKeyModal')">重置密钥</a></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div class="modal-mask" id="appCreateModal">
+    <div class="modal">
+      <div class="layer-header"><strong>新建接入应用</strong><button class="btn btn-link" onclick="closeModal('appCreateModal')">关闭</button></div>
+      <div class="layer-body">
+        <div class="form-grid">
+          <div class="field"><label>应用名称 *</label><input class="field-input" placeholder="如：CaseGen-ERP"></div>
+          <div class="field"><label>回调地址</label><input class="field-input" placeholder="https://example.com/callback"></div>
+          <div class="field"><label>联系人</label><input class="field-input" placeholder="请输入联系人"></div>
+          <div class="field"><label>用途说明</label><textarea class="field-textarea" placeholder="说明接入系统用途与目标业务场景"></textarea></div>
+        </div>
+        <div class="warn-box">应用名称在同一租户内必须唯一，回调地址需符合允许协议与域名规则。</div>
+      </div>
+      <div class="layer-footer"><button class="btn btn-default" onclick="closeModal('appCreateModal')">取消</button><button class="btn btn-primary" onclick="submitCreateApp()">创建应用</button></div>
+    </div>
+  </div>
+  <div class="modal-mask" id="resetKeyModal">
+    <div class="modal modal-confirm">
+      <div class="layer-header"><strong>重置密钥确认</strong><button class="btn btn-link" onclick="closeModal('resetKeyModal')">关闭</button></div>
+      <div class="layer-body">
+        <div class="warn-box">重置后旧密钥将立即失效，调用方必须重新保存并更新到业务系统配置中。</div>
+        <div class="field"><label>请输入 “RESET” 确认 *</label><input id="resetKeyInput" class="field-input" placeholder="请输入 RESET"></div>
+      </div>
+      <div class="layer-footer"><button class="btn btn-default" onclick="closeModal('resetKeyModal')">取消</button><button class="btn btn-danger" onclick="confirmResetKey()">确认重置</button></div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script>
+    function toggleNotifyPanel(e){e.stopPropagation();document.getElementById('avatarMenu').classList.remove('open');document.getElementById('notifyPanel').classList.toggle('open');}
+    function toggleAvatarMenu(e){e.stopPropagation();document.getElementById('notifyPanel').classList.remove('open');document.getElementById('avatarMenu').classList.toggle('open');}
+    document.addEventListener('click',function(){document.querySelectorAll('.topbar-dropdown').forEach(function(d){d.classList.remove('open');});});
+    function openModal(id){document.getElementById(id).classList.add('open');}
+    function closeModal(id){document.getElementById(id).classList.remove('open');}
+    function showToast(text){var toast=document.getElementById('toast');toast.textContent=text;toast.classList.add('show');window.clearTimeout(window.toastTimer);window.toastTimer=setTimeout(function(){toast.classList.remove('show');},2000);}
+    function submitCreateApp(){closeModal('appCreateModal');showToast('应用创建成功，已生成接入标识与密钥');}
+    function confirmResetKey(){var value=document.getElementById('resetKeyInput').value;if(value!=='RESET'){showToast('请输入正确确认信息');return;}closeModal('resetKeyModal');showToast('密钥已重置，请重新保存');}
+  </script>
+</body>
+</html>

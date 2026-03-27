@@ -116,7 +116,11 @@
       "Bash(echo \"http_proxy=$http_proxy\")",
       "Bash(echo \"https_proxy=$https_proxy\")",
       "Bash(echo \"NO_PROXY=$NO_PROXY\")",
-      "Bash(curl -x http://127.0.0.1:7897 https://api.anthropic.com/v1/models -s -o /dev/null -w \"HTTP status: %{http_code}\\\\nProxy: %{proxy_ssl_verifyresult}\\\\nError: %{errormsg}\\\\n\")"
+      "Bash(curl -x http://127.0.0.1:7897 https://api.anthropic.com/v1/models -s -o /dev/null -w \"HTTP status: %{http_code}\\\\nProxy: %{proxy_ssl_verifyresult}\\\\nError: %{errormsg}\\\\n\")",
+      "Read(//tmp/**)",
+      "Bash(shuf -n 80 /tmp/all_filenames.txt)",
+      "Bash(python -c \":*)",
+      "Bash(iconv -f utf-8 -t utf-8)"
     ]
   }
 }

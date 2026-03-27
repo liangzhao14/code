@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>应用详情</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="logo-icon">TC</span><span class="logo-text">CaseFlow API</span></div>
+        <div class="nav-group"><div class="nav-group-title">总览</div><a class="nav-link" href="monitor-dashboard.html"><span class="nav-icon">◉</span>监控工作台</a></div>
+        <div class="nav-group"><div class="nav-group-title">开放接入</div><a class="nav-link" href="app-access.html"><span class="nav-icon">◎</span>接入管理</a><div class="nav-submenu"><a class="nav-link active" href="app-detail.html"><span class="nav-icon">·</span>应用详情</a></div></div>
+        <div class="nav-group"><div class="nav-group-title">生成服务</div><a class="nav-link" href="generate-request.html"><span class="nav-icon">◆</span>生成工作台</a><a class="nav-link" href="task-detail.html"><span class="nav-icon">◇</span>任务详情</a></div>
+      </aside>
+      <main class="content-shell">
+        <div class="topbar">
+          <div class="topbar-left"><div class="breadcrumb"><a href="monitor-dashboard.html">首页</a><span>/</span><a href="app-access.html">开放接入</a><span>/</span><span class="current">应用详情</span></div></div>
+          <div class="topbar-right">
+            <input type="text" class="topbar-search" placeholder="搜索字段或配置">
+            <button class="topbar-icon-btn" onclick="toggleNotifyPanel(event)">🔔<span class="badge-dot"></span>
+              <div class="topbar-dropdown topbar-notify-panel" id="notifyPanel">
+                <div class="topbar-notify-header"><span>消息通知</span><a href="javascript:void(0)">全部已读</a></div>
+                <div class="topbar-notify-item unread"><span class="topbar-notify-dot"></span><div class="topbar-notify-content"><div class="topbar-notify-text">CaseGen-ERP 密钥将在本周轮换</div><div class="topbar-notify-time">刚刚</div></div></div>
+                <div class="topbar-notify-footer"><a href="app-access.html">返回列表</a></div>
+              </div>
+            </button>
+            <div class="topbar-avatar" onclick="toggleAvatarMenu(event)">张
+              <div class="topbar-dropdown topbar-avatar-menu" id="avatarMenu">
+                <div class="topbar-avatar-menu-item" onclick="location.href='app-access.html'">👤 返回应用列表</div>
+                <div class="topbar-avatar-menu-divider"></div>
+                <div class="topbar-avatar-menu-item">🚪 退出登录</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <section class="page-header">
+            <div>
+              <h1 class="page-title">CaseGen-ERP</h1>
+              <p class="page-subtitle">根据 PRD 的 UI 要求分为基础信息、鉴权信息、回调设置三个区域展示，敏感字段默认脱敏。</p>
+            </div>
+            <div class="toolbar-right">
+              <span class="tag tag-success">启用中</span>
+              <button class="btn btn-default" onclick="location.href='generate-request.html'">发起生成</button>
+            </div>
+          </section>
+          <section class="detail-card">
+            <div class="card-title-row"><h2 class="card-title">基础信息</h2><button class="btn btn-default" onclick="showToast('基础信息已复制到剪贴板')">复制摘要</button></div>
+            <div class="desc-grid">
+              <div class="desc-item"><div class="desc-label">应用名称</div><div class="desc-value">CaseGen-ERP</div></div>
+              <div class="desc-item"><div class="desc-label">应用标识</div><div class="desc-value">APP_91KD28A</div></div>
+              <div class="desc-item"><div class="desc-label">创建时间</div><div class="desc-value">2026-03-22 10:40</div></div>
+              <div class="desc-item"><div class="desc-label">联系人</div><div class="desc-value">刘洋 / liuyang@example.com</div></div>
+            </div>
+          </section>
+          <section class="detail-card">
+            <div class="card-title-row"><h2 class="card-title">鉴权信息</h2><button class="btn btn-ghost" onclick="showToast('脱敏字段已展开 10 秒')">查看完整密钥</button></div>
+            <div class="desc-grid">
+              <div class="desc-item"><div class="desc-label">API Key</div><div class="desc-value">ak_xxxx_xxxx_7K92</div></div>
+              <div class="desc-item"><div class="desc-label">签名算法</div><div class="desc-value">HMAC-SHA256</div></div>
+              <div class="desc-item"><div class="desc-label">最近调用时间</div><div class="desc-value">2026-03-25 13:42</div></div>
+              <div class="desc-item"><div class="desc-label">日调用额度</div><div class="desc-value">10,000 次 / 已使用 4,892 次</div></div>
+            </div>
+          </section>
+          <section class="detail-card">
+            <div class="card-title-row"><h2 class="card-title">回调设置</h2><button class="btn btn-primary" onclick="location.href='task-detail.html'">查看回调记录</button></div>
+            <div class="desc-grid">
+              <div class="desc-item"><div class="desc-label">回调地址</div><div class="desc-value">https://erp.partner.com/callback</div></div>
+              <div class="desc-item"><div class="desc-label">通知事件</div><div class="desc-value">任务成功、任务失败、回调失败</div></div>
+              <div class="desc-item"><div class="desc-label">超时阈值</div><div class="desc-value">5 秒</div></div>
+              <div class="desc-item"><div class="desc-label">最近结果</div><div class="desc-value"><span class="tag tag-warning">1 次超时重试后成功</span></div></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script>
+    function toggleNotifyPanel(e){e.stopPropagation();document.getElementById('avatarMenu').classList.remove('open');document.getElementById('notifyPanel').classList.toggle('open');}
+    function toggleAvatarMenu(e){e.stopPropagation();document.getElementById('notifyPanel').classList.remove('open');document.getElementById('avatarMenu').classList.toggle('open');}
+    document.addEventListener('click',function(){document.querySelectorAll('.topbar-dropdown').forEach(function(d){d.classList.remove('open');});});
+    function showToast(text){var toast=document.getElementById('toast');toast.textContent=text;toast.classList.add('show');window.clearTimeout(window.toastTimer);window.toastTimer=setTimeout(function(){toast.classList.remove('show');},2000);}
+  </script>
+</body>
+</html>

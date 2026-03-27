@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>监控工作台</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="logo-icon">TC</span><span class="logo-text">CaseFlow API</span></div>
+        <div class="nav-group"><div class="nav-group-title">总览</div><a class="nav-link active" href="monitor-dashboard.html"><span class="nav-icon">◉</span>监控工作台</a></div>
+        <div class="nav-group"><div class="nav-group-title">开放接入</div><a class="nav-link" href="app-access.html"><span class="nav-icon">◎</span>接入管理</a><div class="nav-submenu"><a class="nav-link" href="app-detail.html"><span class="nav-icon">·</span>应用详情</a></div></div>
+        <div class="nav-group"><div class="nav-group-title">生成服务</div><a class="nav-link" href="generate-request.html"><span class="nav-icon">◆</span>生成工作台</a><a class="nav-link" href="task-detail.html"><span class="nav-icon">◇</span>任务详情</a><a class="nav-link" href="result-center.html"><span class="nav-icon">▣</span>结果中心</a></div>
+      </aside>
+      <main class="content-shell">
+        <div class="topbar">
+          <div class="topbar-left"><div class="breadcrumb"><a href="monitor-dashboard.html">首页</a><span>/</span><span class="current">监控工作台</span></div></div>
+          <div class="topbar-right">
+            <input type="text" class="topbar-search" placeholder="搜索应用、任务或结果">
+            <button class="topbar-icon-btn" onclick="toggleNotifyPanel(event)">🔔<span class="badge-dot"></span>
+              <div class="topbar-dropdown topbar-notify-panel" id="notifyPanel">
+                <div class="topbar-notify-header"><span>消息通知</span><a href="javascript:void(0)">全部已读</a></div>
+                <div class="topbar-notify-item unread"><span class="topbar-notify-dot"></span><div class="topbar-notify-content"><div class="topbar-notify-text">CaseGen-ERP 异步任务成功率下降至 92%</div><div class="topbar-notify-time">2 分钟前</div></div></div>
+                <div class="topbar-notify-item unread"><span class="topbar-notify-dot"></span><div class="topbar-notify-content"><div class="topbar-notify-text">有 1 个应用等待补全回调配置</div><div class="topbar-notify-time">18 分钟前</div></div></div>
+                <div class="topbar-notify-item"><span class="topbar-notify-dot read"></span><div class="topbar-notify-content"><div class="topbar-notify-text">本周模板下载量较上周提升 16%</div><div class="topbar-notify-time">1 小时前</div></div></div>
+                <div class="topbar-notify-footer"><a href="result-center.html">查看全部通知</a></div>
+              </div>
+            </button>
+            <div class="topbar-avatar" onclick="toggleAvatarMenu(event)">张
+              <div class="topbar-dropdown topbar-avatar-menu" id="avatarMenu">
+                <div class="topbar-avatar-menu-item" onclick="location.href='app-detail.html'">👤 个人中心</div>
+                <div class="topbar-avatar-menu-item" onclick="location.href='app-access.html'">⚙️ 账户设置</div>
+                <div class="topbar-avatar-menu-divider"></div>
+                <div class="topbar-avatar-menu-item">🚪 退出登录</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <section class="hero-banner">
+            <div>
+              <h1 class="page-title">测试用例生成开放服务监控台</h1>
+              <p class="page-subtitle">围绕 PRD 中的开放接入、生成服务、任务管理与运营保障做统一可视化，突出异常趋势、任务履约与回调健康度。</p>
+              <div class="hero-chip-row">
+                <span class="chip">今日调用量 4,892</span>
+                <span class="chip">异步任务占比 68%</span>
+                <span class="chip">失败任务需人工排查 9 个</span>
+              </div>
+            </div>
+            <div class="hero-metrics">
+              <div class="section-card"><div class="stat-value">98.2%</div><div class="stat-label">接口可用率</div></div>
+              <div class="section-card"><div class="stat-value">12.4s</div><div class="stat-label">异步平均完成时间</div></div>
+              <div class="section-card"><div class="stat-value">36</div><div class="stat-label">活跃应用数</div></div>
+            </div>
+          </section>
+          <section class="stat-bar">
+            <div class="stat-card"><div class="stat-icon icon-blue">调</div><div class="stat-info"><div class="stat-value">4,892</div><div class="stat-label">今日总调用</div></div></div>
+            <div class="stat-card"><div class="stat-icon icon-green">成</div><div class="stat-info"><div class="stat-value">3,978</div><div class="stat-label">成功返回任务</div></div></div>
+            <div class="stat-card"><div class="stat-icon icon-orange">异</div><div class="stat-info"><div class="stat-value">1,204</div><div class="stat-label">进行中异步任务</div></div></div>
+            <div class="stat-card"><div class="stat-icon icon-red">错</div><div class="stat-info"><div class="stat-value">57</div><div class="stat-label">待处理失败告警</div></div></div>
+          </section>
+          <section class="grid-2">
+            <div class="section-card"><div class="card-title-row"><h2 class="card-title">近 7 日生成趋势</h2><button class="btn btn-default" onclick="showToast('已切换到任务趋势视图')">切换维度</button></div><div id="trendChart" class="chart-box"></div></div>
+            <div class="section-card"><div class="card-title-row"><h2 class="card-title">任务状态分布</h2><a href="task-detail.html">查看异常任务</a></div><div id="statusChart" class="chart-box"></div></div>
+          </section>
+          <section class="grid-2">
+            <div class="section-card">
+              <div class="card-title-row"><h2 class="card-title">热门模板排名</h2><a href="generate-request.html">进入模板选择</a></div>
+              <div class="rank-list">
+                <div class="rank-item"><span class="rank-num">1</span><span class="rank-name">标准模板 / 通用接口场景</span><span class="rank-value">1,934 次</span></div>
+                <div class="rank-item"><span class="rank-num">2</span><span class="rank-name">回归增强模板 / 业务规则密集</span><span class="rank-value">1,118 次</span></div>
+                <div class="rank-item"><span class="rank-num">3</span><span class="rank-name">自定义字段模板 / 第三方平台接入</span><span class="rank-value">726 次</span></div>
+                <div class="rank-item"><span class="rank-num">4</span><span class="rank-name">边界强化模板 / 金融类业务</span><span class="rank-value">402 次</span></div>
+              </div>
+            </div>
+            <div class="section-card">
+              <div class="card-title-row"><h2 class="card-title">待办清单</h2><button class="btn btn-primary" onclick="location.href='app-access.html'">去处理</button></div>
+              <table>
+                <thead><tr><th>事项</th><th>对象</th><th>优先级</th><th>操作</th></tr></thead>
+                <tbody>
+                  <tr><td>回调超时连续 3 次</td><td>CaseGen-ERP</td><td><span class="tag tag-danger">高</span></td><td><a href="task-detail.html">查看任务</a></td></tr>
+                  <tr><td>等待补全联系人信息</td><td>QA-Partner</td><td><span class="tag tag-warning">中</span></td><td><a href="app-detail.html">查看应用</a></td></tr>
+                  <tr><td>结果即将过期</td><td>TASK-20260325-0821</td><td><span class="tag tag-info">提醒</span></td><td><a href="result-center.html">查看结果</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script>
+    function toggleNotifyPanel(e){e.stopPropagation();document.getElementById('avatarMenu').classList.remove('open');document.getElementById('notifyPanel').classList.toggle('open');}
+    function toggleAvatarMenu(e){e.stopPropagation();document.getElementById('notifyPanel').classList.remove('open');document.getElementById('avatarMenu').classList.toggle('open');}
+    document.addEventListener('click',function(){document.querySelectorAll('.topbar-dropdown').forEach(function(d){d.classList.remove('open');});});
+    function showToast(text){var toast=document.getElementById('toast');toast.textContent=text;toast.classList.add('show');window.clearTimeout(window.toastTimer);window.toastTimer=setTimeout(function(){toast.classList.remove('show');},2000);}
+    var trendChart = echarts.init(document.getElementById('trendChart'));
+    trendChart.setOption({tooltip:{trigger:'axis'},legend:{data:['生成请求','成功返回']},grid:{left:40,right:20,top:40,bottom:30},xAxis:{type:'category',data:['3/19','3/20','3/21','3/22','3/23','3/24','3/25'],axisLabel:{color:'#4E5969'},axisLine:{lineStyle:{color:'#F2F3F5'}}},yAxis:{type:'value',axisLabel:{color:'#4E5969'},splitLine:{lineStyle:{color:'#F2F3F5'}}},series:[{name:'生成请求',type:'line',smooth:true,data:[620,702,688,731,760,824,867],itemStyle:{color:'#165DFF'}},{name:'成功返回',type:'line',smooth:true,data:[594,672,650,704,730,792,826],itemStyle:{color:'#00B42A'}}]});
+    var statusChart = echarts.init(document.getElementById('statusChart'));
+    statusChart.setOption({tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},legend:{bottom:0},series:[{type:'pie',radius:['42%','70%'],center:['50%','42%'],data:[{value:61,name:'成功',itemStyle:{color:'#00B42A'}},{value:21,name:'处理中',itemStyle:{color:'#165DFF'}},{value:9,name:'失败',itemStyle:{color:'#F53F3F'}},{value:5,name:'部分成功',itemStyle:{color:'#FF7D00'}},{value:4,name:'已过期',itemStyle:{color:'#86909C'}}],label:{formatter:'{b}\n{d}%'}}]});
+    window.addEventListener('resize', function(){trendChart.resize();statusChart.resize();});
+  </script>
+</body>
+</html>

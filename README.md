@@ -143,6 +143,12 @@ AI Agent 相关实验与探索。
 
 ## 最近变更
 
+## 2026-03-27 17:42
+
+- 修改: "claude code/.claude/settings.local.json"
+- 新增: "claude code/file-paqu/"
+- 新增: codex/docs/test_case_generation_api_v1.0_UED/
+
 ## 2026-03-25 12:25
 
 - 修改: .claude/scripts/auto-sync.sh

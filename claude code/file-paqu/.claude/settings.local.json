@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip show:*)",
+      "Bash(python gen_org_doc.py)",
+      "Bash(python gen_xmind.py)",
+      "Bash(python:*)",
+      "Bash(pip install:*)"
+    ]
+  }
+}

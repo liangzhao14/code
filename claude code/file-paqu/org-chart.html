@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目组织分工与实施保障 - 脑图</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+    background: linear-gradient(135deg, #0f1724 0%, #1a2332 50%, #0d1926 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: #e0e8f0;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: #7a8ba0;
+    margin-bottom: 48px;
+  }
+  .total-badge {
+    display: inline-block;
+    background: rgba(96,165,250,0.15);
+    border: 1px solid rgba(96,165,250,0.3);
+    border-radius: 20px;
+    padding: 4px 16px;
+    font-size: 13px;
+    color: #60a5fa;
+    margin-left: 8px;
+  }
+
+  /* Mind map container */
+  .mindmap {
+    position: relative;
+    width: 1100px;
+    max-width: 100%;
+    min-height: 700px;
+  }
+
+  /* Center node */
+  .center-node {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e3a5f, #2a4a7f);
+    border: 3px solid #3b82f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(59,130,246,0.3), 0 0 80px rgba(59,130,246,0.1);
+    z-index: 10;
+  }
+  .center-node .icon { font-size: 36px; margin-bottom: 8px; }
+  .center-node .label { font-size: 16px; font-weight: 700; color: #e0e8f0; }
+  .center-node .count { font-size: 13px; color: #7aa2d4; margin-top: 4px; }
+
+  /* Branch node */
+  .branch {
+    position: absolute;
+    z-index: 5;
+  }
+  .branch-card {
+    width: 220px;
+    border-radius: 16px;
+    padding: 20px 18px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+  .branch-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  }
+  .branch-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .branch-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .branch-title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .branch-badge {
+    display: inline-block;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .branch-desc {
+    font-size: 12.5px;
+    color: #9ab0c8;
+    line-height: 1.7;
+    margin-top: 8px;
+  }
+  .branch-desc li {
+    list-style: none;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 3px;
+  }
+  .branch-desc li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  /* Color themes */
+  .theme-blue .branch-card { background: rgba(37,99,235,0.12); border-color: rgba(59,130,246,0.25); }
+  .theme-blue .branch-icon { background: rgba(59,130,246,0.2); }
+  .theme-blue .branch-title { color: #60a5fa; }
+  .theme-blue .branch-badge { background: rgba(59,130,246,0.15); color: #60a5fa; }
+  .theme-blue .branch-desc li::before { background: #3b82f6; }
+
+  .theme-purple .branch-card { background: rgba(124,58,237,0.12); border-color: rgba(139,92,246,0.25); }
+  .theme-purple .branch-icon { background: rgba(139,92,246,0.2); }
+  .theme-purple .branch-title { color: #a78bfa; }
+  .theme-purple .branch-badge { background: rgba(139,92,246,0.15); color: #a78bfa; }
+  .theme-purple .branch-desc li::before { background: #8b5cf6; }
+
+  .theme-green .branch-card { background: rgba(16,185,129,0.12); border-color: rgba(52,211,153,0.25); }
+  .theme-green .branch-icon { background: rgba(52,211,153,0.2); }
+  .theme-green .branch-title { color: #34d399; }
+  .theme-green .branch-badge { background: rgba(52,211,153,0.15); color: #34d399; }
+  .theme-green .branch-desc li::before { background: #10b981; }
+
+  .theme-amber .branch-card { background: rgba(245,158,11,0.12); border-color: rgba(251,191,36,0.25); }
+  .theme-amber .branch-icon { background: rgba(251,191,36,0.2); }
+  .theme-amber .branch-title { color: #fbbf24; }
+  .theme-amber .branch-badge { background: rgba(251,191,36,0.15); color: #fbbf24; }
+  .theme-amber .branch-desc li::before { background: #f59e0b; }
+
+  .theme-rose .branch-card { background: rgba(244,63,94,0.12); border-color: rgba(251,113,133,0.25); }
+  .theme-rose .branch-icon { background: rgba(251,113,133,0.2); }
+  .theme-rose .branch-title { color: #fb7185; }
+  .theme-rose .branch-badge { background: rgba(251,113,133,0.15); color: #fb7185; }
+  .theme-rose .branch-desc li::before { background: #f43f5e; }
+
+  .theme-cyan .branch-card { background: rgba(6,182,212,0.12); border-color: rgba(34,211,238,0.25); }
+  .theme-cyan .branch-icon { background: rgba(34,211,238,0.2); }
+  .theme-cyan .branch-title { color: #22d3ee; }
+  .theme-cyan .branch-badge { background: rgba(34,211,238,0.15); color: #22d3ee; }
+  .theme-cyan .branch-desc li::before { background: #06b6d4; }
+
+  .theme-teal .branch-card { background: rgba(20,184,166,0.12); border-color: rgba(45,212,191,0.25); }
+  .theme-teal .branch-icon { background: rgba(45,212,191,0.2); }
+  .theme-teal .branch-title { color: #2dd4bf; }
+  .theme-teal .branch-badge { background: rgba(45,212,191,0.15); color: #2dd4bf; }
+  .theme-teal .branch-desc li::before { background: #14b8a6; }
+
+  /* SVG connectors */
+  .connectors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Security section */
+  .security-section {
+    margin-top: 48px;
+    width: 800px;
+    max-width: 100%;
+    border-radius: 16px;
+    background: rgba(244,63,94,0.06);
+    border: 1px solid rgba(244,63,94,0.2);
+    padding: 28px 32px;
+  }
+  .security-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fb7185;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .security-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .security-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(244,63,94,0.08);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #d4a0aa;
+  }
+  .security-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f43f5e;
+    flex-shrink: 0;
+  }
+
+  /* Positions for 7 branches around center */
+  .b0 { left: 50%; top: 0; transform: translateX(-50%); }
+  .b1 { right: 20px; top: 60px; }
+  .b2 { right: 20px; top: 340px; }
+  .b3 { right: 160px; bottom: 0; }
+  .b4 { left: 160px; bottom: 0; }
+  .b5 { left: 20px; top: 340px; }
+  .b6 { left: 20px; top: 60px; }
+</style>
+</head>
+<body>
+
+<h1>项目组织分工与实施保障<span class="total-badge">总计 14~18 人</span></h1>
+<p class="subtitle">核电领域数据治理项目 — 角色、分工与人员配置</p>
+
+<div class="mindmap" id="mindmap">
+  <svg class="connectors" id="connectors"></svg>
+
+  <!-- Center -->
+  <div class="center-node" id="center">
+    <div class="icon">&#x1F3DB;</div>
+    <div class="label">项目组织架构</div>
+    <div class="count">7 大角色</div>
+  </div>
+
+  <!-- Branch 0: 项目负责人 -->
+  <div class="branch b0 theme-blue" id="b0">
+    <div class="branch-card">
+      <div class="branch-header">
+        <div class="branch-icon">&#x1F451;</div>
+        <div>
+          <div class="branch-title">项目负责人</div>
+          <div class="branch-badge">1 人</div>
+        </div>
+      </div>
+      <ul class="branch-desc">
+        <li>统筹推进整体治理工作</li>
+        <li>组织重要事项决策</li>
+        <li>资源协调</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Branch 1: 业务负责人 -->
+  <div class="branch b1 theme-purple" id="b1">
+    <div class="branch-card">
+      <div class="branch-header">
+        <div class="branch-icon">&#x1F4BC;</div>
+        <div>
+          <div class="branch-title">业务负责人（甲方）</div>
+          <div class="branch-badge">1 人</div>
+        </div>
+      </div>
+      <ul class="branch-desc">
+        <li>明确业务场景和专业口径</li>
+        <li>提供 KRT 系统数据</li>
+        <li>审核内容准确性</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Branch 2: 数据工程师 -->
+  <div class="branch b2 theme-green" id="b2">
+    <div class="branch-card">
+      <div class="branch-header">
+        <div class="branch-icon">&#x1F4BE;</div>
+        <div>
+          <div class="branch-title">数据工程师</div>
+          <div class="branch-badge">2 人</div>
+        </div>
+      </div>
+      <ul class="branch-desc">
+        <li>数据采集</li>
+        <li>数据清洗与脱敏</li>
+        <li>数据增强处理</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Branch 3: 标注负责人 -->
+  <div class="branch b3 theme-amber" id="b3">
+    <div class="branch-card">
+      <div class="branch-header">
+        <div class="branch-icon">&#x1F3AF;</div>
+        <div>
+          <div class="branch-title">标注负责人</div>
+          <div class="branch-badge">1 人</div>
+        </div>
+      </div>
+      <ul class="branch-desc">
+        <li>试标与批量标注</li>
+        <li>口径统一管理</li>
+        <li>标注人员资质考核</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Branch 4: 标注业务人员 -->
+  <div class="branch b4 theme-cyan" id="b4">
+    <div class="branch-card">
+      <div class="branch-header">
+        <div class="branch-icon">&#x1F4DD;</div>
+        <div>
+          <div class="branch-title">标注业务人员</div>
+          <div class="branch-badge">6~10 人</div>
+        </div>
+      </div>
+      <ul class="branch-desc">
+        <li>执行批量数据标注</li>
+        <li>按口径规范操作</li>
+        <li>项目核心产能</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Branch 5: 质检负责人 -->
+  <div class="branch b5 theme-rose" id="b5">
+    <div class="branch-card">
+      <div class="branch-header">
+        <div class="branch-icon">&#x2705;</div>
+        <div>
+          <div class="branch-title">质检负责人</div>
+          <div class="branch-badge">2 人</div>
+        </div>
+      </div>
+      <ul class="branch-desc">
+        <li>三级质检组织执行</li>
+        <li>管理质检记录</li>
+        <li>整改台账管理</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Branch 6: 核电领域专家终审组 / 技术支持 -->
+  <div class="branch b6 theme-teal" id="b6">
+    <div class="branch-card">
+      <div class="branch-header">
+        <div class="branch-icon">&#x1F9D1;&#x200D;&#x1F52C;</div>
+        <div>
+          <div class="branch-title">专家终审 + 技术支持</div>
+          <div class="branch-badge">1+1 人</div>
+        </div>
+      </div>
+      <ul class="branch-desc">
+        <li>安全类/高难度数据终审</li>
+        <li>标注标准修订与争议裁定</li>
+        <li>平台、工具与环境保障</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Security -->
+<div class="security-section">
+  <div class="security-title">&#x1F512; 安全与场地要求</div>
+  <div class="security-grid">
+    <div class="security-item"><div class="security-dot"></div>标注场地设置在安全可控区域，配备门禁系统</div>
+    <div class="security-item"><div class="security-dot"></div>涉密数据必须在内网环境完成标注</div>
+    <div class="security-item"><div class="security-dot"></div>标注工具须具备操作留痕功能</div>
+    <div class="security-item"><div class="security-dot"></div>严禁使用境外在线工具处理涉密数据</div>
+  </div>
+</div>
+
+<script>
+function drawConnectors() {
+  const svg = document.getElementById('connectors');
+  const map = document.getElementById('mindmap');
+  const center = document.getElementById('center');
+  const mapRect = map.getBoundingClientRect();
+
+  const cx = center.offsetLeft + center.offsetWidth / 2;
+  const cy = center.offsetTop + center.offsetHeight / 2;
+
+  const colors = ['#3b82f6','#8b5cf6','#10b981','#f59e0b','#06b6d4','#f43f5e','#14b8a6'];
+  let paths = '';
+
+  for (let i = 0; i < 7; i++) {
+    const el = document.getElementById('b' + i);
+    const card = el.querySelector('.branch-card');
+    const ex = el.offsetLeft + card.offsetWidth / 2;
+    const ey = el.offsetTop + card.offsetHeight / 2;
+
+    // Bezier control points
+    const mx = (cx + ex) / 2;
+    const my = (cy + ey) / 2;
+    const dx = ex - cx;
+    const dy = ey - cy;
+
+    const c1x = cx + dx * 0.15;
+    const c1y = cy + dy * 0.5;
+    const c2x = cx + dx * 0.85;
+    const c2y = cy + dy * 0.5;
+
+    paths += `<path d="M${cx},${cy} C${c1x},${c1y} ${c2x},${c2y} ${ex},${ey}"
+      stroke="${colors[i]}" stroke-width="2" fill="none" stroke-opacity="0.35"
+      stroke-dasharray="6,4" />`;
+
+    // Glow dot at endpoint
+    paths += `<circle cx="${ex}" cy="${ey}" r="4" fill="${colors[i]}" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" />
+    </circle>`;
+  }
+
+  svg.innerHTML = paths;
+}
+
+window.addEventListener('load', drawConnectors);
+window.addEventListener('resize', drawConnectors);
+</script>
+
+</body>
+</html>
