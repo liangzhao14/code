@@ -1,26 +1,23 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-This repository is currently a minimal scaffold with no application code checked in yet. Keep the root clean and organize new work under clear top-level directories:
+This repository now contains a Python MVP for the test case generation API. Keep the root clean and organize work under these top-level directories:
 
 - `src/` for production code
 - `tests/` for automated tests
 - `docs/` for design notes or contributor-facing documentation
 - `assets/` for static files such as images or sample data
+- `scripts/` for local developer entrypoints such as server startup helpers
 
-Prefer feature-focused modules inside `src/` (for example, `src/auth/` or `src/api/`) rather than large mixed directories.
+The current implementation lives in `src/test_case_generation_api/` and is split by responsibility (`models.py`, `generator.py`, `services.py`, `server.py`). Prefer extending that pattern instead of creating broad utility dumps.
 
 ## Build, Test, and Development Commands
-No build tooling is configured yet. When adding a language runtime or framework, expose the common workflows through documented commands and keep them stable.
+Use the following authoritative local commands:
 
-Examples to add once tooling exists:
+- `python scripts/run_server.py` to start the API service locally
+- `python -m unittest discover -s tests -v` to execute the automated test suite
 
-- `npm install` or `pip install -r requirements.txt` to install dependencies
-- `npm run dev` or `python -m app` to run locally
-- `npm test` or `pytest` to execute tests
-- `npm run lint` or `ruff check .` to enforce style
-
-Record the authoritative commands in `README.md` whenever tooling is introduced.
+If new tooling is introduced, add the stable command here and mirror it in `README.md`.
 
 ## Coding Style & Naming Conventions
 Use 4 spaces for Python and 2 spaces for JavaScript, TypeScript, JSON, YAML, and Markdown lists. Prefer descriptive file and module names such as `user_service.py` or `task-runner.ts`.

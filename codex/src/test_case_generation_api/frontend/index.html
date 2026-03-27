@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaseFlow Console</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=20260328">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">CF</span>
+          <div>
+            <div class="brand-title">CaseFlow API</div>
+            <div class="brand-subtitle">Open service console</div>
+          </div>
+        </div>
+        <nav class="nav-stack">
+          <button class="nav-link active" data-route="dashboard">监控工作台</button>
+          <button class="nav-link" data-route="apps">接入管理</button>
+          <button class="nav-link" data-route="generate">生成工作台</button>
+          <button class="nav-link" data-route="tasks">任务详情</button>
+          <button class="nav-link" data-route="results">结果中心</button>
+        </nav>
+        <div class="sidebar-note">
+          <p>这个前端直接托管在 Python 服务里，并按现有 UED 的信息架构组织。</p>
+          <p>新建或重置应用拿到的密钥会保存到当前浏览器，用来发起签名请求。</p>
+        </div>
+      </aside>
+      <main class="content-shell">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">控制台</div>
+            <h1 class="topbar-title" id="pageTitle">监控工作台</h1>
+            <div class="breadcrumb" id="breadcrumb">首页 / 监控工作台</div>
+          </div>
+          <div class="topbar-actions">
+            <input id="globalSearch" class="topbar-search" type="search" placeholder="筛选当前页应用、任务或用例">
+            <button id="refreshButton" class="btn btn-default" type="button">刷新数据</button>
+          </div>
+        </header>
+        <section class="hero-card">
+          <div>
+            <div class="hero-kicker">CaseFlow Console</div>
+            <h2>把已有 UED 接到可运行的真实 API 上</h2>
+            <p>当前版本覆盖接入管理、生成工作台、任务详情、结果中心和用例详情，重点打通 MVP 的端到端使用闭环。</p>
+          </div>
+          <div class="hero-meta">
+            <span class="hero-pill">Python hosted</span>
+            <span class="hero-pill">HMAC signed</span>
+            <span class="hero-pill">UED aligned</span>
+          </div>
+        </section>
+        <div id="app" class="page-content"></div>
+      </main>
+    </div>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toast" class="toast"></div>
+
+  <script src="/assets/app.js?v=20260328" defer></script>
+</body>
+</html>
