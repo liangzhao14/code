@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成工作台</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="logo-icon">TC</span><span class="logo-text">CaseFlow API</span></div>
+        <div class="nav-group"><div class="nav-group-title">总览</div><a class="nav-link" href="monitor-dashboard.html"><span class="nav-icon">◉</span>监控工作台</a></div>
+        <div class="nav-group"><div class="nav-group-title">开放接入</div><a class="nav-link" href="app-access.html"><span class="nav-icon">◎</span>接入管理</a></div>
+        <div class="nav-group"><div class="nav-group-title">生成服务</div><a class="nav-link active" href="generate-request.html"><span class="nav-icon">◆</span>生成工作台</a><a class="nav-link" href="task-detail.html"><span class="nav-icon">◇</span>任务详情</a><a class="nav-link" href="result-center.html"><span class="nav-icon">▣</span>结果中心</a></div>
+      </aside>
+      <main class="content-shell">
+        <div class="topbar">
+          <div class="topbar-left"><div class="breadcrumb"><a href="monitor-dashboard.html">首页</a><span>/</span><a href="generate-request.html">生成服务</a><span>/</span><span class="current">生成工作台</span></div></div>
+          <div class="topbar-right">
+            <input type="text" class="topbar-search" placeholder="搜索模板、请求或任务">
+            <button class="topbar-icon-btn" onclick="toggleNotifyPanel(event)">🔔<span class="badge-dot"></span>
+              <div class="topbar-dropdown topbar-notify-panel" id="notifyPanel">
+                <div class="topbar-notify-header"><span>消息通知</span><a href="javascript:void(0)">全部已读</a></div>
+                <div class="topbar-notify-item unread"><span class="topbar-notify-dot"></span><div class="topbar-notify-content"><div class="topbar-notify-text">标准模板更新了 Excel 字段映射</div><div class="topbar-notify-time">12 分钟前</div></div></div>
+                <div class="topbar-notify-footer"><a href="result-center.html">查看结果</a></div>
+              </div>
+            </button>
+            <div class="topbar-avatar" onclick="toggleAvatarMenu(event)">张
+              <div class="topbar-dropdown topbar-avatar-menu" id="avatarMenu">
+                <div class="topbar-avatar-menu-item" onclick="location.href='app-detail.html'">👤 当前应用</div>
+                <div class="topbar-avatar-menu-divider"></div>
+                <div class="topbar-avatar-menu-item">🚪 退出登录</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <section class="page-header">
+            <div>
+              <h1 class="page-title">生成工作台</h1>
+              <p class="page-subtitle">承接 UC-02，支持业务标题、输入材料、生成模式、模板标识和覆盖维度输入，并补充结构化业务规则与附件引用。</p>
+            </div>
+            <div class="toolbar-right">
+              <button class="btn btn-default" onclick="openDrawer('ruleDrawer')">补充业务规则</button>
+              <button class="btn btn-default" onclick="openModal('attachmentModal')">添加附件引用</button>
+              <button class="btn btn-primary" onclick="submitGenerate()">生成测试用例</button>
+            </div>
+          </section>
+          <section class="grid-2">
+            <div class="section-card">
+              <div class="card-title-row"><h2 class="card-title">请求参数</h2><span class="tag tag-info">API 表单模拟</span></div>
+              <div class="form-grid">
+                <div class="field"><label>应用标识 *</label><input class="field-input" value="APP_91KD28A"></div>
+                <div class="field"><label>请求流水号 *</label><input class="field-input" value="REQ_20260327_092001"></div>
+                <div class="field"><label>业务标题 *</label><input class="field-input" value="开放平台生成任务结果获取接口"></div>
+                <div class="field"><label>生成模式 *</label><select class="field-select"><option>异步</option><option>同步</option></select></div>
+                <div class="field"><label>模板标识</label><select class="field-select"><option>标准模板</option><option>自定义字段模板</option></select></div>
+                <div class="field"><label>覆盖维度</label>
+                  <div class="multi-select" id="msCoverage">
+                    <div class="multi-select-trigger" onclick="toggleMultiSelect('msCoverage')"><span class="ms-placeholder">请选择（可多选）</span></div>
+                    <div class="multi-select-dropdown">
+                      <label class="multi-select-option"><input type="checkbox" value="正常" onchange="updateMultiSelect('msCoverage')">正常</label>
+                      <label class="multi-select-option"><input type="checkbox" value="异常" onchange="updateMultiSelect('msCoverage')">异常</label>
+                      <label class="multi-select-option"><input type="checkbox" value="边界" onchange="updateMultiSelect('msCoverage')">边界</label>
+                      <label class="multi-select-option"><input type="checkbox" value="权限" onchange="updateMultiSelect('msCoverage')">权限</label>
+                      <label class="multi-select-option"><input type="checkbox" value="兼容" onchange="updateMultiSelect('msCoverage')">兼容</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="field"><label>输入材料 *</label><textarea class="field-textarea">接口需支持按任务 ID 拉取生成结果，并在任务未完成时返回明确错误信息。返回结构需包含标题、步骤、预期结果、优先级和覆盖类型。</textarea></div>
+              </div>
+            </div>
+            <div class="section-card">
+              <div class="card-title-row"><h2 class="card-title">返回结构预览</h2><button class="btn btn-default" onclick="showToast('已刷新 JSON 结构示例')">刷新示例</button></div>
+              <div class="notice-box">PRD 要求调用测试页面支持快速粘贴样例材料并预览返回结构，这里用卡片化 JSON 摘要做设计示意。</div>
+              <div class="file-tile-grid">
+                <div class="file-tile"><strong>resultMeta</strong><p class="page-subtitle">taskId、mode、template、generatedAt</p></div>
+                <div class="file-tile"><strong>summary</strong><p class="page-subtitle">caseCount、coverage、expiredAt</p></div>
+                <div class="file-tile"><strong>cases[]</strong><p class="page-subtitle">title、steps、expectedResult、priority</p></div>
+                <div class="file-tile"><strong>partialFailures</strong><p class="page-subtitle">errorCode、reason、retryable</p></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div class="drawer-mask" id="ruleDrawer">
+    <div class="drawer">
+      <div class="layer-header"><strong>结构化业务规则</strong><button class="btn btn-link" onclick="closeDrawer('ruleDrawer')">关闭</button></div>
+      <div class="layer-body">
+        <div class="field"><label>场景描述 *</label><textarea class="field-textarea">第三方系统通过任务结果接口获取结构化测试用例，要求状态校验、过期校验和结果下载路径说明齐全。</textarea></div>
+        <div class="field"><label>前置条件</label><textarea class="field-textarea">任务已完成，调用方具备对应应用访问权限。</textarea></div>
+        <div class="field"><label>业务规则列表</label><textarea class="field-textarea">1. 未完成任务不可获取结果。
+2. 结果过期需提示重新生成。
+3. 用例详情至少包含标题、步骤、预期和优先级。</textarea></div>
+        <div class="field"><label>期望覆盖重点</label><textarea class="field-textarea">重点覆盖任务未完成、任务过期、部分成功结果的失败项标识。</textarea></div>
+      </div>
+      <div class="layer-footer"><button class="btn btn-default" onclick="closeDrawer('ruleDrawer')">取消</button><button class="btn btn-primary" onclick="saveRules()">纳入上下文</button></div>
+    </div>
+  </div>
+  <div class="modal-mask" id="attachmentModal">
+    <div class="modal">
+      <div class="layer-header"><strong>附件引用提交</strong><button class="btn btn-link" onclick="closeModal('attachmentModal')">关闭</button></div>
+      <div class="layer-body">
+        <div class="form-grid">
+          <div class="field"><label>附件名称 *</label><input class="field-input" placeholder="接口说明.md"></div>
+          <div class="field"><label>附件类型 *</label><select class="field-select"><option>需求文档</option><option>接口文档</option><option>原型说明</option></select></div>
+          <div class="field"><label>附件地址 / 对象 ID *</label><input class="field-input" placeholder="https://files.example.com/open-api.md"></div>
+        </div>
+        <div class="notice-box">仅记录可访问引用，不在页面内直接上传原始文件，符合 PRD 的“附件引用提交”定义。</div>
+      </div>
+      <div class="layer-footer"><button class="btn btn-default" onclick="closeModal('attachmentModal')">取消</button><button class="btn btn-primary" onclick="saveAttachment()">引用成功</button></div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script>
+    function toggleNotifyPanel(e){e.stopPropagation();document.getElementById('avatarMenu').classList.remove('open');document.getElementById('notifyPanel').classList.toggle('open');}
+    function toggleAvatarMenu(e){e.stopPropagation();document.getElementById('notifyPanel').classList.remove('open');document.getElementById('avatarMenu').classList.toggle('open');}
+    document.addEventListener('click',function(){document.querySelectorAll('.topbar-dropdown').forEach(function(d){d.classList.remove('open');});});
+    function openModal(id){document.getElementById(id).classList.add('open');}
+    function closeModal(id){document.getElementById(id).classList.remove('open');}
+    function openDrawer(id){document.getElementById(id).classList.add('open');}
+    function closeDrawer(id){document.getElementById(id).classList.remove('open');}
+    function toggleMultiSelect(id){document.getElementById(id).classList.toggle('open');}
+    function updateMultiSelect(id){var ms=document.getElementById(id);var trigger=ms.querySelector('.multi-select-trigger');var selected=[];ms.querySelectorAll('input[type="checkbox"]').forEach(function(c){if(c.checked)selected.push(c.value);});if(selected.length===0){trigger.innerHTML='<span class="ms-placeholder">请选择（可多选）</span>';}else{trigger.innerHTML=selected.map(function(v){return '<span class="ms-tag">'+v+' <span class="ms-tag-close" onclick="removeTag(event,\''+id+'\',\''+v+'\')">×</span></span>';}).join('');}}
+    function removeTag(event,id,value){event.stopPropagation();var ms=document.getElementById(id);ms.querySelectorAll('input[type="checkbox"]').forEach(function(c){if(c.value===value)c.checked=false;});updateMultiSelect(id);}
+    document.addEventListener('click',function(e){document.querySelectorAll('.multi-select.open').forEach(function(ms){if(!ms.contains(e.target))ms.classList.remove('open');});});
+    function showToast(text){var toast=document.getElementById('toast');toast.textContent=text;toast.classList.add('show');window.clearTimeout(window.toastTimer);window.toastTimer=setTimeout(function(){toast.classList.remove('show');},2000);}
+    function saveRules(){closeDrawer('ruleDrawer');showToast('结构化业务规则已纳入生成上下文');}
+    function saveAttachment(){closeModal('attachmentModal');showToast('附件引用已记录到任务上下文');}
+    function submitGenerate(){showToast('已提交异步任务，任务 ID: TASK-20260327-0821');setTimeout(function(){location.href='task-detail.html';},800);}
+  </script>
+</body>
+</html>

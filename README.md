@@ -143,6 +143,10 @@ AI Agent 相关实验与探索。
 
 ## 最近变更
 
+## 2026-03-27 18:45
+
+- 新增: codex/docs/test_case_generation_api_v1.0_UED/pages/generate-request.html
+
 ## 2026-03-27 18:27
 
 - 修改: CHANGELOG.md
