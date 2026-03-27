@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>任务详情</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="logo-icon">TC</span><span class="logo-text">CaseFlow API</span></div>
+        <div class="nav-group"><div class="nav-group-title">总览</div><a class="nav-link" href="monitor-dashboard.html"><span class="nav-icon">◉</span>监控工作台</a></div>
+        <div class="nav-group"><div class="nav-group-title">开放接入</div><a class="nav-link" href="app-access.html"><span class="nav-icon">◎</span>接入管理</a></div>
+        <div class="nav-group"><div class="nav-group-title">生成服务</div><a class="nav-link" href="generate-request.html"><span class="nav-icon">◆</span>生成工作台</a><a class="nav-link active" href="task-detail.html"><span class="nav-icon">◇</span>任务详情</a><a class="nav-link" href="result-center.html"><span class="nav-icon">▣</span>结果中心</a></div>
+      </aside>
+      <main class="content-shell">
+        <div class="topbar">
+          <div class="topbar-left"><div class="breadcrumb"><a href="monitor-dashboard.html">首页</a><span>/</span><a href="task-detail.html">任务管理</a><span>/</span><span class="current">任务详情</span></div></div>
+          <div class="topbar-right">
+            <input type="text" class="topbar-search" placeholder="搜索任务 ID">
+            <button class="topbar-icon-btn" onclick="toggleNotifyPanel(event)">🔔<span class="badge-dot"></span>
+              <div class="topbar-dropdown topbar-notify-panel" id="notifyPanel">
+                <div class="topbar-notify-header"><span>消息通知</span><a href="javascript:void(0)">全部已读</a></div>
+                <div class="topbar-notify-item unread"><span class="topbar-notify-dot"></span><div class="topbar-notify-content"><div class="topbar-notify-text">TASK-20260327-0821 已完成，可获取结果</div><div class="topbar-notify-time">刚刚</div></div></div>
+                <div class="topbar-notify-footer"><a href="result-center.html">去查看结果</a></div>
+              </div>
+            </button>
+            <div class="topbar-avatar" onclick="toggleAvatarMenu(event)">张
+              <div class="topbar-dropdown topbar-avatar-menu" id="avatarMenu">
+                <div class="topbar-avatar-menu-item" onclick="location.href='generate-request.html'">👤 返回工作台</div>
+                <div class="topbar-avatar-menu-divider"></div>
+                <div class="topbar-avatar-menu-item">🚪 退出登录</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <section class="page-header">
+            <div>
+              <h1 class="page-title">任务详情 / TASK-20260327-0821</h1>
+              <p class="page-subtitle">按 UC-03 展示任务状态、输入摘要、失败原因、回调状态与状态流转历史，并保留刷新和重试入口。</p>
+            </div>
+            <div class="toolbar-right">
+              <span class="tag tag-success">成功</span>
+              <button class="btn btn-default" onclick="showToast('状态已刷新')">刷新状态</button>
+              <button class="btn btn-primary" onclick="location.href='result-center.html'">查看结果</button>
+            </div>
+          </section>
+          <section class="grid-2">
+            <div class="detail-card">
+              <div class="card-title-row"><h2 class="card-title">任务摘要</h2><a href="generate-request.html">查看原始请求</a></div>
+              <div class="desc-grid">
+                <div class="desc-item"><div class="desc-label">任务状态</div><div class="desc-value"><span class="tag tag-success">成功</span></div></div>
+                <div class="desc-item"><div class="desc-label">生成模式</div><div class="desc-value">异步</div></div>
+                <div class="desc-item"><div class="desc-label">创建时间</div><div class="desc-value">2026-03-27 09:20</div></div>
+                <div class="desc-item"><div class="desc-label">完成时间</div><div class="desc-value">2026-03-27 09:21</div></div>
+                <div class="desc-item"><div class="desc-label">输入摘要</div><div class="desc-value">开放平台结果获取接口，强调任务未完成与结果过期校验。</div></div>
+                <div class="desc-item"><div class="desc-label">失败原因</div><div class="desc-value">无</div></div>
+              </div>
+            </div>
+            <div class="detail-card">
+              <div class="card-title-row"><h2 class="card-title">回调状态</h2><button class="btn btn-default" onclick="openModal('retryModal')">发起重试</button></div>
+              <div class="desc-grid">
+                <div class="desc-item"><div class="desc-label">回调地址</div><div class="desc-value">https://erp.partner.com/callback</div></div>
+                <div class="desc-item"><div class="desc-label">最终结果</div><div class="desc-value"><span class="tag tag-warning">重试后成功</span></div></div>
+                <div class="desc-item"><div class="desc-label">最近响应码</div><div class="desc-value">200</div></div>
+                <div class="desc-item"><div class="desc-label">累计重试次数</div><div class="desc-value">1</div></div>
+              </div>
+            </div>
+          </section>
+          <section class="detail-card">
+            <div class="card-title-row"><h2 class="card-title">状态流转时间线</h2><span class="tag tag-info">待处理 → 处理中 → 成功</span></div>
+            <div class="timeline">
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-body"><strong>09:20:02 创建任务</strong><p class="page-subtitle">已完成鉴权、签名校验与参数合法性检查。</p></div></div>
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-body"><strong>09:20:11 进入处理中</strong><p class="page-subtitle">开始解析输入材料，加载标准模板和覆盖维度。</p></div></div>
+              <div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-body"><strong>09:21:04 生成成功</strong><p class="page-subtitle">输出 18 条测试用例，其中边界类 4 条、异常类 5 条。</p></div></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div class="modal-mask" id="retryModal">
+    <div class="modal modal-confirm">
+      <div class="layer-header"><strong>确认重试任务</strong><button class="btn btn-link" onclick="closeModal('retryModal')">关闭</button></div>
+      <div class="layer-body"><div class="warn-box">仅失败或已过期任务推荐重试。当前页面保留入口，用于匹配 PRD 的状态操作矩阵设计。</div></div>
+      <div class="layer-footer"><button class="btn btn-default" onclick="closeModal('retryModal')">取消</button><button class="btn btn-primary" onclick="retryTask()">确认重试</button></div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script>
+    function toggleNotifyPanel(e){e.stopPropagation();document.getElementById('avatarMenu').classList.remove('open');document.getElementById('notifyPanel').classList.toggle('open');}
+    function toggleAvatarMenu(e){e.stopPropagation();document.getElementById('notifyPanel').classList.remove('open');document.getElementById('avatarMenu').classList.toggle('open');}
+    document.addEventListener('click',function(){document.querySelectorAll('.topbar-dropdown').forEach(function(d){d.classList.remove('open');});});
+    function openModal(id){document.getElementById(id).classList.add('open');}
+    function closeModal(id){document.getElementById(id).classList.remove('open');}
+    function showToast(text){var toast=document.getElementById('toast');toast.textContent=text;toast.classList.add('show');window.clearTimeout(window.toastTimer);window.toastTimer=setTimeout(function(){toast.classList.remove('show');},2000);}
+    function retryTask(){closeModal('retryModal');showToast('已重新发起任务重试');}
+  </script>
+</body>
+</html>
