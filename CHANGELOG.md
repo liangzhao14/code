@@ -4,10 +4,17 @@
 
 ---
 
+## 2026-03-27 18:27
+
+- 修改: CHANGELOG.md
+- 修改: README.md
+- 修改: "claude code/.claude/settings.local.json"
+
+
 ## 2026-03-27 17:42
 
-- 修改: "claude code/.claude/settings.local.json"
-- 新增: "claude code/file-paqu/"
+- 修改: "claudecode/.claude/settings.local.json"
+- 新增: "claudecode/file-paqu/"
 - 新增: codex/docs/test_case_generation_api_v1.0_UED/
 
 

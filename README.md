@@ -8,7 +8,7 @@
 
 ```
 code/
-├── claude code/      # 使用 Claude Code 构建的项目
+├── claudecode/       # 使用 Claude Code 构建的项目
 ├── codex/            # 使用 Codex 构建的项目
 ├── opencode/         # 使用 OpenCode 构建的项目
 └── Agent/            # Agent 相关实验
@@ -16,7 +16,7 @@ code/
 
 ---
 
-## claude code
+## claudecode
 
 > 使用 [Claude Code](https://claude.ai/code) 开发的项目
 
@@ -33,7 +33,7 @@ code/
 - JWT 登录鉴权
 
 ```
-claude code/credit-card-manager/
+claudecode/credit-card-manager/
 ├── backend/    # Spring Boot 后端
 ├── frontend/   # Vue 3 前端
 └── sql/        # 数据库初始化脚本
@@ -59,7 +59,7 @@ python main.py interactive         # 交互式配置新网站
 ```
 
 ```
-claude code/universal-scraper/
+claudecode/universal-scraper/
 ```
 
 ---
@@ -71,7 +71,7 @@ claude code/universal-scraper/
 **技术栈**: HTML5 · CSS3 · Vanilla JavaScript
 
 ```
-claude code/news-viewer/
+claudecode/news-viewer/
 ```
 
 ---
@@ -79,7 +79,7 @@ claude code/news-viewer/
 ### 文件下载器
 
 ```
-claude code/file-downloader/
+claudecode/file-downloader/
 ```
 
 ---
@@ -91,7 +91,7 @@ claude code/file-downloader/
 **技术栈**: Python 3 · Playwright · BeautifulSoup4 · requests
 
 ```
-claude code/nnsa-scraper/
+claudecode/nnsa-scraper/
 ```
 
 ---
@@ -143,10 +143,16 @@ AI Agent 相关实验与探索。
 
 ## 最近变更
 
+## 2026-03-27 18:27
+
+- 修改: CHANGELOG.md
+- 修改: README.md
+- 修改: "claude code/.claude/settings.local.json"
+
 ## 2026-03-27 17:42
 
-- 修改: "claude code/.claude/settings.local.json"
-- 新增: "claude code/file-paqu/"
+- 修改: "claudecode/.claude/settings.local.json"
+- 新增: "claudecode/file-paqu/"
 - 新增: codex/docs/test_case_generation_api_v1.0_UED/
 
 ## 2026-03-25 12:25
